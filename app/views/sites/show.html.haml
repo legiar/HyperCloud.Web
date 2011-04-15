@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), sites_path
+  = link_to t('edit'), edit_site_path(@site)
+
+%dl
+  %dt= Site.human_attribute_name :name
+  %dd= @site.name
+  %dt= Site.human_attribute_name :customer
+  %dd= @site.customer

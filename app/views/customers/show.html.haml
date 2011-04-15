@@ -1,0 +1,8 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), customers_path
+  = link_to t('edit'), edit_customer_path(@customer)
+
+%dl
+  %dt= Customer.human_attribute_name :name
+  %dd= @customer.name

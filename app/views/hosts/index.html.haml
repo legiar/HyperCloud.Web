@@ -1,0 +1,18 @@
+%h1= t('.title')
+%p= link_to t('.new_host'), new_host_path
+
+%table
+  %thead
+    %tr
+      %th= Host.human_attribute_name :name
+      %th= Host.human_attribute_name :ip
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for host in @hosts
+      %tr{ :class => cycle(:odd, :even) }
+        %td= host.name
+        %td= host.ip
+        %td.action= link_to t('show'), host
+        %td.action= link_to t('edit'), edit_host_path(host)
+        %td.action= link_to t('destroy'), host, :confirm => t('are_you_sure'), :method => :delete

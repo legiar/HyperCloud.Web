@@ -1,0 +1,18 @@
+%h1= t('.title')
+%p= link_to t('.new_site'), new_site_path
+
+%table
+  %thead
+    %tr
+      %th= Site.human_attribute_name :name
+      %th= Site.human_attribute_name :customer
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for site in @sites
+      %tr{ :class => cycle(:odd, :even) }
+        %td= site.name
+        %td= site.customer
+        %td.action= link_to t('show'), site
+        %td.action= link_to t('edit'), edit_site_path(site)
+        %td.action= link_to t('destroy'), site, :confirm => t('are_you_sure'), :method => :delete

@@ -1,0 +1,18 @@
+%h1= t('.title')
+%p= link_to t('.new_slice'), new_slice_path
+
+%table
+  %thead
+    %tr
+      %th= Slice.human_attribute_name :name
+      %th= Slice.human_attribute_name :host
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for slice in @slices
+      %tr{ :class => cycle(:odd, :even) }
+        %td= slice.name
+        %td= slice.host
+        %td.action= link_to t('show'), slice
+        %td.action= link_to t('edit'), edit_slice_path(slice)
+        %td.action= link_to t('destroy'), slice, :confirm => t('are_you_sure'), :method => :delete

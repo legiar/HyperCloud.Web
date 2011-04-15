@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), slices_path
+  = link_to t('edit'), edit_slice_path(@slice)
+
+%dl
+  %dt= Slice.human_attribute_name :name
+  %dd= @slice.name
+  %dt= Slice.human_attribute_name :host
+  %dd= @slice.host

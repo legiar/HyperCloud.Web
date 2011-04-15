@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), hosts_path
+  = link_to t('edit'), edit_host_path(@host)
+
+%dl
+  %dt= Host.human_attribute_name :name
+  %dd= @host.name
+  %dt= Host.human_attribute_name :ip
+  %dd= @host.ip

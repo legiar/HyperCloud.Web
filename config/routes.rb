@@ -1,4 +1,12 @@
 HyperAdmin::Application.routes.draw do
+  resources :slices
+
+  resources :sites
+
+  resources :customers
+
+  resources :hosts
+
   devise_for :users
 
   # The priority is based upon order of creation:
