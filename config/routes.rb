@@ -1,4 +1,10 @@
 HyperAdmin::Application.routes.draw do
+  resources :network_addresses
+
+  resources :networks
+
+  resources :databases
+
   resources :slices
 
   resources :sites

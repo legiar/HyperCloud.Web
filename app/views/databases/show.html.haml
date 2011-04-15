@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), databases_path
+  = link_to t('edit'), edit_database_path(@database)
+
+%dl
+  %dt= Database.human_attribute_name :customer
+  %dd= @database.customer
+  %dt= Database.human_attribute_name :name
+  %dd= @database.name

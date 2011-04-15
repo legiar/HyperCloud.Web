@@ -1,0 +1,19 @@
+= form_for(@network_address) do |f|
+  - if @network_address.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@network_address.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @network_address.errors.full_messages.each do |msg|
+        %li= msg
+  
+  .field
+    = f.label :network
+    %br
+    = f.text_field :network
+  .field
+    = f.label :ip
+    %br
+    = f.text_field :ip
+
+  .actions
+    = f.submit

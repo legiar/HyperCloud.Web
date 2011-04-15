@@ -1,0 +1,20 @@
+%h1= t('.title')
+%p= link_to t('.new_network'), new_network_path
+
+%table
+  %thead
+    %tr
+      %th= Network.human_attribute_name :address
+      %th= Network.human_attribute_name :netmask
+      %th= Network.human_attribute_name :gateway
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for network in @networks
+      %tr{ :class => cycle(:odd, :even) }
+        %td= network.address
+        %td= network.netmask
+        %td= network.gateway
+        %td.action= link_to t('show'), network
+        %td.action= link_to t('edit'), edit_network_path(network)
+        %td.action= link_to t('destroy'), network, :confirm => t('are_you_sure'), :method => :delete

@@ -1,0 +1,2 @@
+module NetworkAddressesHelper
+end

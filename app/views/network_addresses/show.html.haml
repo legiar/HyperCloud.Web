@@ -1,0 +1,10 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), network_addresses_path
+  = link_to t('edit'), edit_network_address_path(@network_address)
+
+%dl
+  %dt= NetworkAddress.human_attribute_name :network
+  %dd= @network_address.network
+  %dt= NetworkAddress.human_attribute_name :ip
+  %dd= @network_address.ip
