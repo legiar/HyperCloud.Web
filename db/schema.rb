@@ -10,9 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110415122502) do
+ActiveRecord::Schema.define(:version => 20110415134822) do
 
   create_table "customers", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "databases", :force => true do |t|
+    t.integer  "customer_id"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -21,6 +28,21 @@ ActiveRecord::Schema.define(:version => 20110415122502) do
   create_table "hosts", :force => true do |t|
     t.string   "name"
     t.string   "ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "network_addresses", :force => true do |t|
+    t.integer  "network_id"
+    t.string   "ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "networks", :force => true do |t|
+    t.string   "address"
+    t.string   "netmask"
+    t.string   "gateway"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +62,8 @@ ActiveRecord::Schema.define(:version => 20110415122502) do
     t.integer  "customer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "database_id"
+    t.integer  "slice_id"
   end
 
   create_table "slices", :force => true do |t|
@@ -47,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20110415122502) do
     t.integer  "host_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "network_address_id"
   end
 
   create_table "users", :force => true do |t|

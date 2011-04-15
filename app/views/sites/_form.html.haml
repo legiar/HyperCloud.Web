@@ -1,4 +1,4 @@
-= form_for(@site) do |f|
+= semantic_form_for @site do |f|
   - if @site.errors.any?
     #errorExplanation
       %h2= "#{pluralize(@site.errors.count, 'error')} prohibited this user from being saved:"
@@ -6,14 +6,9 @@
       - @site.errors.full_messages.each do |msg|
         %li= msg
   
-  .field
-    = f.label :name
-    %br
-    = f.text_field :name
-  .field
-    = f.label :customer
-    %br
-    = f.text_field :customer
+  = f.input :name
+  = f.input :customer, :as => :select
+  = f.input :slice, :as => :select
+  = f.input :database, :as => :select
 
-  .actions
-    = f.submit
+  = f.commit_button

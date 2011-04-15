@@ -1,4 +1,4 @@
-= form_for(@slice) do |f|
+= semantic_form_for @slice do |f|
   - if @slice.errors.any?
     #errorExplanation
       %h2= "#{pluralize(@slice.errors.count, 'error')} prohibited this user from being saved:"
@@ -6,14 +6,7 @@
       - @slice.errors.full_messages.each do |msg|
         %li= msg
   
-  .field
-    = f.label :name
-    %br
-    = f.text_field :name
-  .field
-    = f.label :host
-    %br
-    = f.text_field :host
-
-  .actions
-    = f.submit
+  = f.input :name
+  = f.input :host
+  = f.input :network_address, :label_method => :ip
+  = f.commit_button

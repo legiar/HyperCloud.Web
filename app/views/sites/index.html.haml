@@ -6,13 +6,17 @@
     %tr
       %th= Site.human_attribute_name :name
       %th= Site.human_attribute_name :customer
+      %th= Site.human_attribute_name :slice
+      %th= Site.human_attribute_name :database
       %th{:colspan => 3}= t 'actions'
   
   %tbody
     - for site in @sites
       %tr{ :class => cycle(:odd, :even) }
         %td= site.name
-        %td= site.customer
+        %td= site.customer.name if site.customer
+        %td= site.slice.name if site.slice
+        %td= site.database.name if site.database
         %td.action= link_to t('show'), site
         %td.action= link_to t('edit'), edit_site_path(site)
         %td.action= link_to t('destroy'), site, :confirm => t('are_you_sure'), :method => :delete
