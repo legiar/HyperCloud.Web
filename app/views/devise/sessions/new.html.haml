@@ -1,0 +1,26 @@
+#loginbox
+  #login-inner
+    = form_for resource, :as => resource_name, :url => session_path(resource_name) do |f|
+      %table(border="0" cellpadding="0" cellspacing="0")
+        - if resource.errors.any?
+          %tr
+            %th
+            %td Wrong username or password.
+        %tr
+          %th Username
+          %td= f.text_field :email, :class => "login-inp"
+        %tr
+          %th Password
+          %td= f.password_field :password, :class => "login-inp", :onfocus => "this.value=''"
+        - if devise_mapping.rememberable?
+          %tr
+            %th
+            %td(valign="top")
+              = f.check_box :remember_me, :class => "checkbox-size"
+              = f.label :remember_me
+        %tr
+          %th
+          %td= f.submit "Login", :class => "submit-login"
+  .clear
+  = link_to "Forgot your password?", new_password_path(resource_name), :class => "forgot-pwd"
+    

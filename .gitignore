@@ -5,5 +5,7 @@ tmp/
 *.lock
 config/database.yml
 public/javascript/all.js
-public/stylesheet/all.css
+public/stylesheet/all.cssa
+*-
+
 
