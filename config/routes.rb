@@ -18,5 +18,7 @@ HyperAdmin::Application.routes.draw do
     get "/logout" => "devise/sessions#destroy"
   end
 
+  get "dashboard/index"
+
   root :to => "dashboard#index"
 end

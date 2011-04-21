@@ -4,8 +4,8 @@
 
   %head
     %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
-    %link(rel="icon" href="./favicon.ico" type="image/x-icon")
-    %link(rel="shortcut icon" href="./favicon.ico" type="image/x-icon")
+    %link(rel="icon" href="/favicon.ico" type="image/x-icon")
+    %link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
     %title HyperAdmin
     = stylesheet_link_tag :all, :cache => 'all'
     = javascript_include_tag 'jquery', 'jquery-ui', 'rails', 'application', :cache => 'all'
@@ -49,7 +49,7 @@
                 <a href="" id="acc-stats">Statistics</a> 
             
           .nav
-            =# render "shared/menu"
+            = render "common/menu"
           .clear
       <div class="clear">
      
@@ -83,7 +83,7 @@
     .clear &nbsp;
         
     #footer
-      <!-- <div id="footer-pad">&nbsp;</div> -->
+      #footer-pad &nbsp;
       #footer-left
         Admin Skin &copy; Copyright Internet Dreams Ltd. <a href="">www.netdreams.co.uk</a>. All rights reserved.
       .clear &nbsp;
