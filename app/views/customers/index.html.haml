@@ -6,13 +6,17 @@
     %tr
       %th.check
       %th Customer
+      %th Databases
+      %th Sites
       %th.options
   
   %tbody
     - for customer in @customers
       %tr{:class => cycle(:odd, :even)}
-        %td= customer.id
-        %td= customer.name
+        %td= h customer.id
+        %td= h customer.name
+        %td= h customer.databases.collect{|database| database.name}.join(' ')
+        %td= h customer.sites.collect{|site| site.name}.join(' ')
         %td.options
           = link_to 'Show', customer
           = link_to 'Edit', edit_customer_path(customer)

@@ -1,18 +1,23 @@
-%h1= t('.title')
-%p= link_to t('.new_database'), new_database_path
+%h1 Databases
+%p= link_to 'New database', new_database_path
 
-%table
+%table.table
   %thead
     %tr
-      %th= Database.human_attribute_name :customer
-      %th= Database.human_attribute_name :name
-      %th{:colspan => 3}= t 'actions'
+      %th.check
+      %th Name
+      %th Customer
+      %th Site
+      %th.options
   
   %tbody
     - for database in @databases
-      %tr{ :class => cycle(:odd, :even) }
-        %td= database.customer
-        %td= database.name
-        %td.action= link_to t('show'), database
-        %td.action= link_to t('edit'), edit_database_path(database)
-        %td.action= link_to t('destroy'), database, :confirm => t('are_you_sure'), :method => :delete
+      %tr{:class => cycle(:odd, :even)}
+        %td= h database.id
+        %td= h database.name
+        %td= h database.customer.name if database.customer
+        %td= h database.site.name if database.site
+        %td.options
+          = link_to 'Show', database
+          = link_to 'Edit', edit_database_path(database)
+          = link_to 'Destroy', database, :confirm => 'Are you sure', :method => :delete

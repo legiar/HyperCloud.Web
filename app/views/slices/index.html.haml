@@ -17,14 +17,14 @@
   %tbody
     - for slice in @slices
       %tr{:class => cycle(:odd, :even)}
-        %td= slice.id
-        %td= slice.name
-        %td= slice.host.name if slice.host
-        %td= slice.active_host.name if slice.active_host
-        %td= slice.network_address.ip if slice.network_address
-        %td= slice.cpu
-        %td= slice.memory
-        %td= slice.sites.collect{|site| site.name}.join(' ')
+        %td= h slice.id
+        %td= h slice.name
+        %td= h slice.host.name if slice.host
+        %td= h slice.active_host.name if slice.active_host
+        %td= h slice.network_address.ip if slice.network_address
+        %td= h slice.cpu
+        %td= h slice.memory
+        %td= h slice.sites.collect{|site| site.name}.join(' ')
         %td.options
           = link_to '', slice, :class => "icon-3 info-tooltip"
           = link_to '', edit_slice_path(slice), :class => "icon-1 info-tooltip"
