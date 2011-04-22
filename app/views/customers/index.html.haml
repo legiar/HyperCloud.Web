@@ -1,16 +1,19 @@
-%h1= t('.title')
-%p= link_to t('.new_customer'), new_customer_path
+%h1 Customers
+%p= link_to 'New customer', new_customer_path
 
-%table
+%table.table
   %thead
     %tr
-      %th= Customer.human_attribute_name :name
-      %th{:colspan => 3}= t 'actions'
+      %th.check
+      %th Customer
+      %th.options
   
   %tbody
     - for customer in @customers
-      %tr{ :class => cycle(:odd, :even) }
+      %tr{:class => cycle(:odd, :even)}
+        %td= customer.id
         %td= customer.name
-        %td.action= link_to t('show'), customer
-        %td.action= link_to t('edit'), edit_customer_path(customer)
-        %td.action= link_to t('destroy'), customer, :confirm => t('are_you_sure'), :method => :delete
+        %td.options
+          = link_to 'Show', customer
+          = link_to 'Edit', edit_customer_path(customer)
+          = link_to 'Destroy', customer, :confirm => 'Are you sure', :method => :delete

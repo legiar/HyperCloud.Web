@@ -1,20 +1,31 @@
-%h1= t('.title')
-%p= link_to t('.new_slice'), new_slice_path
+%h1 Slices
+%p= link_to 'New slice', new_slice_path
 
-%table
+%table.table
   %thead
     %tr
-      %th= Slice.human_attribute_name :name
-      %th= Slice.human_attribute_name :host
-      %th= Slice.human_attribute_name :network_address
-      %th{:colspan => 3}= t 'actions'
+      %th.check
+      %th Name
+      %th Host
+      %th Active Host
+      %th IP
+      %th CPU
+      %th Memory
+      %th Sites
+      %th.options Options
   
   %tbody
     - for slice in @slices
-      %tr{ :class => cycle(:odd, :even) }
+      %tr{:class => cycle(:odd, :even)}
+        %td= slice.id
         %td= slice.name
-        %td= slice.host.name
-        %td= slice.network_address.ip
-        %td.action= link_to t('show'), slice
-        %td.action= link_to t('edit'), edit_slice_path(slice)
-        %td.action= link_to t('destroy'), slice, :confirm => t('are_you_sure'), :method => :delete
+        %td= slice.host.name if slice.host
+        %td= slice.active_host.name if slice.active_host
+        %td= slice.network_address.ip if slice.network_address
+        %td= slice.cpu
+        %td= slice.memory
+        %td= slice.sites.collect{|site| site.name}.join(' ')
+        %td.options
+          = link_to '', slice, :class => "icon-3 info-tooltip"
+          = link_to '', edit_slice_path(slice), :class => "icon-1 info-tooltip"
+          = link_to '', slice, :confirm => 'Are you sure', :method => :delete, :class => "icon-2 info-tooltip"
