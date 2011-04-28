@@ -1,5 +1,4 @@
 /* Chrome */
-*:focus {outline: none;}
 input:-webkit-autofill {color: #000; !important;}
 
 /* GENERAL --------------------------------------------------------*/ 
@@ -666,8 +665,12 @@ a:hover.action-delete  {
   text-indent: -3000px;
   width: 80px;
   }
+  
+/********************* Form *********************/  
+
 #id-form  {
-  }
+}
+
 .inp-form  {
   background: url(../images/forms/form_inp.gif) no-repeat;
   border: none;
@@ -676,7 +679,7 @@ a:hover.action-delete  {
  
   padding: 6px 6px 0 6px;
   width: 186px;
-  }
+}
   
 .inp-form-error  {
   background: url(../images/forms/form_inp_error.gif) no-repeat;
@@ -1288,10 +1291,6 @@ div.selectbox-wrapper3 ul li  {
   
   
   
-  
-  
- 
-  
 /* STYLED CHECKBOXES AND RADIOS -------------------------------------------- */  
 .ui-radio-state-disabled,
 .ui-radio-state-checked-disabled,
@@ -1340,7 +1339,7 @@ label  {
   position: absolute;
   }
   
-/*  LOGIN -------------------------------------------------------------------------------- */  
+/********************* Login *********************/  
 
 #login-bg  {
   background: url(../images/login/login_bg.jpg) no-repeat top center;

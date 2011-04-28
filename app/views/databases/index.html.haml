@@ -8,6 +8,7 @@
       %th Name
       %th Customer
       %th Site
+      %th Size
       %th.options
   
   %tbody
@@ -17,6 +18,7 @@
         %td= h database.name
         %td= h database.customer.name if database.customer
         %td= h database.site.name if database.site
+        %td= h database.size
         %td.options
           = link_to 'Show', database
           = link_to 'Edit', edit_database_path(database)
