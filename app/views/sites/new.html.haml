@@ -1,3 +1,24 @@
-%h1= t '.title'
-%p= link_to t('back'), sites_path
-= render 'form'
+- @title = "New site"
+
+%table
+  %tr
+    %td
+      #step-holder
+      = semantic_form_for @site do |f|
+        %table#id-form
+          - if @site.errors.any?
+            %tr
+              %td{:colspan => 3}
+                #errorExplanation
+                  %h2= "#{pluralize(@site.errors.count, 'error')} prohibited this user from being saved:"
+                  %ul
+                    - @site.errors.full_messages.each do |msg|
+                      %li= msg
+          %tr
+            %td
+              = f.input :name
+              = f.input :customer, :as => :select
+              = f.input :slice, :as => :select
+              = f.input :database, :as => :select
+
+              = f.commit_button

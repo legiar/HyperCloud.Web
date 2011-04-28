@@ -2,6 +2,8 @@
   #login-inner
     = form_for resource, :as => resource_name, :url => session_path(resource_name) do |f|
       %table(border="0" cellpadding="0" cellspacing="0")
+        = flash[:error]
+        = flash[:info]
         - if resource.errors.any?
           %tr
             %th

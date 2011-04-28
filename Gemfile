@@ -1,13 +1,15 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
-gem 'mysql2'
+gem 'rails', '3.0.7'
+gem 'mysql2', '= 0.2.6'
 gem 'devise'
 gem 'haml'
 gem 'formtastic', '~> 1.2.3'
 gem 'inherited_resources', '~> 1.2.1'
 gem 'unicorn'
 gem 'capistrano'
+gem 'delayed_job'
+gem 'cancan'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'

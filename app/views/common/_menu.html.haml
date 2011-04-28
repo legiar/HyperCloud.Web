@@ -1,7 +1,7 @@
 .table
   = menu_bar do |mainbar|
-    - mainbar.menu :home, 'Home', dashboard_index_path do |homebar|
-      - homebar.menu :overview, 'Overview', dashboard_index_path, :match_url => "^/(dashboard/index){0,1}$"
+    - mainbar.menu :home, 'Home', dashboard_path, :match_url => "^/$" do |homebar|
+      - homebar.menu :overview, 'Dashboard', dashboard_path
     - mainbar.menu :customers, 'Customers', customers_path
     - mainbar.menu :resources, 'Resources', '#' do |resourcesbar|
       - resourcesbar.menu :hosts, 'Hosts', hosts_path
@@ -9,4 +9,6 @@
       - resourcesbar.menu :slices, 'Slices', slices_path
       - resourcesbar.menu :databases, 'Databases', databases_path
       - resourcesbar.menu :sites, 'Sites', sites_path
+    - mainbar.menu :settings, 'Settings', '#', :match_url => "^/(settings|users|roles)" do |settingsbar|
+      - settingsbar.menu :users, 'Users', users_path
 .clear

@@ -12,13 +12,14 @@ HyperAdmin::Application.routes.draw do
   resources :customers
 
   resources :hosts
-
+  
   devise_for :users do
     get "/login" => "devise/sessions#new"
     get "/logout" => "devise/sessions#destroy"
   end
+  resources :users
 
-  get "dashboard/index"
+  get "dashboard", :controller => :dashboard, :action => :index
 
   root :to => "dashboard#index"
 end
