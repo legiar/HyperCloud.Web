@@ -1,0 +1,16 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), products_path
+  = link_to t('edit'), edit_product_path(@product)
+
+%dl
+  %dt= Product.human_attribute_name :name
+  %dd= @product.name
+  %dt= Product.human_attribute_name :version
+  %dd= @product.version
+  %dt= Product.human_attribute_name :published
+  %dd= @product.published
+  %dt= Product.human_attribute_name :demo
+  %dd= @product.demo
+  %dt= Product.human_attribute_name :release
+  %dd= @product.release

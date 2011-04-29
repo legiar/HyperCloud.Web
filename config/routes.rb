@@ -1,4 +1,6 @@
 HyperAdmin::Application.routes.draw do
+  resources :products
+
   resources :network_addresses
 
   resources :networks

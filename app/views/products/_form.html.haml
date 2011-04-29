@@ -1,0 +1,14 @@
+= semantic_form_for @product do |f|
+  /- if @product.errors.any?
+  /  #errorExplanation
+  /    %h2= "#{pluralize(@product.errors.count, 'error')} prohibited this user from being saved:"
+  /    %ul
+  /    - @product.errors.full_messages.each do |msg|
+  /      %li= msg
+  
+  = f.input :name
+  = f.input :version
+  = f.input :published
+  = f.input :demo
+  = f.input :release
+  = f.submit :class => 'create'

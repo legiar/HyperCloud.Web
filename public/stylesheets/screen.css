@@ -1493,3 +1493,90 @@ a:hover.back-login  {
 .submit-login:hover  {
   background: url(../images/login/submit_login.gif) no-repeat 0 -29px;
   }
+
+/********************* Form *********************/  
+  
+form.formtastic li {
+  position: relative;
+  display: block;
+  clear: both;
+  height: 37px;
+}
+  
+form.formtastic label {
+  position: absolute;
+  /*float: left;*/
+  display: block;
+  line-height: 28px;
+  min-width: 130px;
+  padding: 0 0 10px 0;
+  text-align: left;
+  width: 130px;
+  font-weight: bold;
+  color: #333;
+}
+
+form.formtastic label abbr {
+  color: red;
+}
+
+form.formtastic input {
+  position: absolute;
+  left: 130px;
+  display: block;
+  background: url(../images/forms/form_inp.gif) no-repeat;
+  border: none;
+  color: #393939;
+  height: 25px;
+  padding: 6px 6px 0 6px;
+  width: 187px;
+}
+
+form.formtastic label input {
+  width: 20px;
+}
+
+form.formtastic select {
+  position: absolute;
+  left: 130px;
+  background: url(../images/forms/form_select.gif) left no-repeat;
+  border: none;
+  color: #393939;
+  cursor: pointer;
+  height: 25px;
+  padding: 10px 10px 0 10px;
+  width: 187px;
+}
+
+form.formtastic input.create {
+  background: url(../images/forms/form_submit.gif) no-repeat;
+  cursor: pointer;
+  height: 30px;
+  margin: 0 4px 0 0;
+  padding: 0;
+  text-indent: -3000px;
+  width: 80px;  
+}
+
+form.formtastic li.error input {
+  background: url(../images/forms/form_inp_error.gif) no-repeat;
+}
+
+form.formtastic p.inline-errors-left {
+  position: absolute;
+  left: 400px;
+  width: 13px;
+  background: url(../images/forms/error_left.gif) no-repeat;
+  height: 25px;
+  padding: 7px 10px 0 4px;
+}
+
+form.formtastic p.inline-errors {
+  position: absolute;
+  left: 413px;
+  padding: 7px 10px 0 4px;
+  color: white;
+  line-height: 14px;
+  height: 25px;
+  background: url(../images/forms/error_right.gif) right no-repeat;
+}

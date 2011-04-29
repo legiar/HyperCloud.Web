@@ -20,11 +20,11 @@
 # Should all fields be considered "required" by default?
 # Rails 2 only, ignored by Rails 3 because it will never fall back to this default.
 # Defaults to true.
-# Formtastic::SemanticFormBuilder.all_fields_required_by_default = true
+Formtastic::SemanticFormBuilder.all_fields_required_by_default = false
 
 # Should select fields have a blank option/prompt by default?
 # Defaults to true.
-# Formtastic::SemanticFormBuilder.include_blank_for_select_by_default = true
+Formtastic::SemanticFormBuilder.include_blank_for_select_by_default = false
 
 # Set the string that will be appended to the labels/fieldsets which are required
 # It accepts string or procs and the default is a localized version of
@@ -43,9 +43,9 @@
 # Formtastic uses the following classes as default for hints, inline_errors and error list
 
 # If you override the class here, please ensure to override it in your formtastic_changes.css stylesheet as well
-# Formtastic::SemanticFormBuilder.default_hint_class = "inline-hints"
-# Formtastic::SemanticFormBuilder.default_inline_error_class = "inline-errors"
-# Formtastic::SemanticFormBuilder.default_error_list_class = "errors"
+Formtastic::SemanticFormBuilder.default_hint_class = "inline-hints"
+Formtastic::SemanticFormBuilder.default_inline_error_class = "inline-errors"
+Formtastic::SemanticFormBuilder.default_error_list_class = "errors"
 
 # Set the method to call on label text to transform or format it for human-friendly
 # reading when formtastic is used without object. Defaults to :humanize.
@@ -62,7 +62,7 @@
 # errors messages. Sometimes you want the hints to be rendered first than
 # the input, in the following order: hints, input and errors. You can
 # customize it doing just as below:
-# Formtastic::SemanticFormBuilder.inline_order = [:input, :hints, :errors]
+Formtastic::SemanticFormBuilder.inline_order = [:input, :hints, :errors]
 
 # Additionally, you can customize the order for specific types of inputs.
 # This is configured on a type basis and if a type is not found it will
