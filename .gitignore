@@ -5,7 +5,8 @@ tmp/
 *.lock
 config/database.yml
 public/javascript/all.js
-public/stylesheet/all.cssa
+public/stylesheet/all.css
 *-
+db/schema.rb
 
 
