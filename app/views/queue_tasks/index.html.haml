@@ -1,0 +1,22 @@
+%h1= t('.title')
+%p= link_to t('.new_queue_task'), new_queue_task_path
+
+%table
+  %thead
+    %tr
+      %th= QueueTask.human_attribute_name :queue_job
+      %th= QueueTask.human_attribute_name :task
+      %th= QueueTask.human_attribute_name :status
+      %th= QueueTask.human_attribute_name :completed_at
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for queue_task in @queue_tasks
+      %tr{ :class => cycle(:odd, :even) }
+        %td= queue_task.queue_job
+        %td= queue_task.task
+        %td= queue_task.status
+        %td= queue_task.completed_at
+        %td.action= link_to t('show'), queue_task
+        %td.action= link_to t('edit'), edit_queue_task_path(queue_task)
+        %td.action= link_to t('destroy'), queue_task, :confirm => t('are_you_sure'), :method => :delete

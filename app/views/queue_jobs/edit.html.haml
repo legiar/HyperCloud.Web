@@ -1,0 +1,5 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), queue_jobs_path
+  = link_to t('show'), @queue_job
+= render 'form'

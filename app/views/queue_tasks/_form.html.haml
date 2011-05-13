@@ -1,0 +1,27 @@
+= form_for(@queue_task) do |f|
+  - if @queue_task.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@queue_task.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @queue_task.errors.full_messages.each do |msg|
+        %li= msg
+  
+  .field
+    = f.label :queue_job
+    %br
+    = f.text_field :queue_job
+  .field
+    = f.label :task
+    %br
+    = f.text_field :task
+  .field
+    = f.label :status
+    %br
+    = f.text_field :status
+  .field
+    = f.label :completed_at
+    %br
+    = f.datetime_select :completed_at
+
+  .actions
+    = f.submit

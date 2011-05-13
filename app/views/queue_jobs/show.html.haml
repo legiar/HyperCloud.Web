@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), queue_jobs_path
+  = link_to t('edit'), edit_queue_job_path(@queue_job)
+
+%dl
+  %dt= QueueJob.human_attribute_name :job
+  %dd= @queue_job.job
+  %dt= QueueJob.human_attribute_name :status
+  %dd= @queue_job.status
+  %dt= QueueJob.human_attribute_name :completed_at
+  %dd= @queue_job.completed_at

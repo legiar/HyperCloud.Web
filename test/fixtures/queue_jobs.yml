@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  job: 
+  status: 1
+  completed_at: 
+
+two:
+  job: 
+  status: 1
+  completed_at: 

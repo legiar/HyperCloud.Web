@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  queue_job: 
+  task: 
+  status: 1
+  completed_at: 2011-05-13 17:01:21
+
+two:
+  queue_job: 
+  task: 
+  status: 1
+  completed_at: 2011-05-13 17:01:21

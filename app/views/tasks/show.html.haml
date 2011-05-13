@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), tasks_path
+  = link_to t('edit'), edit_task_path(@task)
+
+%dl
+  %dt= Task.human_attribute_name :name
+  %dd= @task.name
+  %dt= Task.human_attribute_name :job
+  %dd= @task.job
+  %dt= Task.human_attribute_name :script
+  %dd= @task.script
