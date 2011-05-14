@@ -10,6 +10,7 @@ gem 'unicorn'
 gem 'capistrano'
 gem 'delayed_job'
 gem 'cancan'
+gem "cocoon"
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
@@ -26,4 +27,5 @@ gem 'cancan'
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'hpricot'
+  #gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
 end
