@@ -1,16 +1,17 @@
-%h1= t('.title')
-%p= link_to t('.new_job'), new_job_path
+- @title = "Jobs"
+%p= link_to "New job", new_job_path
 
-%table
+%table.table
   %thead
     %tr
-      %th= Job.human_attribute_name :name
-      %th{:colspan => 3}= t 'actions'
+      = table_columns %w(name)
   
   %tbody
     - for job in @jobs
       %tr{ :class => cycle(:odd, :even) }
+        %td= job.id
         %td= job.name
-        %td.action= link_to t('show'), job
-        %td.action= link_to t('edit'), edit_job_path(job)
-        %td.action= link_to t('destroy'), job, :confirm => t('are_you_sure'), :method => :delete
+        %td.action
+          = link_to 'Show', job
+          = link_to 'Edit', edit_job_path(job)
+          = link_to 'Destroy', job, :confirm => 'Are you sure', :method => :delete

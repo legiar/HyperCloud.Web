@@ -1,3 +1,7 @@
-%h1= t '.title'
-%p= link_to t('back'), jobs_path
-= render 'form'
+- @title = "New job"
+%p= link_to "back", jobs_path
+
+%table
+  %tr
+    %td
+      = render 'form'

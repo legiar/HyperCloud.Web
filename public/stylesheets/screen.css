@@ -1,5 +1,8 @@
 /* Chrome */
-input:-webkit-autofill {color: #000; !important;}
+input:-webkit-autofill {
+  color: #000 !important;
+  background-color: transparent !important;
+}
 
 /* GENERAL --------------------------------------------------------*/ 
 .fr  {
@@ -283,6 +286,7 @@ h3  {
 #message-green  {
   margin-bottom: 5px;
   }
+  
 .green-left  {
   background: url(../images/table/message_green.gif) top left no-repeat;
   color: #6da827;
@@ -290,13 +294,16 @@ h3  {
   font-weight: bold;
   line-height: 12px;
   padding: 0 0 0 20px;
-  }
+  vertical-align: middle;
+}
+
 .green-left a  {
   color: #6da827;
   font-family: Tahoma;
   font-weight: normal;
   text-decoration: underline;
-  }
+}
+
 .green-right a  {
   cursor: pointer;
   }
@@ -425,7 +432,7 @@ a:hover.icon-5  {
 	border-left: 0px !important;
 }
 
-.table th.options  {
+.table th.options, .table th.action  {
 	background: url(../images/table/table_header_options.jpg) no-repeat;
 	min-width: 221px;
 	width: 221px;
@@ -451,7 +458,7 @@ a:hover.icon-5  {
 	padding: 10px 0 10px 10px;
 }
 
-.table td.options  {
+.table td.options, .table td.action  {
 	padding: 0 0 0 10px;
 	width: 210px;
 }
@@ -1502,6 +1509,10 @@ form.formtastic li {
   clear: both;
   height: 37px;
 }
+
+form.formtastic li.fields {
+  height: auto;
+}
   
 form.formtastic label {
   position: absolute;
@@ -1540,15 +1551,15 @@ form.formtastic select {
   position: absolute;
   left: 130px;
   background: url(../images/forms/form_select.gif) left no-repeat;
-  border: none;
+  /*border: none;*/
   color: #393939;
   cursor: pointer;
   height: 25px;
-  padding: 10px 10px 0 10px;
+  /*padding: 10px 10px 0 10px;*/
   width: 187px;
 }
 
-form.formtastic input.create {
+form.formtastic input.create, form.formtastic input.update {
   background: url(../images/forms/form_submit.gif) no-repeat;
   cursor: pointer;
   height: 30px;

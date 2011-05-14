@@ -1,5 +1,9 @@
-%h1= t '.title'
+- @title = "Edit job"
 %p
-  = link_to t('back'), jobs_path
-  = link_to t('show'), @job
-= render 'form'
+  = link_to 'back', jobs_path
+  = link_to 'show', @job
+
+%table
+  %tr
+    %td
+      = render 'form'

@@ -1,5 +1,11 @@
-%h1= t '.title'
+- @title = "Edit database"
+
 %p
-  = link_to t('back'), databases_path
-  = link_to t('show'), @database
-= render 'form'
+  = link_to "Back", databases_path
+  = link_to "Show", @database
+
+%table
+  %tr
+    %td
+      #step-holder
+      = render "form"

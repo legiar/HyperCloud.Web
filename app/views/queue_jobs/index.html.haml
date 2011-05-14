@@ -1,20 +1,20 @@
-%h1= t('.title')
-%p= link_to t('.new_queue_job'), new_queue_job_path
+- @title = "Queue Jobs"
+/%p=# link_to t('.new_queue_job'), new_queue_job_path
 
-%table
+%table.table
   %thead
     %tr
-      %th= QueueJob.human_attribute_name :job
-      %th= QueueJob.human_attribute_name :status
-      %th= QueueJob.human_attribute_name :completed_at
-      %th{:colspan => 3}= t 'actions'
+      = table_columns %w(created_at job status completed_at)
   
   %tbody
     - for queue_job in @queue_jobs
       %tr{ :class => cycle(:odd, :even) }
-        %td= queue_job.job
+        %td= queue_job.id
+        %td= queue_job.created_at
+        %td= queue_job.job.name
         %td= queue_job.status
         %td= queue_job.completed_at
-        %td.action= link_to t('show'), queue_job
-        %td.action= link_to t('edit'), edit_queue_job_path(queue_job)
-        %td.action= link_to t('destroy'), queue_job, :confirm => t('are_you_sure'), :method => :delete
+        %td.action
+          = link_to "Show", queue_job
+          = link_to 'Edit', edit_queue_job_path(queue_job)
+          = link_to 'Destroy', queue_job, :confirm => 'Are you sure', :method => :delete

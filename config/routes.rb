@@ -1,4 +1,6 @@
 HyperAdmin::Application.routes.draw do
+  resources :conditions
+
   resources :queue_tasks
   resources :queue_jobs
   resources :tasks

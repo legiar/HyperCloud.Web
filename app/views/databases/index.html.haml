@@ -1,25 +1,22 @@
-%h1 Databases
+- @title = "Databases"
 %p= link_to 'New database', new_database_path
 
 %table.table
   %thead
     %tr
-      %th.check
-      %th Name
-      %th Customer
-      %th Site
-      %th Size
-      %th.options
+      = table_columns %w(name login password customer site size options)
   
   %tbody
     - for database in @databases
       %tr{:class => cycle(:odd, :even)}
-        %td= h database.id
-        %td= h database.name
-        %td= h database.customer.name if database.customer
-        %td= h database.site.name if database.site
-        %td= h database.size
+        %td= database.id
+        %td= database.name
+        %td= database.login
+        %td= database.password
+        %td= database.customer.name if database.customer
+        %td= database.site.name if database.site
+        %td= database.size
         %td.options
-          = link_to 'Show', database
-          = link_to 'Edit', edit_database_path(database)
-          = link_to 'Destroy', database, :confirm => 'Are you sure', :method => :delete
+          = link_to '', database, :class => "icon-3 info-tooltip"
+          = link_to '', edit_database_path(database), :class => "icon-1 info-tooltip"
+          = link_to '', database, :confirm => 'Are you sure', :method => :delete, :class => "icon-2 info-tooltip"

@@ -10,6 +10,9 @@
       - resourcesbar.menu :products, 'Products', products_path
       - resourcesbar.menu :databases, 'Databases', databases_path
       - resourcesbar.menu :sites, 'Sites', sites_path
-    - mainbar.menu :settings, 'Settings', '#', :match_url => "^/(settings|users|roles)" do |settingsbar|
+    - mainbar.menu :settings, 'Settings', '#', :match_url => "^/(settings|users|roles|jobs|tasks|queue)" do |settingsbar|
       - settingsbar.menu :users, 'Users', users_path
+      - settingsbar.menu :queue, 'Queue Jobs', queue_jobs_path
+      - settingsbar.menu :jobs, 'Jobs', jobs_path
+      - settingsbar.menu :tasks, "Tasks", tasks_path
 .clear

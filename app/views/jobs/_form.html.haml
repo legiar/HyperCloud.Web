@@ -1,15 +1,20 @@
-= form_for(@job) do |f|
-  - if @job.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@job.errors.count, 'error')} prohibited this user from being saved:"
-      %ul
-      - @job.errors.full_messages.each do |msg|
-        %li= msg
+= semantic_form_for(@job) do |f|
+  %table#id-form
+    %tr
+      %td
+        - if @job.errors.any?
+          #errorExplanation
+            %h2= "#{pluralize(@job.errors.count, 'error')} prohibited this user from being saved:"
+            %ul
+            - @job.errors.full_messages.each do |msg|
+              %li= msg
   
-  .field
-    = f.label :name
-    %br
-    = f.text_field :name
-
-  .actions
-    = f.submit
+      %td
+        = f.input :name
+        %h3 Conditions
+        %li#conditions.fields
+          = f.semantic_fields_for :conditions do |condition|
+            = render 'condition_fields', :f => condition
+          .links
+            = link_to_add_association 'add condition', f, :conditions
+        = f.commit_button

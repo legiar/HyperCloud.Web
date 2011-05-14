@@ -7,20 +7,24 @@ class QueueJob < ActiveRecord::Base
   scope :active, where(:status => 2)
   scope :failed, where(:status => 3)
 
+  after_initialize do
+    self.status = 0
+  end
+
   def completed?
-    self.status == 1
+    #self.status == 1
   end
 
   def active?
-    self.status == 2
+    #self.status == 2
   end
 
   def failed?
-    self.status == 3
+    #self.status == 3
   end
 
   def status
-    case self.status
+    case read_attribute(:status)
       when 0 then "Not completed"
       when 1 then "Completed"
       when 2 then "Active"

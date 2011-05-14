@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), conditions_path
+  = link_to t('edit'), edit_condition_path(@condition)
+
+%dl
+  %dt= Condition.human_attribute_name :event_type
+  %dd= @condition.event_type
+  %dt= Condition.human_attribute_name :model
+  %dd= @condition.model
+  %dt= Condition.human_attribute_name :fields
+  %dd= @condition.fields
