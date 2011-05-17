@@ -4,13 +4,14 @@
 %table.table
   %thead
     %tr
-      = table_columns %w(name)
+      = table_columns %w(name, params)
   
   %tbody
     - for job in @jobs
       %tr{ :class => cycle(:odd, :even) }
         %td= job.id
         %td= job.name
+        %td= job.params
         %td.action
           = link_to 'Show', job
           = link_to 'Edit', edit_job_path(job)

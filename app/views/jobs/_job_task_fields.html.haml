@@ -1,0 +1,6 @@
+%span.nested-fields
+  = f.input :task
+  = link_to_remove_association "Remove condition", f
+
+  :javascript
+    $("select").combobox();

@@ -2,7 +2,14 @@ HyperAdmin::Application.routes.draw do
   resources :conditions
 
   resources :queue_tasks
-  resources :queue_jobs
+  resources :queue_jobs do
+    collection do
+      post "reorder"
+    end
+    member do
+      get 'cancel'
+    end
+  end
   resources :tasks
   resources :jobs
   resources :products

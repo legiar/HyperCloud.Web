@@ -1,5 +1,8 @@
 %span.nested-fields
   = f.input :model
   = f.input :fields
-  = f.input :event_type
+  = f.input :event_type, :as => :select, :collection => {"Create" => 0, "Update" => 1, "Destroy" => 2}
   = link_to_remove_association "remove condition", f
+
+  :javascript
+    $("select").combobox();

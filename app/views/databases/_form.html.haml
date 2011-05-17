@@ -1,21 +1,16 @@
 
 = semantic_form_for(@database) do |f|
-  %table#id-form
-    - if @database.errors.any?
-      %tr
-        %td{:colspan => 3}
-          #errorExplanation
-            %h2= "#{pluralize(@database.errors.count, 'error')} prohibited this user from being saved:"
-            %ul
-            - @database.errors.full_messages.each do |msg|
-              %li= msg
+  - if @database.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@database.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @database.errors.full_messages.each do |msg|
+        %li= msg
   
-    %tr
-      %td
-        = f.input :customer
-        = f.input :name
-        = f.input :login
-        = f.input :password, :as => :string
-        = f.input :certificate_name
-        = f.input :certificate_password, :as => :string
-        = f.commit_button
+  = f.input :customer
+  = f.input :name
+  = f.input :login
+  = f.input :password, :as => :string
+  = f.input :certificate_name
+  = f.input :certificate_password, :as => :string
+  = f.commit_button

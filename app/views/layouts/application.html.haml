@@ -7,15 +7,15 @@
     %link(rel="icon" href="/favicon.ico" type="image/x-icon")
     %link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
     %title HyperAdmin
-    = stylesheet_link_tag 'reset', 'formtastic', 'screen', :cache => 'all'
-    = javascript_include_tag 'jquery', 'jquery-ui', 'rails', :cocoon, 'application', :cache => 'all'
+    = stylesheet_link_tag "reset", "formtastic", "jquery-ui", "screen", :cache => 'all'
+    = javascript_include_tag "jquery", "jquery-ui", "rails", "cocoon", "jquery-combobox", "application", :cache => "all"
     = csrf_meta_tag
 
   %body
     #page-top-outer
       #page-top
         #logo
-          <a href=""><img src="/images/shared/logo.png" width="156" height="40" alt="" /></a>
+          = link_to image_tag("shared/logo.png", :size => "156x40", :alt => ""), root_path
       
         #top-search
           =# render "shared/search"
@@ -85,5 +85,6 @@
     #footer
       #footer-pad &nbsp;
       #footer-left
-        Admin Skin &copy; Copyright Internet Dreams Ltd. <a href="">www.netdreams.co.uk</a>. All rights reserved.
+        HyperAdmin &copy; Copyright LegiarNET 2011. All rights reserved.
       .clear &nbsp;
+      

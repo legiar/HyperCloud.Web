@@ -4,18 +4,16 @@
 %table.table
   %thead
     %tr
-      %th
-      %th= Task.human_attribute_name :name
-      %th= Task.human_attribute_name :job
-      %th= Task.human_attribute_name :script
-      %th{:colspan => 3}= t 'actions'
+      = table_columns %w(name params script)
   
   %tbody
     - for task in @tasks
       %tr{ :class => cycle(:odd, :even) }
+        %td= task.id
         %td= task.name
-        %td= task.job
+        %td= task.params
         %td= task.script
-        %td.action= link_to t('show'), task
-        %td.action= link_to t('edit'), edit_task_path(task)
-        %td.action= link_to t('destroy'), task, :confirm => t('are_you_sure'), :method => :delete
+        %td.action
+          = link_to 'Show', task
+          = link_to 'Edit', edit_task_path(task)
+          = link_to 'Destroy', task, :confirm => 'Are you sure', :method => :delete

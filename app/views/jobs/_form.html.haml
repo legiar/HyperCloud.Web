@@ -1,20 +1,26 @@
 = semantic_form_for(@job) do |f|
-  %table#id-form
-    %tr
-      %td
-        - if @job.errors.any?
-          #errorExplanation
-            %h2= "#{pluralize(@job.errors.count, 'error')} prohibited this user from being saved:"
-            %ul
-            - @job.errors.full_messages.each do |msg|
-              %li= msg
+  - if @job.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@job.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @job.errors.full_messages.each do |msg|
+        %li= msg
   
-      %td
-        = f.input :name
-        %h3 Conditions
-        %li#conditions.fields
-          = f.semantic_fields_for :conditions do |condition|
-            = render 'condition_fields', :f => condition
-          .links
-            = link_to_add_association 'add condition', f, :conditions
-        = f.commit_button
+  = f.input :name
+  = f.input :params
+
+  %li#conditions.fields
+    %h3 Conditions
+    = f.semantic_fields_for :conditions do |condition|
+      = render 'condition_fields', :f => condition
+    .links
+      = link_to_add_association 'Add condition', f, :conditions
+
+  %li#tasks.fields
+    %h3 Tasks
+    = f.semantic_fields_for :job_tasks do |task|
+      = render 'job_task_fields', :f => task
+    .links
+      = link_to_add_association 'Add task', f, :job_tasks
+
+  = f.commit_button

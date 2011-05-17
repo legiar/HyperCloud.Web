@@ -1,20 +1,37 @@
-- @title = "Queue Jobs"
-/%p=# link_to t('.new_queue_job'), new_queue_job_path
+- @title = "Queued Jobs"
 
-%table.table
+%table.table.sortable{"data-reorder-url" => reorder_queue_jobs_path}
   %thead
     %tr
-      = table_columns %w(created_at job status completed_at)
+      = table_columns %w(job status created_at completed_at position)
   
   %tbody
-    - for queue_job in @queue_jobs
-      %tr{ :class => cycle(:odd, :even) }
-        %td= queue_job.id
-        %td= queue_job.created_at
-        %td= queue_job.job.name
-        %td= queue_job.status
-        %td= queue_job.completed_at
-        %td.action
-          = link_to "Show", queue_job
-          = link_to 'Edit', edit_queue_job_path(queue_job)
-          = link_to 'Destroy', queue_job, :confirm => 'Are you sure', :method => :delete
+    - unless @queue_jobs.empty?
+      - @queue_jobs.each_with_index do |queue_job, index|
+        /%tr[queue_job]{:class => cycle(:odd, :even), :position => index}
+        %tr[queue_job]{:class => queue_job.active? ? "active" : ""}
+          %td= queue_job.id
+          %td= queue_job.job.name
+          %td= queue_job.status
+          %td= queue_job.created_at
+          %td= queue_job.completed_at
+          %td= queue_job.position
+          %td.action
+            - if queue_job.active?
+              = link_to "Stop", "#", :confirm => "Are you sure?"
+            - else
+              = link_to 'Cancel', cancel_queue_job_path(queue_job), :confirm => "Are you sure?"
+        - if queue_job.active?
+          - queue_job.queue_tasks.order(:position).each do |queue_task|
+            %tr[queue_task]
+              %td &nbsp;
+              %td= queue_task.task.name
+              %td= queue_task.status
+              %td= queue_task.created_at
+              %td= queue_task.completed_at
+              %td= queue_task.position
+              %td.action
+                = link_to 'Cancel', '#'
+    - else
+      %tr
+        %td{:colspan => 7, :style => "text-align: center"} Job Queue is empty

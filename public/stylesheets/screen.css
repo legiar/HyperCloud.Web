@@ -46,8 +46,6 @@ body  {
   background: #fff;
   color: #393939;
   font-family: Arial;
-  font-size: 0px;
-  line-height: 0;
 }
 
 #page-top-outer  {
@@ -224,6 +222,7 @@ h3  {
   font-family: Tahoma;
   font-weight: bold;
   padding: 0 0 0 20px;
+  vertical-align: middle;
 }
 .yellow-left a  {
   color: #e79300;
@@ -248,6 +247,7 @@ h3  {
   font-family: Tahoma;
   font-weight: bold;
   padding: 0 0 0 20px;
+  vertical-align: middle;
 }
 .blue-left a  {
   color: #2e74b2;
@@ -270,6 +270,7 @@ h3  {
   font-family: Tahoma;
   font-weight: bold;
   padding: 0 0 0 20px;
+  vertical-align: middle;
   }
 .red-left a  {
   color: #ce2700;
@@ -1060,6 +1061,9 @@ a#acc-stats  {
 .ui-menubar-menu-2.ui-menubar-selected span {
   color: #94b52c;
 }
+
+.ui-menubar.ui-state-active, .ui-menubar-menu.ui-state-active {border: none; background: transparent;}
+.ui-menubar.ui-state-active a, .ui-menubar-menu.ui-state-active a {color: #fff;}
   
 .nav-divider  {
   background: url(../images/shared/nav/divider.jpg) top no-repeat;
@@ -1504,21 +1508,19 @@ a:hover.back-login  {
 /********************* Form *********************/  
   
 form.formtastic li {
-  position: relative;
   display: block;
-  clear: both;
-  height: 37px;
+  position: relative;
+  /*clear: both;*/
+  /*height: 37px;*/
+  vertical-align: top;
 }
 
 form.formtastic li.fields {
-  height: auto;
+  /*height: auto;*/
 }
   
 form.formtastic label {
-  position: absolute;
-  /*float: left;*/
-  display: block;
-  line-height: 28px;
+  display: inline-block;
   min-width: 130px;
   padding: 0 0 10px 0;
   text-align: left;
@@ -1532,9 +1534,6 @@ form.formtastic label abbr {
 }
 
 form.formtastic input {
-  position: absolute;
-  left: 130px;
-  display: block;
   background: url(../images/forms/form_inp.gif) no-repeat;
   border: none;
   color: #393939;
@@ -1544,19 +1543,43 @@ form.formtastic input {
 }
 
 form.formtastic label input {
-  width: 20px;
+  /*width: 20px;*/
+}
+
+form.formtastic input.ui-combobox {
+  background: url(../images/forms/form_select.gif) left no-repeat;
+  cursor: pointer;
+}
+
+.ui-autocomplete {
+  max-height: 300px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+  /* add padding to account for vertical scrollbar */
+  padding-right: 20px;
 }
 
 form.formtastic select {
-  position: absolute;
-  left: 130px;
   background: url(../images/forms/form_select.gif) left no-repeat;
-  /*border: none;*/
+  border: none;
   color: #393939;
   cursor: pointer;
   height: 25px;
-  /*padding: 10px 10px 0 10px;*/
+  padding: 10px 10px 0 10px;
   width: 187px;
+}
+
+form.formtastic textarea {
+  /*background: url(../images/forms/form_textarea.gif) no-repeat;
+  border: none;*/
+  color: #393939;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 97px;
+  overflow: auto;
+  padding: 6px 6px 0 6px;
+  width: 378px;
 }
 
 form.formtastic input.create, form.formtastic input.update {
@@ -1566,7 +1589,7 @@ form.formtastic input.create, form.formtastic input.update {
   margin: 0 4px 0 0;
   padding: 0;
   text-indent: -3000px;
-  width: 80px;  
+  width: 80px;
 }
 
 form.formtastic li.error input {
@@ -1574,20 +1597,23 @@ form.formtastic li.error input {
 }
 
 form.formtastic p.inline-errors-left {
-  position: absolute;
-  left: 400px;
-  width: 13px;
+  display: inline-block;
   background: url(../images/forms/error_left.gif) no-repeat;
   height: 25px;
   padding: 7px 10px 0 4px;
 }
 
 form.formtastic p.inline-errors {
-  position: absolute;
-  left: 413px;
+  display: inline-block;
   padding: 7px 10px 0 4px;
   color: white;
-  line-height: 14px;
   height: 25px;
   background: url(../images/forms/error_right.gif) right no-repeat;
+}
+
+
+
+.table tr.queue_task td {
+	border: 1px solid #d2d2d2;
+	padding: 5px 0 5px 10px;
 }
