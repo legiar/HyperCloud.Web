@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 #set :git_enable_submodules, 1
 
 role :app, "zabbix.bpmonline.com"
-role :db, "zabbix.bpmonline.com", :primary => true
+#role :db, "zabbix.bpmonline.com", :primary => true
 
 set :user, "webmaster"
 set :use_sudo, false
@@ -45,6 +45,8 @@ end
 
 namespace :config do
   task :symlink_app_config do
+    run "ln -sf #{deploy_to}/shared/config/database.yml #{current_release}/config/database.yml"
+    run "ln -sf #{deploy_to}/shared/menu_helper #{current_release}/vendor/plugins/menu_helper"
   end
 end
 

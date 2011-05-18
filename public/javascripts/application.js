@@ -28,6 +28,7 @@ $(document).ready(function () {
 	$("p.inline-errors").before('<p class="inline-errors-left">&nbsp;</p>');
 
 	$("select").combobox();
+	$('input[type=checkbox]').checkbox('toggle');
 	
 	$(".sortable").sortable({
 		items: "tr.queue_job:not(.active)",
