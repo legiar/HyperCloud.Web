@@ -1,0 +1,19 @@
+!!! XML
+!!! Strict
+%html(xmlns="http://www.w3.org/1999/xhtml")
+
+  %head
+    %meta(http-equiv="Content-Type" content="text/html; charset=UTF-8")
+    %title HyperAdmim
+
+  %body
+    %h2 Состояние системы мониторинга площадки BPMonline OnDemand
+    - @status.each do |host, services|
+      %h4 Узел системы мониторинга '#{host}', размещенный в '#{Host.find_by_name(host).location}'
+      - services.each do |service, status|
+        %h5
+          Сервис '#{service}':&nbsp;
+          - color = status ? "green" : "red"
+          - text_status = status ? "OK" : "FAIL"
+          %span{:style => "color: #{color}"}= text_status
+    
