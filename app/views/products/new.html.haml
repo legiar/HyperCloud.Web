@@ -1,3 +1,6 @@
 - @title = 'New Product'
 %p= link_to t('back'), products_path
-= render 'form'
+%table
+  %tr
+    %td
+      = render 'form'

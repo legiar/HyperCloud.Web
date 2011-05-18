@@ -3,8 +3,8 @@ class QueueTask < ActiveRecord::Base
   belongs_to :task
 
   scope :current, where(:status => 0)
-  scope :completed, where(:status => 1)
-  scope :active, where(:status => 2)
+  scope :active, where(:status => 1)
+  scope :completed, where(:status => 2)
   scope :failed, where(:status => 3)
   scope :canceled, where(:status => 4)
 
@@ -14,11 +14,15 @@ class QueueTask < ActiveRecord::Base
     end
   end
 
-  def completed?
-    status_code == 1
+  def current?
+    status_code == 0
   end
 
   def active?
+    status_code == 1
+  end
+
+  def completed?
     status_code == 2
   end
 
@@ -40,8 +44,8 @@ class QueueTask < ActiveRecord::Base
   def status
     case status_code
       when 0 then "Not completed"
-      when 1 then "Completed"
-      when 2 then "Active"
+      when 1 then "Active"
+      when 2 then "Completed"
       when 3 then "Failed"
       when 4 then "Canceled"
     end

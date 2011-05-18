@@ -2,9 +2,9 @@ class QueueJob < ActiveRecord::Base
   belongs_to :job
   has_many :queue_tasks
 
-  scope :current, where("status = ? or status = ?", 0, 2).order("status desc")
-  scope :completed, where(:status => 1)
-  scope :active, where(:status => 2)
+  scope :current, where("status < 2").order("status desc")
+  scope :active, where(:status => 1)
+  scope :completed, where(:status => 2)
   scope :failed, where(:status => 3)
   scope :canceled, where(:status => 4)
 
@@ -14,11 +14,15 @@ class QueueJob < ActiveRecord::Base
     end
   end
 
-  before_save do |record|
+  before_save do
     if new_record?
       pos = QueueJob.maximum(:position)
       pos = 0 if pos.nil?
-      record.position = pos + 1
+      position = pos + 1
+
+      job.tasks.each do |task|
+        queue_tasks << QueueTask.new(:task => task)
+      end
     end
   end
 
@@ -28,11 +32,15 @@ class QueueJob < ActiveRecord::Base
     end
   end
 
-  def completed?
+  def current?
+    status_code == 0
+  end
+  
+  def active?
     status_code == 1
   end
 
-  def active?
+  def completed?
     status_code == 2
   end
 
@@ -56,8 +64,8 @@ class QueueJob < ActiveRecord::Base
   def status
     case read_attribute(:status)
       when 0 then "Not completed"
-      when 1 then "Completed"
-      when 2 then "Active"
+      when 1 then "Active"
+      when 2 then "Completed"
       when 3 then "Failed"
       when 4 then "Canceled"
     end
