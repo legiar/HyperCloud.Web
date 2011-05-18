@@ -1,12 +1,12 @@
-rails_root  = '/home/webmaster/hyperadmin/current'
-rails_env   = 'production'
-pid_file    = '/home/webmaster/hyperadmin/shared/pids/unicorn.pid'
-socket_file = '/home/webmaster/hyperadmin/shared/var/unicorn.sock'
+rails_root  = "/home/hyperadmin/current"
+rails_env   = "production"
+pid_file    = "/home/hyperadmin/shared/pids/unicorn.pid"
+socket_file = "/home/hyperadmin/shared/var/unicorn.sock"
 log_file    = "#{rails_root}/log/unicorn.log"
 error_file    = "#{rails_root}/log/error.log"
-username    = 'webmaster'
-group       = 'webmaster'
-old_pid     = pid_file + '.oldbin'
+username    = "hyperadmin"
+group       = "webmaster"
+old_pid     = pid_file + ".oldbin"
 
 working_directory rails_root
 pid pid_file
@@ -18,7 +18,6 @@ preload_app true
 timeout 30
 
 listen socket_file, :backlog => 2048
-#listen '109.234.153.234:80', :tcp_nopush => true
 
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=)
 
@@ -46,6 +45,6 @@ end
 
 after_fork do |server, worker|
   ActiveRecord::Base.establish_connection
-  worker.user(username, group) if Process.euid == 0 && rails_env == 'production'
+  worker.user(username, group) if Process.euid == 0 && rails_env == "production"
 end
 

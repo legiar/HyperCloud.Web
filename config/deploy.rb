@@ -11,13 +11,13 @@ set :deploy_via, :remote_cache
 role :app, "zabbix.bpmonline.com"
 #role :db, "zabbix.bpmonline.com", :primary => true
 
-set :user, "webmaster"
+set :user, "hyperadmin"
 set :use_sudo, false
 
-set :app_dir, "/home/#{user}/#{application}"
-set :deploy_to, "#{app_dir}"
+set :app_dir, "/home/#{user}"
+#set :copy_dir, "#{app_dir}/tmp"
 
-#set :copy_dir, "/home/tmp"
+set :deploy_to, "#{app_dir}"
 
 set :keep_releases, 10
 
