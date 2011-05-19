@@ -13,4 +13,24 @@ class User < ActiveRecord::Base
     return !!self.roles.find_by_name(role.to_s.camelize)
   end
 
+  def inactive_message
+    if !approved?
+      :not_approved
+    else
+      super
+    end
+  end
+
+  def active_for_authentication?
+    super && approved?
+  end
+
+  def valid_for_authentication?
+    if confirmed?
+      block_given? ? yield : true
+    else
+      inactive_message
+    end
+  end
+
 end

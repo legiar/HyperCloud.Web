@@ -1,25 +1,12 @@
-#loginbox
-  #login-inner
-    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+#login
+  .notice Change your password
+  .inner
+    = semantic_form_for resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put } do |f|
       = f.hidden_field :reset_password_token
-      %table(border="0" cellpadding="0" cellspacing="0")
-        %tr
-          %th(colspan=2)
-            %h2 Change your password
-
-        %tr
-          %td(colspan=2)= devise_error_messages!
-        
-        %tr
-          %th= f.label :password, "New password"
-          %td= f.password_field :password, :class => "login-inp"
-
-        %tr
-          %th= f.label :password_confirmation, "Confirm new password"
-          %td= f.password_field :password_confirmation, :class => "login-inp"
-        
-        %tr
-          %th &nbsp;
-          %td= f.submit "Change my password", :class => "submit-login"
-
-= render :partial => "devise/shared/links"
+      = devise_error_messages!
+      = f.input :password, :label => "New password"
+      = f.input :password_confirmation, :label => "Confirm new password"
+      = f.commit_button "Change my password"
+  
+  .links
+    = render :partial => "devise/shared/links"

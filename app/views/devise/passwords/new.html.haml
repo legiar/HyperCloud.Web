@@ -1,17 +1,12 @@
-#forgotbox{:style => "display: block"}
-  #forgotbox-text Please send us your email and we'll reset your password.
-  #forgot-inner
-    = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f|
-      %table(border="0" cellpadding="0" cellspacing="0")
-        - if resource.errors.any?
-          %tr
-            %th
-            %td= devise_error_messages!
-        %tr
-          %th Email address:
-          %td= f.email_field :email, :class => "login-inp"
-        %tr
-          %th
-          %td= f.submit "Send me", :class => "submit-login"
-  .clear
-  = link_to "Back to login", new_session_path(resource_name), :class => "back-login"
+#login
+  .notice Please send us your email and we'll reset your password.
+  .inner
+    = semantic_form_for resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post} do |f|
+      - if resource.errors.any?
+        = devise_error_messages!
+      = f.input :email
+      = f.commit_button
+
+  .links
+    = render :partial => "devise/shared/links"
+

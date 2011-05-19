@@ -1,31 +1,26 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-gem 'rails', '3.0.7'
-gem 'mysql2', '= 0.2.6'
-gem 'devise'
-gem 'haml'
-gem 'formtastic', '~> 1.2.3'
-gem 'inherited_resources', '~> 1.2.1'
-gem 'unicorn'
-gem 'capistrano'
-gem 'delayed_job'
-gem 'cancan'
+gem "rails", "3.0.7"
+gem "mysql2", "= 0.2.6"
+gem "haml"
+gem "sass"
+gem "rb-inotify", ">= 0.5.1"
+gem "devise"
+gem "formtastic", "~> 1.2.3"
+gem "inherited_resources", "~> 1.2.1"
+gem "unicorn"
+gem "capistrano"
+gem "cancan"
 gem "cocoon"
 
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem "clockwork"
+gem "beanstalk-client"
+gem "stalker"
+gem "delayed_job"
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
 group :development, :test do
-  gem 'hpricot'
+  gem "hpricot"
+  gem "contest"
+  gem "mocha"
   #gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
 end

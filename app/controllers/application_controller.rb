@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   private
 
   def get_layout
-    (controller_name == "sessions" || controller_name == 'passwords') ? "login" : "application"
+    devise_controller? ? "devise" : "application"
   end
 
 end

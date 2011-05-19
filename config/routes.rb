@@ -1,4 +1,11 @@
 HyperAdmin::Application.routes.draw do
+  namespace :dns do
+    resources :domains do
+      resources :records
+    end
+    resources :supermasters
+  end
+
   resources :conditions
 
   resources :queue_tasks
