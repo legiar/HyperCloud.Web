@@ -43,7 +43,7 @@ a  {
 }
 
 .yellow-left  {
-  background: url(../images/table/message_yellow.gif) top left no-repeat;
+  background: url(table/message_yellow.gif) top left no-repeat;
   color: #e79300;
   font-family: Tahoma;
   font-weight: bold;
@@ -68,7 +68,7 @@ a  {
 }
 
 .blue-left  {
-  background: url(../images/table/message_blue.gif) top left no-repeat;
+  background: url(table/message_blue.gif) top left no-repeat;
   color: #2e74b2;
   font-family: Tahoma;
   font-weight: bold;
@@ -91,7 +91,7 @@ a  {
   margin-bottom: 5px;
   }
 .red-left  {
-  background: url(../images/table/message_red.gif) top left no-repeat;
+  background: url(table/message_red.gif) top left no-repeat;
   color: #ce2700;
   font-family: Tahoma;
   font-weight: bold;
@@ -115,7 +115,7 @@ a  {
   }
   
 .green-left  {
-  background: url(../images/table/message_green.gif) top left no-repeat;
+  background: url(table/message_green.gif) top left no-repeat;
   color: #6da827;
   font-family: Tahoma;
   font-weight: bold;
@@ -146,7 +146,7 @@ a  {
   
   
 a.icon-1  {
-  background: url(../images/table/table_icon_1.gif) no-repeat;
+  background: url(table/table_icon_1.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -154,10 +154,10 @@ a.icon-1  {
   width: 24px;
   }
 a:hover.icon-1  {
-  background: url(../images/table/table_icon_1.gif) 0 -24px;
+  background: url(table/table_icon_1.gif) 0 -24px;
   }
 a.icon-2  {
-  background: url(../images/table/table_icon_2.gif) no-repeat;
+  background: url(table/table_icon_2.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -165,10 +165,10 @@ a.icon-2  {
   width: 24px;
   }
 a:hover.icon-2  {
-  background: url(../images/table/table_icon_2.gif) 0 -24px;
+  background: url(table/table_icon_2.gif) 0 -24px;
   }
 a.icon-3  {
-  background: url(../images/table/table_icon_3.gif) no-repeat;
+  background: url(table/table_icon_3.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -176,10 +176,10 @@ a.icon-3  {
   width: 24px;
   }
 a:hover.icon-3  {
-  background: url(../images/table/table_icon_3.gif) 0 -24px;
+  background: url(table/table_icon_3.gif) 0 -24px;
   }
 a.icon-4  {
-  background: url(../images/table/table_icon_4.gif) no-repeat;
+  background: url(table/table_icon_4.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -187,17 +187,17 @@ a.icon-4  {
   width: 24px;
   }
 a:hover.icon-4  {
-  background: url(../images/table/table_icon_4.gif) 0 -24px;
+  background: url(table/table_icon_4.gif) 0 -24px;
   }
 a.icon-5  {
-  background: url(../images/table/table_icon_5.gif) no-repeat;
+  background: url(table/table_icon_5.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
   width: 24px;
   }
 a:hover.icon-5  {
-  background: url(../images/table/table_icon_5.gif) 0 -24px;
+  background: url(table/table_icon_5.gif) 0 -24px;
   }
 #tooltip  {
   background-color: #8c8c8c;
@@ -241,7 +241,7 @@ a:hover.icon-5  {
 .table th {
 	height: 50px;
 	text-align: left;
-	background: url(../images/table/table_header_repeat.jpg) repeat-x;
+	background: url(table/table_header_repeat.jpg) repeat-x;
 	border-left: 1px solid #373737;
 
 	color: #fff;
@@ -252,7 +252,7 @@ a:hover.icon-5  {
 }
 
 .table th.check {
-	background: url(../images/table/table_header_checkbox.jpg) no-repeat;
+	background: url(table/table_header_checkbox.jpg) no-repeat;
 	min-width: 29px;
 	padding-left: 0px;
 	width: 29px;
@@ -260,14 +260,14 @@ a:hover.icon-5  {
 }
 
 .table th.options, .table th.action  {
-	background: url(../images/table/table_header_options.jpg) no-repeat;
+	background: url(table/table_header_options.jpg) no-repeat;
 	min-width: 221px;
 	width: 221px;
 	padding-left: 0px;
 }
 
 .table th a {
-	background: url(../images/table/table_sort_arrow.gif) right no-repeat;
+	background: url(table/table_sort_arrow.gif) right no-repeat;
 	color: #fff;
 	font-family: Tahoma;
 	font-weight: bold;
@@ -303,14 +303,14 @@ a:hover.icon-5  {
 	width: 17px;
 	height:17px;
 	cursor: pointer;
-	background: url(../images/shared/checkbox.gif) 0 -17px;
+	background: url(shared/checkbox.gif) 0 -17px;
 }
   
 #toggle-all.toggle-checked {
 	display: block;
 	width: 17px;
 	height:17px;
-	background: url(../images/shared/checkbox.gif) 0 0;
+	background: url(shared/checkbox.gif) 0 0;
 }
   
 
@@ -328,7 +328,7 @@ a:hover.icon-5  {
   line-height: 0;
   }
 #related-act-bottom  {
-  background: url(../images/forms/bg_related_act.gif) no-repeat bottom;
+  background: url(forms/bg_related_act.gif) no-repeat bottom;
   font-size: 0px;
   line-height: 0;
   }
@@ -356,7 +356,7 @@ ul.greyarrow  {
   list-style-type: none;
   }
 ul.greyarrow li  {
-  background: url(../images/forms/icon_list_arrow.gif) no-repeat 0 5px;
+  background: url(forms/icon_list_arrow.gif) no-repeat 0 5px;
   line-height: 18px;
   padding: 0 0 0 12px;
   }
@@ -368,7 +368,7 @@ ul.greyarrow li a:hover  {
   text-decoration: underline;
   }
 .lines-dotted-short  {
-  background: url(../images/forms/lines_dotted_short.gif) no-repeat 0px 14px;
+  background: url(forms/lines_dotted_short.gif) no-repeat 0px 14px;
   font-size: 0px;
   height: 28px;
   line-height: 0;
@@ -381,7 +381,7 @@ ul.greyarrow li a:hover  {
   margin: 0 4px 0 0;
 }  
 .page-far-left  {
-  background: url(../images/table/paging_far_left.gif) no-repeat;
+  background: url(table/paging_far_left.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -389,14 +389,14 @@ ul.greyarrow li a:hover  {
   width: 24px;
   }
 .page-left  {
-  background: url(../images/table/paging_far_left.gif) no-repeat;
+  background: url(table/paging_far_left.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
   width: 24px;
   }
 .page-far-right  {
-  background: url(../images/table/paging_far_right.gif) no-repeat;
+  background: url(table/paging_far_right.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -404,7 +404,7 @@ ul.greyarrow li a:hover  {
   width: 24px;
   }
 .page-right  {
-  background: url(../images/table/paging_far_right.gif) no-repeat;
+  background: url(table/paging_far_right.gif) no-repeat;
   display: block;
   float: left;
   height: 24px;
@@ -423,19 +423,19 @@ ul.greyarrow li a:hover  {
   position: relative;
   }
 a.action-slider  {
-  background: url(../images/table/dropdown_actions.gif) no-repeat;
+  background: url(table/dropdown_actions.gif) no-repeat;
   display: block;
   height: 30px;
   width: 110px;
   }
 a.action-slider.activated  {
-  background: url(../images/table/dropdown_actions.gif) no-repeat 0 -30px;
+  background: url(table/dropdown_actions.gif) no-repeat 0 -30px;
   display: block;
   height: 30px;
   width: 110px;
   }
 #actions-box-slider  {
-  background: url(../images/table/actions_slider_bg.gif) bottom no-repeat;
+  background: url(table/actions_slider_bg.gif) bottom no-repeat;
   display: none;
   left: 0;
   padding-bottom: 1px;
@@ -461,24 +461,24 @@ a.action-delete  {
   width: 63px;
   }
 a:hover.action-edit  {
-  background: #949494 url(../images/table/action_edit.gif) no-repeat 14px 5px;
+  background: #949494 url(table/action_edit.gif) no-repeat 14px 5px;
   color: #fff;
   }
 a.action-edit  {
-  background: #c7c7c7 url(../images/table/action_edit.gif) no-repeat 14px 5px;
+  background: #c7c7c7 url(table/action_edit.gif) no-repeat 14px 5px;
   }
 a.action-delete  {
-  background: #c7c7c7 url(../images/table/action_delete.gif) no-repeat 14px 5px;
+  background: #c7c7c7 url(table/action_delete.gif) no-repeat 14px 5px;
   }
 a:hover.action-delete  {
-  background: #949494 url(../images/table/action_delete.gif) no-repeat 14px 5px;
+  background: #949494 url(table/action_delete.gif) no-repeat 14px 5px;
   color: #fff;
   }
      
   
 /* FORM ------------------------------------------------------- */  
 .form-submit  {
-  background: url(../images/forms/form_submit.gif) no-repeat;
+  background: url(forms/form_submit.gif) no-repeat;
   border: none;
   cursor: pointer;
   display: block;
@@ -490,7 +490,7 @@ a:hover.action-delete  {
   width: 80px;
   }
 .form-reset  {
-  background: url(../images/forms/form_reset.gif) no-repeat;
+  background: url(forms/form_reset.gif) no-repeat;
   border: none;
   cursor: pointer;
   display: block;
@@ -506,7 +506,7 @@ a:hover.action-delete  {
 }
 
 .inp-form  {
-  background: url(../images/forms/form_inp.gif) no-repeat;
+  background: url(forms/form_inp.gif) no-repeat;
   border: none;
   color: #393939;
   height: 25px;
@@ -516,7 +516,7 @@ a:hover.action-delete  {
 }
   
 .inp-form-error  {
-  background: url(../images/forms/form_inp_error.gif) no-repeat;
+  background: url(forms/form_inp_error.gif) no-repeat;
   border: none; 
   color: #393939;
   height: 25px;
@@ -524,7 +524,7 @@ a:hover.action-delete  {
   width: 187px;
   }
 .form-textarea  {
-  background: url(../images/forms/form_textarea.gif) no-repeat;
+  background: url(forms/form_textarea.gif) no-repeat;
   border: none;
   color: #393939;
   font-family: Arial, Helvetica, sans-serif;
@@ -590,7 +590,7 @@ font-family: Tahoma;
 .step-dark-left {
   float:left;
    
-  background: url(../images/forms/step_dark_left.gif) no-repeat;
+  background: url(forms/step_dark_left.gif) no-repeat;
   height:27px;
   padding:13px 15px 0 25px;
   font-size: 13px;
@@ -608,14 +608,14 @@ font-family: Tahoma;
 .step-dark-right {
   float:left;
   width:12px;
-  background: url(../images/forms/step_dark_right.gif) no-repeat;
+  background: url(forms/step_dark_right.gif) no-repeat;
   height:39px;
 }
 .step-dark-round {
   float:left;
   width:8px;
   height:39px;
-  background: url(../images/forms/step_dark_round.gif) no-repeat;
+  background: url(forms/step_dark_round.gif) no-repeat;
 }
 
 .step-light-left {
@@ -623,7 +623,7 @@ font-family: Tahoma;
      height:27px;
   padding:13px 15px 0 25px;
   font-size: 13px;
-  background: url(../images/forms/step_light_left.gif) no-repeat;
+  background: url(forms/step_light_left.gif) no-repeat;
   height:39px;
   color:#cbcbcb;
   font-weight: bold;
@@ -640,14 +640,14 @@ font-family: Tahoma;
 .step-light-right {
   float:left;
   width:12px;
-  background: url(../images/forms/step_light_right.gif) no-repeat;
+  background: url(forms/step_light_right.gif) no-repeat;
   height:39px;
 }
 .step-light-round {
   float:left;
   width:8px;
   height:39px;
-  background: url(../images/forms/step_light_round.gif) no-repeat;
+  background: url(forms/step_light_round.gif) no-repeat;
 }
 
 .bubble-left {
@@ -655,7 +655,7 @@ font-family: Tahoma;
   width:10px;
   height:29px;
   margin-left: 5px;
-  background: url(../images/forms/bubble_left.gif) no-repeat;
+  background: url(forms/bubble_left.gif) no-repeat;
 }
 
 .bubble-inner {
@@ -665,20 +665,20 @@ font-family: Tahoma;
   line-height: 14px;
   font-size: 11px;
   height:22px;
-  background: url(../images/forms/bubble_inner.gif) repeat-x;
+  background: url(forms/bubble_inner.gif) repeat-x;
 }
 .bubble-right {
   float:left;
   width:8px;
   height:29px;
-  background: url(../images/forms/bubble_right.gif) right no-repeat;
+  background: url(forms/bubble_right.gif) right no-repeat;
 }
 .error-left {
   float:left;
   width:13px;
   height:32px;
   margin-left: 5px;
-  background: url(../images/forms/error_left.gif) no-repeat;
+  background: url(forms/error_left.gif) no-repeat;
 }
 
 .error-inner {
@@ -687,7 +687,7 @@ font-family: Tahoma;
   color:#fff; 
   line-height: 14px;
   height:25px;
-  background: url(../images/forms/error_right.gif) right  no-repeat;
+  background: url(forms/error_right.gif) right  no-repeat;
 }
 .file_1 {
   border: 1px solid #acacac;
@@ -702,7 +702,7 @@ font-family: Tahoma;
   text-align: left;
   }
 .nav-outer-repeat  {
-  background: url(../images/shared/nav/repeat.jpg) repeat-x;
+  background: url(shared/nav/repeat.jpg) repeat-x;
   height: 77px;
   }
 .nav-outer  {
@@ -722,7 +722,7 @@ font-family: Tahoma;
   margin: 0px 0 0 0;
   }
 .account-content  {
-  background: #454545 url(../images/shared/nav/account_drop_bg.gif) no-repeat bottom;
+  background: #454545 url(shared/nav/account_drop_bg.gif) no-repeat bottom;
   display: none;
   left: 5px;
   padding-bottom: 20px;
@@ -754,7 +754,7 @@ font-family: Tahoma;
   color: #94b52c;
   }
 .acc-line  {
-  background: url(../images/shared/nav/account_line.gif) no-repeat 0 7px;
+  background: url(shared/nav/account_line.gif) no-repeat 0 7px;
   font-size: 0px;
   height: 14px;
   line-height: 0px;
@@ -765,23 +765,23 @@ a#logout  {
   margin: 10px 0 0 5px;
   }
 a#acc-settings  {
-  background: url(../images/shared/nav/icon_acc_settings.gif) no-repeat 0 2px;
+  background: url(shared/nav/icon_acc_settings.gif) no-repeat 0 2px;
   padding: 0 0 0 20px;
   }
 a#acc-details  {
-  background: url(../images/shared/nav/icon_acc_personal.gif) no-repeat 0 2px;
+  background: url(shared/nav/icon_acc_personal.gif) no-repeat 0 2px;
   padding: 0 0 0 20px;
   }
 a#acc-project  {
-  background: url(../images/shared/nav/icon_acc_projects.gif) no-repeat 0 2px;
+  background: url(shared/nav/icon_acc_projects.gif) no-repeat 0 2px;
   padding: 0 0 0 20px;
   }
 a#acc-inbox  {
-  background: url(../images/shared/nav/icon_acc_inbox.gif) no-repeat 0 2px;
+  background: url(shared/nav/icon_acc_inbox.gif) no-repeat 0 2px;
   padding: 0 0 0 20px;
   }
 a#acc-stats  {
-  background: url(../images/shared/nav/icon_acc_stats.gif) no-repeat 0 2px;
+  background: url(shared/nav/icon_acc_stats.gif) no-repeat 0 2px;
   padding: 0 0 0 20px;
   }
   
@@ -831,25 +831,25 @@ a#acc-stats  {
 }
 
 .ui-menubar-menu-1.ui-menubar-selected a {
-  background: url(../images/shared/nav/pro_line_1.gif);
+  background: url(shared/nav/pro_line_1.gif);
   padding: 0 0 0 10px;
 }
 
 .ui-menubar-menu-1.ui-menubar-selected a span {
-  background: url(../images/shared/nav/pro_line_1.gif) right top;
+  background: url(shared/nav/pro_line_1.gif) right top;
   display: block;
   padding: 0 20px 0 10px;
 }
 
 .ui-menubar-menu-1.ui-menubar-menu a:hover, .ui-menubar-menu-1.ui-menubar-menu:hover a {
-  background: url(../images/shared/nav/pro_line_1.gif);
+  background: url(shared/nav/pro_line_1.gif);
   color: #fff;
   cursor: pointer;
   padding: 0 0 0 10px;
 }
 
 .ui-menubar-menu-1.ui-menubar-menu a:hover span, .ui-menubar-menu-1.ui-menubar-menu:hover a span {
-  background: url(../images/shared/nav/pro_line_1.gif) right top;
+  background: url(shared/nav/pro_line_1.gif) right top;
   cursor: pointer;
   padding: 0 20px 0 10px;
 }
@@ -861,7 +861,7 @@ a#acc-stats  {
 .ui-menubar-menu-1:hover .ui-menubar-2,
 .ui-menubar-menu-1 a:hover .ui-menubar-2,
 .ui-menubar-menu-1.ui-menubar-selected .ui-menubar-2 {
-  background: url(../images/shared/nav/back_0.gif);
+  background: url(shared/nav/back_0.gif);
   display: block;
   position: absolute;
   top: 37px;
@@ -892,7 +892,7 @@ a#acc-stats  {
 .ui-menubar.ui-state-active a, .ui-menubar-menu.ui-state-active a {color: #fff;}
   
 .nav-divider  {
-  background: url(../images/shared/nav/divider.jpg) top no-repeat;
+  background: url(shared/nav/divider.jpg) top no-repeat;
   float: left;
   height: 40px;
   width: 15px;
@@ -920,7 +920,7 @@ height: 70px;
   
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
-  background: url(../images/shared/icon_idlogo.jpg) no-repeat 0 12px;
+  background: url(shared/icon_idlogo.jpg) no-repeat 0 12px;
   } 
 #footer-left a  {
   color: #818181;
@@ -984,7 +984,7 @@ div.selectbox-wrapper ul li  {
   padding: 6px 2px 6px 10px;
   }
 .selectbox_styled  {
-  background: url(../images/shared/top_search_select.gif) left no-repeat;
+  background: url(shared/top_search_select.gif) left no-repeat;
   border: none;
   border-left: none;
   color: #fff;
@@ -1039,7 +1039,7 @@ div.selectbox-wrapper2 ul li  {
   padding: 6px 2px 6px 10px;
   }
 .styledselect_form_1  {
-  background: url(../images/forms/form_select.gif) left no-repeat;
+  background: url(forms/form_select.gif) left no-repeat;
   border: none;
   border-left: none;
   color: #393939;
@@ -1054,7 +1054,7 @@ div.selectbox-wrapper2 ul li  {
   width: 192px;
   }
 .styledselect_form_2  {
-  background: url(../images/forms/form_select_small.gif) left no-repeat;
+  background: url(forms/form_select_small.gif) left no-repeat;
   border: none;
   border-left: none;
   color: #393939;
@@ -1110,7 +1110,7 @@ div.selectbox-wrapper3 ul li  {
   padding: 6px 2px 6px 10px;
   }
 .styledselect_pages  {
-  background: url(../images/table/select_number_rows.gif) left no-repeat;
+  background: url(table/select_number_rows.gif) left no-repeat;
   border: none;
   border-left: none;
   color: #393939;
@@ -1137,7 +1137,7 @@ div.selectbox-wrapper3 ul li  {
   }
 span.ui-checkbox,
       span.ui-radio  {
-  background: url(../images/shared/checkbox.gif) 0 -17px no-repeat;
+  background: url(shared/checkbox.gif) 0 -17px no-repeat;
   display: block;
   float: left;
   height: 17px;
@@ -1205,7 +1205,7 @@ form.formtastic label abbr {
 }
 
 form.formtastic input {
-  background: url(../images/forms/form_inp.gif) no-repeat;
+  background: url(forms/form_inp.gif) no-repeat;
   border: none;
   color: #393939;
   height: 25px;
@@ -1218,7 +1218,7 @@ form.formtastic label input {
 }
 
 form.formtastic input.ui-combobox {
-  background: url(../images/forms/form_select.gif) left no-repeat;
+  background: url(forms/form_select.gif) left no-repeat;
   cursor: pointer;
 }
 
@@ -1232,7 +1232,7 @@ form.formtastic input.ui-combobox {
 }
 
 form.formtastic select {
-  background: url(../images/forms/form_select.gif) left no-repeat;
+  background: url(forms/form_select.gif) left no-repeat;
   border: none;
   color: #393939;
   cursor: pointer;
@@ -1242,7 +1242,7 @@ form.formtastic select {
 }
 
 form.formtastic textarea {
-  /*background: url(../images/forms/form_textarea.gif) no-repeat;
+  /*background: url(forms/form_textarea.gif) no-repeat;
   border: none;*/
   color: #393939;
   font-family: Arial, Helvetica, sans-serif;
@@ -1254,7 +1254,7 @@ form.formtastic textarea {
 }
 
 form.formtastic input.create, form.formtastic input.update {
-  background: url(../images/forms/form_submit.gif) no-repeat;
+  background: url(forms/form_submit.gif) no-repeat;
   cursor: pointer;
   height: 30px;
   margin: 0 4px 0 0;
@@ -1264,12 +1264,12 @@ form.formtastic input.create, form.formtastic input.update {
 }
 
 form.formtastic li.error input {
-  background: url(../images/forms/form_inp_error.gif) no-repeat;
+  background: url(forms/form_inp_error.gif) no-repeat;
 }
 
 form.formtastic p.inline-errors-left {
   display: inline-block;
-  background: url(../images/forms/error_left.gif) no-repeat;
+  background: url(forms/error_left.gif) no-repeat;
   height: 25px;
   padding: 7px 10px 0 4px;
 }
@@ -1279,7 +1279,7 @@ form.formtastic p.inline-errors {
   padding: 7px 10px 0 4px;
   color: white;
   height: 25px;
-  background: url(../images/forms/error_right.gif) right no-repeat;
+  background: url(forms/error_right.gif) right no-repeat;
 }
 
 

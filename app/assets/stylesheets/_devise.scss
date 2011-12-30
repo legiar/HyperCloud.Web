@@ -1,5 +1,5 @@
 body.login {
-  background: url(../images/login/login_bg.jpg) no-repeat top center;
+  background: url(login/login_bg.jpg) no-repeat top center;
 
   #wrapper {
     margin: 0px auto;
@@ -27,7 +27,7 @@ body.login {
 $login-height: 272px;
 
 #login {
-  background: url(../images/login/loginbox_bg.png) no-repeat;
+  background: url(login/loginbox_bg.png) no-repeat;
   position: relative;
   width: 508px;
   padding-top: 60px;
@@ -101,7 +101,7 @@ $login-height: 272px;
     }
     
     input {
-      background: url(../images/login/inp_login.gif) no-repeat;
+      background: url(login/inp_login.gif) no-repeat;
       border: none;
       color: #fff;
       font-size: 16px;
@@ -127,14 +127,14 @@ $login-height: 272px;
   li.commit {
     padding-left: $label-width;
     input {
-      background: url(../images/login/submit_login.gif) no-repeat;
+      background: url(login/submit_login.gif) no-repeat;
       border: none;
       cursor: pointer;
       height: 29px;
       text-indent: -3000px;
       width: 73px;
       &:hover  {
-        background: url(../images/login/submit_login.gif) no-repeat 0 -29px;
+        background: url(login/submit_login.gif) no-repeat 0 -29px;
       }
     }
   }

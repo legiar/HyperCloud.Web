@@ -1,26 +1,35 @@
-source "http://rubygems.org"
+source 'http://rubygems.org'
 
-gem "rails", "3.0.7"
-gem "mysql2", "= 0.2.6"
-gem "haml"
-gem "sass"
-gem "rb-inotify", ">= 0.5.1"
-gem "devise"
+gem 'rails', '3.1.0'
+
+# Bundle edge Rails instead:
+# gem 'rails',     :git => 'git://github.com/rails/rails.git'
+
+gem 'mysql2'
+gem 'sqlite3'
+gem 'json'
+gem 'therubyracer'
+gem 'haml'
+gem 'devise'
 gem "formtastic", "~> 1.2.3"
 gem "inherited_resources", "~> 1.2.1"
 gem "unicorn"
 gem "capistrano"
 gem "cancan"
 gem "cocoon"
+#gem "breadcrumbs_on_rails"
 
-gem "clockwork"
-gem "beanstalk-client"
-gem "stalker"
-gem "delayed_job"
+#gem "clockwork"
+#gem "beanstalk-client"
+#gem "stalker"
+#gem "delayed_job"
 
-group :development, :test do
-  gem "hpricot"
-  gem "contest"
-  gem "mocha"
-  #gem 'rails-dev-boost', :git => 'git://github.com/thedarkone/rails-dev-boost.git', :require => 'rails_development_boost'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
 end
+
+gem 'jquery-rails'
