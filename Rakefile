@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-HyperAdmin::Application.load_tasks
+HyperCloud::Application.load_tasks

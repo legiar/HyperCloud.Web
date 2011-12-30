@@ -1,4 +1,4 @@
-HyperAdmin::Application.configure do
+HyperCloud::Application.configure do
   config.action_mailer.default_url_options = {
     :protocol => "https",
     :host => "admin.bpmonline.com"

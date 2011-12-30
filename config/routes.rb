@@ -1,4 +1,4 @@
-HyperAdmin::Application.routes.draw do
+HyperCloud::Application.routes.draw do
   namespace :dns do
     resources :domains do
       resources :records
