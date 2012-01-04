@@ -1,9 +1,0 @@
-- {:popup => :yellow, :error => :red, :info => :blue, :notice => :green}.each do |key, color|
-  - color = color.to_s
-  - if flash[key]
-    %div{:id => "message-#{color}"}
-      %table(border="0" width="100%" cellpadding="0" cellspacing="0")
-        %tr
-          %td{:class => "#{color}-left"}= flash[key]
-          %td{:class => "#{color}-right"}= link_to image_tag("table/icon_close_#{color}.gif"), "#", :class => "close-#{color}"
-

@@ -1,0 +1,16 @@
+- add_breadcrumb @zone.name, zone_path(@zone)
+#notice= notice
+
+.detail-view.ui-tabs.ui-widget.ui-widget-content.ui-corner-all
+  .toolbar
+    .button.refresh
+      %span Refresh
+  %ul
+    %li= link_to "Details", "#details-tab-details"
+    %li= link_to "Spaces", "#details-tab-details"
+
+= @zone.name
+= @zone.description
+
+= link_to 'Edit', edit_zone_path(@zone)
+= link_to 'Back', zones_path

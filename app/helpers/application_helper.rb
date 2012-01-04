@@ -9,4 +9,4 @@ module ApplicationHelper
     end
     out.flatten.join.html_safe
   end
-end
+end  

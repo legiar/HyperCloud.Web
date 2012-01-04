@@ -1,0 +1,19 @@
+.dashboard
+  %ul.general
+    %li.head
+      %span General
+      .controls
+    %li
+      .caption= link_to "Zones", zones_path
+      .value= Zone.count
+    %li
+      .caption= link_to "Spaces", slices_path
+      .value= Space.count
+    %li
+      .caption= link_to "Hosts", hosts_path
+      .value= Host.count
+    %li
+      .caption= link_to "Sites", sites_path
+      .value= Site.count
+      
+    

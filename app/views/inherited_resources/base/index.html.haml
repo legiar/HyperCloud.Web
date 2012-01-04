@@ -1,0 +1,30 @@
+%article.content-box
+  %header
+    %h2= resource_class.name.pluralize
+    %nav
+      %ul.button-switch
+        %li= link_to "New #{resource_class.name.downcase}", new_resource_path, :class => "button"
+          
+  %section
+    %table.datatable
+      %thead
+        - begin
+          = render "table_head"
+        - rescue
+          %tr
+            %th.check
+            %th Name
+            %th.options Options
+      
+      %tbody
+        - begin
+          = render "table_body"
+        - rescue
+          - collection.each do |record|
+            %tr{:class => cycle(:odd, :even)}
+              %td= record.id
+              %td= record.try(:name)
+              %td.options
+                = link_to 'Show', resource_path(record)
+                = link_to 'Edit', edit_resource_path(record)
+                = link_to 'Destroy', resource_path(record), :method => :delete, :confirm => 'Are you sure'

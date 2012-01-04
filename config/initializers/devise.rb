@@ -4,7 +4,7 @@ Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
-  config.mailer_sender = "cloud@bpmonline.com"
+  config.mailer_sender = "admin@bpmonline.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
@@ -43,16 +43,16 @@ Devise.setup do |config|
   config.strip_whitespace_keys = [ :email ]
 
   # Tell if authentication through request.params is enabled. True by default.
-  # config.params_authenticatable = true
+  config.params_authenticatable = true
 
   # Tell if authentication through HTTP Basic Auth is enabled. False by default.
-  # config.http_authenticatable = false
+  config.http_authenticatable = false
 
   # If http headers should be returned for AJAX requests. True by default.
-  # config.http_authenticatable_on_xhr = true
+  config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. "Application" by default.
-  # config.http_authentication_realm = "Application"
+  config.http_authentication_realm = "HyperCloud"
 
   # It will change confirmation, password recovery and other workflows
   # to behave the same regardless if the e-mail provided was right or wrong.
@@ -69,7 +69,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "77d89154ff737587bbe21863bd07450dd234bd95d3a2a3448870e69032ba8f78070d390562bf89b5d71797dc0f189c2bb4bc458fe9631635f9aa5795e6ce78b7"
+  config.pepper = "77d89154ff737587bbe21863bd07450dd234bd95d3a2a3448870e69032ba8f78070d390562bf89b5d71797dc0f189c2bb4bc458fe9631635f9aa5795e6ce78b7"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -90,7 +90,7 @@ Devise.setup do |config|
   config.remember_across_browsers = true
 
   # If true, extends the user's remember period when remembered via cookie.
-  config.extend_remember_period = false
+  config.extend_remember_period = true
 
   # If true, uses the password salt as remember token. This should be turned
   # to false if you are not using database authenticatable.
@@ -141,7 +141,7 @@ Devise.setup do |config|
   # ==> Configuration for :recoverable
   #
   # Defines which key will be used when recovering the password for an account
-  # config.reset_password_keys = [ :email ]
+  config.reset_password_keys = [ :email ]
 
   # Time interval you can reset your password with a reset password key.
   # Don't put a too small interval or your users won't have the time to
@@ -192,7 +192,7 @@ Devise.setup do |config|
   # config.navigational_formats = [:"*/*", "*/*", :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  config.sign_out_via = :delete
+  config.sign_out_via = :get
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting

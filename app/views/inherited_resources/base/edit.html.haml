@@ -1,0 +1,6 @@
+%article.content-box
+  %header
+    %h2 Edit #{resource_class.name.downcase} '#{resource.try(:name)}' 
+
+  %section
+    = render "form"

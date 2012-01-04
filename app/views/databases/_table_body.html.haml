@@ -1,0 +1,13 @@
+- for database in @databases
+  %tr{:class => cycle(:odd, :even)}
+    %td= database.id
+    %td= database.name
+    %td= database.login
+    %td= database.password
+    %td= database.customer.try(:name)
+    %td= database.site.try(:name)
+    %td= database.size
+    %td.options
+      = link_to 'Show', database
+      = link_to 'Edit', edit_database_path(database)
+      = link_to 'Destroy', database, :method => :delete, :confirm => 'Are you sure'

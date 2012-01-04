@@ -1,0 +1,184 @@
+/*  Forms  */
+form {
+  margin:20px 0;
+  padding-bottom:5px;
+}
+section form:last-child, section div form:last-child { margin-bottom:0; }
+form.table-form { margin-top:0; }
+button, input, select, textarea { margin:0; }
+textarea { overflow:auto; }
+fieldset {
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  border-radius:3px;
+  padding:25px 25px 0;
+  margin-bottom:15px;
+  border-style:solid;
+  border-width:1px;
+}
+.ie8 fieldset, .ie7 fieldset { padding-top:0; }
+fieldset.no-borders { border:0; }
+legend {
+  font-size:116%;
+  padding:0 1em;
+}
+input, textarea, select, .customfile, div.wysiwyg iframe {
+  background-position:top;
+  background-repeat:repeat-x;
+  border:1px solid;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+}
+input[type=text], input[type=password], textarea, select { padding:8px; }
+input[type="checkbox"], input[type="radio"] {
+  background:none;
+  border:none;
+}
+label {
+  font-weight:bold;
+  cursor:pointer;
+}
+select {
+  width:auto;
+  cursor:pointer;
+}
+.checkbox, .radio {
+  width:200px;
+  position:relative;
+  left:185px;
+  text-align:left;
+}
+.checkbox label, .radio label { font-weight:normal; }
+
+/*  Form :: Layout  */
+form dt, form.horizontal-form dt {
+  width:150px;
+  min-height:20px;
+  text-align:right;
+}
+form dd, form.horizontal-form dd {
+  position:relative;
+  top:-21px;
+  left:165px;
+}
+form dd p, form.horizontal-form dd p {
+  font-size:77%;
+  position:relative;
+  top:-4px;
+}
+form.vertical-form dd:last-child { margin-bottom:25px; }
+form.vertical-form dt {
+  width:auto;
+  text-align:left;
+  margin:15px 0 5px;
+}
+form.vertical-form dt.clear-tm { margin-top:0; }
+form.vertical-form dd { position:static; }
+form.vertical-form dd.checkbox, form.vertical-form dd.radio {
+  margin-bottom:0;
+  position:relative;
+  left:0;
+}
+form.vertical-form dd.checkbox { top:-23px; }
+form.vertical-form dt.checkbox, form.vertical-form dt.radio {
+  left:20px;
+  margin:0;
+}
+form dt.checkbox, form dt.radio { text-align:left; }
+form dd.text {
+  max-width:600px;
+  top:-21px;
+}
+form dd.text p {
+  font-size:100%;
+  top:-1px;
+
+}
+input.small, textarea.small { width:25%; }
+input.medium, textarea.medium { width:50%; }
+input.large, textarea.large { width:75%; }
+input.full, textarea.full { width:99%; }
+textarea.footer { width:94%; resize:vertical; }
+
+/*  Form :: Elements  */
+form label span { color:#e30613; }
+form span.valid-side-note, form span.invalid-side-note {
+  margin-left:5px;
+  padding:0 0 0 20px;
+  background-repeat:no-repeat;
+  background-position:left 1px;
+}
+input.ghost {
+  background:#fff;
+  border-color:#fff;
+  padding:6px 0 8px 0;
+}
+input.ghost:focus { padding:8px;}
+input:disabled, input.disabled {
+  background-repeat:repeat;
+  box-shadow:none;
+  cursor:not-allowed;
+}
+input.datepicker {
+  padding-right:30px;
+  cursor:pointer;
+}
+.datepicker-icon {
+  display:inline-block;
+  text-indent:-9999em;
+  width:16px;
+  height:16px;
+  background:url('../img/jquery/datepicker.png') no-repeat center;
+  position:relative;
+  top:4px;
+  left:-24px;
+}
+
+/*  Form :: IE fix  */
+.ie6 legend, .ie7 legend { margin-left:-7px; }
+.ie8 legend, .ie7 legend { margin-bottom:30px; }
+.ie8 legend { top:-25px; }
+.ie7 legend { top:-35px; }
+.ie7 input[type="checkbox"] { vertical-align:baseline; }
+.ie6 input { vertical-align:text-bottom; }
+.ie7 input[type=checkbox], .ie8 input[type=checkbox], .ie9 input[type=checkbox],
+.ie7 input[type=radio], .ie8 input[type=radio], .ie9 input[type=radio] {
+  border:none;
+  box-shadow:none;
+}
+/*.ie7 .checkbox, .ie8 .checkbox, .ie9 .checkbox { top:-7px; }
+.ie7 .radio, .ie8 .radio, .ie9 .radio { top:-5px; }*/
+.ie7 td select {
+  position:relative;
+  top:-3px;
+  left:-15px;
+}
+.ie7 .datepicker-icon { top:0; }
+
+/*  Form :: jQuery Datepicker  */
+.jq-datepicker {
+  border:1px solid;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+}
+.jq-datepicker .datepick-nav {
+  height:20px;
+  padding-top:10px;
+}
+.jq-datepicker .datepick-ctrl { padding:5px 0 3px; }
+.jq-datepicker .datepick-nav, .jq-datepicker .datepick-ctrl, .jq-datepicker .datepick-month, .jq-datepicker .datepick-month-header,
+.jq-datepicker .datepick-month-header select, .jq-datepicker .datepick-month-header input, .jq-datepicker .datepick-cmd:hover,
+.jq-datepicker .datepick-ctrl .datepick-cmd:hover, .jq-datepicker .datepick-month th, .jq-datepicker .datepick-month tr, 
+.jq-datepicker .datepick-month th a { background:none; }
+.jq-datepicker .datepick-month table td { width:30px; }
+.jq-datepicker .datepick-month a, .jq-datepicker .datepick-month span { padding:11px 0; }
+.jq-datepicker .datepick-month thead, .jq-datepicker .datepick-month th, .jq-datepicker .datepick-month th a { border:none; }
+.jq-datepicker .datepick-month-header, .jq-datepicker .datepick-month-header select, .jq-datepicker .datepick-month-header input { height:auto; }
+.jq-datepicker .datepick-month-header select {
+  border:1px solid;
+  -webkit-border-radius:1px;
+  -moz-border-radius:1px;
+  border-radius:1px;
+}

@@ -1,0 +1,23 @@
+.view.list-view
+  .toolbar
+    .button.action.add.reduced-hide
+      %span= link_to 'Add space', new_space_path 
+
+  .data-table
+    .fixed-header
+      %table
+        %thead
+          %tr
+            %th Name
+            %th Zone
+            %th.actions Actions
+
+        %tbody
+          - @spaces.each do |space|
+            %tr{:class => cycle(:odd, :even)}
+              %td= link_to space.name, space 
+              %td= link_to(space.zone.name, space.zone) unless space.zone.nil?
+              %td.actions
+                = link_to 'Show', space
+                = link_to 'Edit', edit_space_path(space)
+                = link_to 'Destroy', space, :confirm => 'Are you sure?', :method => :delete

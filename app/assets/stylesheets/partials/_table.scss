@@ -1,0 +1,277 @@
+/*  Tables  */
+table, thead, tfoot {
+  width:100%;
+  font-size:93%;
+}
+
+tbody, .datatable thead, .datatable tfoot {
+  border-width:1px;
+  border-style:solid;
+}
+
+.table-form tbody {
+  border-width:1px 1px 1px 2px;
+}
+
+tfoot, tfoot td {
+  border:none;
+  padding:0;
+}
+th, td {
+  padding:5px 0;
+  height:36px;
+  text-align:center;
+  border-bottom:1px solid;
+  vertical-align:middle;
+}
+th {
+  font-size:116%;
+  padding:10px 0;
+  font-weight:bold;
+  height:25px;
+  border-bottom:1px solid;
+}
+table tr:hover td { background-color:#fff; }
+table input[type="checkbox"] {
+  margin:0 6px 4px;
+  position:static;
+}
+
+table .pagination {
+  float:right;
+  margin:10px 0 0;
+}
+table .pagination li {
+  float:left;
+  list-style:none;
+  background:none;
+  padding:0;
+  margin-right:5px;
+}
+table .pagination li.hellip { padding-top:5px; }
+table .pagination li:last-child { margin-right:0; }
+
+table .actions {
+  margin:0 auto;
+  padding:0;
+}
+table .actions li {
+  display:inline-block;
+  background:none;
+  list-style:none;
+  padding:0;
+}
+.ie7 table .actions li { float:left; }
+table .actions li a {
+  display:block;
+  height:16px;
+  width:16px;
+  text-indent:-9999em;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+table .actions li:last-child { margin-right:0; }
+
+.no-cssgradients .datatable thead tr, .no-cssgradients .datatable tfoot tr {
+  background-repeat:repeat-x;
+  background-position:left bottom;
+}
+.ie7 .datatable, .ie7 table, .ie8 table, .ie9 table {
+  background-repeat:repeat-x;
+  background-position:left 8px;
+}
+
+/*  Table Mini Actions  */
+.toggle-table-switch {
+  display:block;
+  height:16px;
+  width:16px;
+  padding:4px;
+  text-indent:-999em;
+  background-position:center;
+  background-repeat:no-repeat;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  border:1px solid;
+  margin:0 auto;
+}
+.table-switch {
+  position:absolute;
+  margin:2px 0 0;
+  padding:2px 10px;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  border:1px solid;
+  z-index:1;
+}
+.table-switch li {
+  background:none;
+  list-style:none;
+  padding:0;
+  margin:0;
+  text-align:left;
+  border-bottom:1px solid;
+}
+.table-switch li:last-child { border:none; }
+.table-switch li a {
+  display:block;
+  padding:5px 0;
+  text-decoration:none;
+}
+.no-js .table-switch, .no-js .toggle-table-switch { display:none; }
+
+
+.dataTables_wrapper {
+  position: relative;
+  min-height: 302px;
+  clear: both;
+  _height: 302px;
+  zoom: 1;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 30px;
+  margin-left: -125px;
+  margin-top: -15px;
+  padding: 14px 0 2px 0;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  background-color: white;
+}
+.dataTables_length, .dataTables_filter {
+  margin-bottom:15px;
+  overflow:hidden;
+}
+.dataTables_length {
+  width: 40%;
+  float: left;
+}
+.dataTables_filter {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+.dataTables_info, .dataTables_paginate {
+  margin-top:15px;
+  overflow:hidden;
+}
+.dataTables_info {
+  width: 30%;
+  float: left;
+}
+.dataTables_paginate {
+  float: right;
+  text-align: right;
+  padding-bottom:3px;
+}
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+  height: 19px;
+  width: 19px;
+  float: left;
+  cursor:pointer;
+}
+.paginate_disabled_previous { background-image: url("jquery/back_disabled.png"); }
+.paginate_enabled_previous { background-image: url("jquery/back_enabled.png"); }
+.paginate_disabled_next { background-image: url("jquery/forward_disabled.png"); }
+.paginate_enabled_next { background-image: url("jquery/forward_enabled.png"); }
+
+table.datatable {
+  margin:0 auto;
+  clear:both;
+  width:99.8%;
+}
+table.datatable thead th {
+  cursor: pointer;
+  * cursor: hand;
+}
+table.datatable td.center { text-align: center; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc { background:url("jquery/sort_asc.png") no-repeat center right; }
+.sorting_desc { background: url("jquery/sort_desc.png") no-repeat center right; }
+.sorting { background: url("jquery/sort_both.png") no-repeat center right; }
+.sorting_asc_disabled { background: url("jquery/sort_asc_disabled.png") no-repeat center right; }
+.sorting_desc_disabled { background: url("jquery/sort_desc_disabled.png") no-repeat center right; }
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.dataTables_scroll { clear: both; }
+.dataTables_scrollBody { *margin-top: -1px; }
+.top, .bottom {
+  padding: 15px;
+  background-color: #F5F5F5;
+  border: 1px solid #CCCCCC;
+}
+.top .dataTables_info { float: none; }
+.clear { clear: both; }
+.dataTables_empty { text-align: center; }
+tfoot input {
+  margin: 0.5em 0;
+  width: 100%;
+  color: #444;
+}
+tfoot input.search_init { color: #999; }
+td.group {
+  background-color: #d1cfd0;
+  border-bottom: 2px solid #A19B9E;
+  border-top: 2px solid #A19B9E;
+}
+td.details {
+  background-color: #d1cfd0;
+  border: 2px solid #A19B9E;
+}
+.example_alt_pagination div.dataTables_info { width: 40%; }
+.paging_full_numbers {
+  width: 70%;
+  line-height: 22px;
+}
+.paging_full_numbers span.paginate_button, .paging_full_numbers span.paginate_active {
+  display:inline-block;
+  vertical-align:baseline;
+  white-space:nowrap;
+  width:auto;
+  cursor:pointer;
+  overflow:visible;
+  padding:7px 10px;
+  border-width:1px;
+  border-style:solid;
+  text-decoration:none;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  font-weight:bold;
+  margin: 0 3px;
+  cursor: pointer;
+  *cursor: hand;
+}
+.no-cssgradients .paging_full_numbers span.paginate_button, .no-cssgradients .paging_full_numbers span.paginate_active {
+  background-repeat:repeat-x;
+  background-position:left bottom;
+}
+table.display tr.even.row_selected td { background-color: #B0BED9; }
+table.display tr.odd.row_selected td { background-color: #9FAFD1; }
+div.box {
+  height: 100px;
+  padding: 10px;
+  overflow: auto;
+  border: 1px solid #8080FF;
+  background-color: #E5E5FF;
+}
+.paging_full_numbers span.paginate_button {
+  border-color: #BFBFBF #B3B3B3 #999999;
+}

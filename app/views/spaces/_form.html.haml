@@ -1,0 +1,13 @@
+= semantic_form_for @space do |f|
+  - if @space.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@space.errors.count, 'error')} prohibited this user from being saved:"
+      %ul
+      - @space.errors.full_messages.each do |msg|
+        %li= msg
+
+  = f.input :zone, :as => :select
+  = f.input :name
+  = f.input :description, :as => :text
+
+  = f.commit_button

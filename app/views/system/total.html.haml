@@ -1,0 +1,40 @@
+.system-dashboard-view
+  .toolbar
+  / Zone dashboard
+  .system-dashboard
+    .head
+      %span Zones
+      .view-more
+        %span= link_to "View more", zones_path
+    %ul.status_box.good
+      %li.block
+        %span.header Number of Zones
+        %span.overview.total= Zone.count
+      %li.block
+        %span.header Number of Spaces
+        %span.overview.total= Space.count
+      %li.block
+        %span.header Number of Clusters
+        %span.overview.total= "?"
+      %li.block.last
+        %span.header Number of Hosts
+        %span.overview.total= Host.count
+  / Host dashboard
+  .system-dashboard
+    .head
+      %span Hosts
+      .view-more
+        %span= link_to "View more", zones_path
+    %ul.status_box.good
+      %li.block
+        %span.header Total Hosts
+        %span.overview.total= Host.count
+      %li.block
+        %span.header Total CPU
+        %span.overview.total= "?"
+      %li.block
+        %span.header Total Memory
+        %span.overview.total= "?"
+      %li.block.last
+        %span.header Total Storage
+        %span.overview.total= "?"

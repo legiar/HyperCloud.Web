@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zone:</b>
+  <%= @space.zone %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @space.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @space.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_space_path(@space) %> |
+<%= link_to 'Back', spaces_path %>

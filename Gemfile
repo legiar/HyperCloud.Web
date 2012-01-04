@@ -11,7 +11,7 @@ gem 'json'
 gem 'therubyracer'
 gem 'haml'
 gem 'devise'
-gem "formtastic", "~> 1.2.3"
+gem "formtastic", "~> 2.0.0"
 gem "inherited_resources", "~> 1.2.1"
 gem "unicorn"
 gem "capistrano"
@@ -23,6 +23,10 @@ gem "cocoon"
 #gem "beanstalk-client"
 #gem "stalker"
 #gem "delayed_job"
+
+gem "compass", :git => 'git://github.com/chriseppstein/compass.git'
+gem "compass-h5bp"
+gem "html5-boilerplate"
 
 # Gems used only for assets and not required
 # in production environments by default.
