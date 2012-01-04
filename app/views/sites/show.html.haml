@@ -1,10 +1,61 @@
-%h1= t '.title'
-%p
-  = link_to t('back'), sites_path
-  = link_to t('edit'), edit_site_path(@site)
+%section#dashboard
+  %h1 Site '#{@site.name}'
+  %ul#breadcrumbs
+    %li= link_to "Home", root_url, :title => "Back to Homepage" 
+    %li= link_to "Sites", sites_path
+    %li= link_to @site.name, @site
 
-%dl
-  %dt= Site.human_attribute_name :name
-  %dd= @site.name
-  %dt= Site.human_attribute_name :customer
-  %dd= @site.customer
+%article.content-box.col-2
+  %header
+    %h2 Details
+    %nav
+      %a.toggle-options-switch.button.gray{:href => "#"}
+        = image_tag("icon_options.png")
+      %ul.options-switch{:style => "margin-left: -5.5px; display: none; "}
+        %li
+          %a{:href => "#"} View
+        %li
+          %a{:href => "#"} Edit
+        %li
+          %a{:href => "#"} Delete
+  
+  %section
+    %ul
+      %li Customer
+      %li Network (IPs)
+      %li Balancer (Slices, status?)
+          
+%article.content-box.col-2.clear-rm
+  %header
+    %h2 Usage statistics
+    %nav
+      %ul.button-switch
+        %li= link_to "Refresh", "#", :class => "button"
+  
+  %section
+    %ul
+      %li User statistics    
+      %li Web alizer
+      %li Traffic
+      %li Summary CPU usage
+
+.clearfix
+
+%article.content-box
+  %header
+    %h2 Support
+    %nav
+      /%form.content-box-header-search{:action => "/"}
+      /  %input.content-box-header-search-input{:name => "", :type => "text"}
+      /    %button.content-box-header-search-btn Search
+  %section
+    .sidetabs
+      %nav.sidetab-switch
+        %ul
+          %li= link_to "Error Logs", "#sidetab1", :class => "default-sidetab current"
+          %li= link_to "Tickets", "#sidetab2" 
+        %p Support info
+      #sidetab1.sidetab.default-sidetab
+        = render "error_logs"
+      #sidetab3.sidetab{:style => "display: none;"}
+        

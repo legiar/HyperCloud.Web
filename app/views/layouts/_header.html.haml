@@ -3,18 +3,21 @@
   %nav#nav-main
     %ul#nav-main-navigation
       %li= link_to "Dashboard", dashboard_path
+      %li= link_to "Hosts", hosts_path
+      %li= link_to "Slices", slices_path
       %li= link_to "Sites", sites_path
-      %li
-        = link_to "Databases", databases_path
-        %span.small-notification 3
+      %li= link_to "Databases", databases_path
       %li
         %a.nav-main-subnav{:href => "#submenu-3", :title => ""} Tickets
       %li
-        %a.nav-main-subnav{:href => "#submenu-4", :title => ""} Users
+        = link_to "Users", users_path
+        - cnt = User.where(:approved => false).count
+        - if cnt > 0 
+          %span.small-notification= cnt 
         
     %ul#nav-main-user
       %li Welcome, #{link_to current_user.email, "#"}
-      %li= link_to image_tag("icon_user_message.png", :alt => "Messages"), "#", :title => "Messages", :class => "actions"  
-      %li= link_to image_tag("icon_user_settings.png", :alt => "Settings"), "#", :title => "Settings", :class => "actions"  
+      /%li= link_to image_tag("icon_user_message.png", :alt => "Messages"), "#", :title => "Messages", :class => "actions"  
+      /%li= link_to image_tag("icon_user_settings.png", :alt => "Settings"), "#", :title => "Settings", :class => "actions"  
       %li= link_to image_tag("icon_user_logout.png", :alt => "Logout"), destroy_user_session_path, :method => :delete, :title => "Logout", :class => "actions"
   

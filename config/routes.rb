@@ -1,4 +1,19 @@
 HyperCloud::Application.routes.draw do
+  devise_for :users
+  resources :users do
+    member do
+      get 'approve'
+      get 'reject'
+    end
+  end
+  
+  resources :customers
+  
+  resources :hosts
+  resources :slices
+  resources :sites
+  resources :databases
+  
   #namespace :dns do
   #  resources :domains do
   #    resources :records
@@ -22,17 +37,6 @@ HyperCloud::Application.routes.draw do
   #resources :products
   #resources :network_addresses
   #resources :networks
-  resources :databases
-  #resources :slices
-  resources :sites
-  #resources :customers
-  #resources :hosts
-  
-  #resources :users
-  devise_for :users # do
-  #  get "/login" => "devise/sessions#new"
-  #  get "/logout" => "devise/sessions#destroy"
-  #end
 
   get "dashboard", :controller => :dashboard, :action => :index
 

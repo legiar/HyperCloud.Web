@@ -1,11 +1,12 @@
 - @sites.each do |site|
   %tr{:class => cycle(:odd, :even)}
     %td= site.id
-    %td= site.name
+    %td= link_to site.name, site
     %td= site.slice.try(:name)
     %td= site.customer.try(:name)
     %td= site.database.try(:name)
-    %td.options
-      = link_to 'Show', site
-      = link_to 'Edit', edit_site_path(site)
-      = link_to 'Destroy', site, :confirm => 'Are you sure', :method => :delete
+    %td
+      %ul.actions
+        %li= link_to t('Show'), site, :class => "view tooltip"
+        %li= link_to t('Edit'), edit_site_path(site), :class => "edit tooltip"
+        %li= link_to t('Destroy'), site, :method => :delete, :confirm => t('are_you_sure'), :class => "delete tooltip"

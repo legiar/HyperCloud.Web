@@ -32,5 +32,21 @@ class User < ActiveRecord::Base
       inactive_message
     end
   end
+  
+  def approve!
+    self.approved = true
+    save(:validate => true)
+    Mailer.approve(self).deliver
+  end
+  
+  def self.send_reset_password_instructions(attributes={})
+    recoverable = find_or_initialize_with_errors(reset_password_keys, attributes, :not_found)
+    if !recoverable.approved?
+      recoverable.errors[:base] << I18n.t("devise.failure.not_approved")
+    elsif recoverable.persisted?
+      recoverable.send_reset_password_instructions
+    end
+    recoverable
+  end    
 
 end

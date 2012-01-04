@@ -1,0 +1,11 @@
+- @users.each do |user|
+  %tr
+    %td= user.id
+    %td= user.email
+    %td= user.approved?
+    %td.actions
+      = link_to "Show", user
+      = link_to "Edit", edit_user_path(user)
+      - unless user.approved?
+        = link_to "Approve", approve_user_path(user)
+        = link_to "Reject", reject_user_path(user)

@@ -3,3 +3,8 @@
 
 en:
   hello: "Hello world"
+  actions: "Actions"
+  show: "Show"
+  edit: "Edit"
+  destroy: "Destroy"
+  are_you_sure: "Are you sure?"

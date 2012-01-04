@@ -1,0 +1,33 @@
+%h3 Error Logs
+%ul.tickets
+  %li.ticket-header
+    %ul
+      %li.ticket-header-ticket Date
+      %li.ticket-header-activity Message
+      %li.ticket-header-user Slice
+      %li.ticket-header-priority Level
+      %li.ticket-header-age Age
+  - SiteErrorLog.order(:date).each do |error|
+    %li.ticket-data
+      .ticket-overview
+        %ul
+          %li.ticket-data-ticket= error.date
+          - m = error.message.match(/Exception Message:\s*(.*)/)
+          - msg = "Unknown error"
+          - msg = m[1].gsub(/\r/, '') if m 
+          %li.ticket-data-activity= link_to msg, "#", :class => "ticket-open-details"  
+          %li.ticket-data-user #{error.slice}, #{error.site}
+          %li.ticket-data-priority= error.level
+          %li.ticket-data-age= 0
+      .ticket-details{:style => "display: none;"}
+        %h4= msg
+        %dl
+          %dt Posted:
+          %dd
+            %strong= error.date
+        %h5 Message
+        %p= h(error.message).gsub(/\n/, '<br/>').gsub(/\r/, '').html_safe
+        %ul.ticket-details-actions
+          %li
+            = link_to "Send to email", "#", :class => "button red"
+        

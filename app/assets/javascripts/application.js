@@ -101,7 +101,7 @@ $(function(){
 		$('div'+sidetabID).parent().find('.sidetab').hide(); // Hide all content divs
 		$('div'+sidetabID).show(); // Show the content div with the id equal to the id of URL Hash
 		$('div'+sidetabID).find('.visualize').trigger('visualizeRefresh'); // Refresh jQuery Visualize
-		$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
+		//$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
 	}
 	
 	$('.tab-switch a').click(
@@ -111,8 +111,8 @@ $(function(){
 			$(this).addClass('current'); // Add class 'current' to clicked tab
 			$(tab).siblings('.tab').hide(); // Hide all content divs
 			$(tab).show(); // Show the content div with the id equal to the id of clicked tab
-			$(tab).find('.visualize').trigger('visualizeRefresh'); // Refresh jQuery Visualize
-			$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
+			//$(tab).find('.visualize').trigger('visualizeRefresh'); // Refresh jQuery Visualize
+			//$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
 			return false;
 		}
 	);
@@ -124,11 +124,23 @@ $(function(){
 			$(this).addClass('current'); // Add class 'current' to clicked sidetab
 			$(sidetab).siblings('.sidetab').hide(); // Hide all content divs
 			$(sidetab).show(); // Show the content div with the id equal to the id of clicked tab
-			$(sidetab).find('.visualize').trigger('visualizeRefresh'); // Refresh jQuery Visualize
-			$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
+			//$(sidetab).find('.visualize').trigger('visualizeRefresh'); // Refresh jQuery Visualize
+			//$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
 			return false;
 		}
 	);
+	
+	// Tickets
+	$('.tickets .ticket-details').hide(); // Hide all ticket details
+	$('.tickets .ticket-open-details').click( // On click hide all ticket details content and open clicked one
+		function() {
+			//$('.tickets .ticket-details').slideUp()
+			$(this).parent().parent().parent().parent().siblings().find('.ticket-details').slideUp(); // Hide all ticket details expect the one clicked
+			$(this).parent().parent().parent().parent().find('.ticket-details').slideToggle();
+			return false;
+		}
+	);
+	
 	
 	/*$('#sites').dataTable({
 		'bProcessing': true,

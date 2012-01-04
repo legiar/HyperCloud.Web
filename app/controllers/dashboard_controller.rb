@@ -7,7 +7,10 @@ class DashboardController < ApplicationController
   
     def authenticate_user!
       unless current_user
-        redirect_to new_user_session_url
+        redirected_flash = {}
+        redirected_flash[:error] = flash[:error] if flash[:error]
+        redirected_flash[:notice] = flash[:notice] if flash[:notice] 
+        redirect_to new_user_session_url, :flash => redirected_flash
       end
     end
   
