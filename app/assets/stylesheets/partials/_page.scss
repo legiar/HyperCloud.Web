@@ -35,8 +35,8 @@ small {
 // inputs if you want to use these
 input:valid, textarea:valid {}
 input:invalid, textarea:invalid {
-  @include border-radius(1px);
-  @include single-box-shadow(red, 0, 0, 5px, 0);
+  //@include border-radius(1px);
+  //@include single-box-shadow(red, 0, 0, 5px, 0);
 }
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }

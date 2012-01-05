@@ -1,34 +1,48 @@
-/*  Forms  */
+/* Forms */
+
 form {
-  margin:20px 0;
-  padding-bottom:5px;
+  margin: 20px 0;
+  padding-bottom: 5px;
 }
-section form:last-child, section div form:last-child { margin-bottom:0; }
-form.table-form { margin-top:0; }
-button, input, select, textarea { margin:0; }
-textarea { overflow:auto; }
+
+section form:last-child, section div form:last-child {
+  margin-bottom: 0;
+}
+
+form.table-form {
+  margin-top: 0;
+}
+
+button, input, select, textarea {
+  margin: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
 fieldset {
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  border-radius:3px;
-  padding:25px 25px 0;
-  margin-bottom:15px;
-  border-style:solid;
-  border-width:1px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 25px 25px 0;
+  margin-bottom: 15px;
+  border-style: solid;
+  border-width: 1px;
 }
-.ie8 fieldset, .ie7 fieldset { padding-top:0; }
+.ie8 fieldset, .ie7 fieldset { padding-top: 0; }
 fieldset.no-borders { border:0; }
 legend {
   font-size:116%;
   padding:0 1em;
 }
 input, textarea, select, .customfile, div.wysiwyg iframe {
-  background-position:top;
-  background-repeat:repeat-x;
-  border:1px solid;
-  -webkit-border-radius:1px;
-  -moz-border-radius:1px;
-  border-radius:1px;
+  background-position: top;
+  background-repeat: repeat-x;
+  border: 1px solid;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  border-radius: 1px;
 }
 input[type=text], input[type=password], textarea, select { padding:8px; }
 input[type="checkbox"], input[type="radio"] {
@@ -53,19 +67,19 @@ select {
 
 /*  Form :: Layout  */
 form dt, form.horizontal-form dt {
-  width:150px;
-  min-height:20px;
-  text-align:right;
+  width: 150px;
+  min-height: 20px;
+  text-align: right;
 }
 form dd, form.horizontal-form dd {
-  position:relative;
-  top:-21px;
-  left:165px;
+  position: relative;
+  top: -21px;
+  left: 165px;
 }
 form dd p, form.horizontal-form dd p {
-  font-size:77%;
-  position:relative;
-  top:-4px;
+  font-size: 77%;
+  position: relative;
+  top: -4px;
 }
 form.vertical-form dd:last-child { margin-bottom:25px; }
 form.vertical-form dt {
@@ -102,7 +116,22 @@ input.full, textarea.full { width:99%; }
 textarea.footer { width:94%; resize:vertical; }
 
 /*  Form :: Elements  */
-form label span { color:#e30613; }
+abbr[title] {
+  color: #e30613;
+  border-bottom: 0px none !important;
+  &:before {
+    content: " ";
+  }
+}
+
+form {
+  label {
+    span {
+      color: #e30613;
+    }
+  }
+}
+    
 form span.valid-side-note, form span.invalid-side-note {
   margin-left:5px;
   padding:0 0 0 20px;

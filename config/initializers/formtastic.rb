@@ -9,21 +9,21 @@
 # --------------------------------------------------------------------------------------------------
 
 # Set the default text field size when input is a string. Default is nil.
-# Formtastic::FormBuilder.default_text_field_size = 50
+Formtastic::FormBuilder.default_text_field_size = 10
 
 # Set the default text area height when input is a text. Default is 20.
-# Formtastic::FormBuilder.default_text_area_height = 5
+Formtastic::FormBuilder.default_text_area_height = 3
 
 # Set the default text area width when input is a text. Default is nil.
-# Formtastic::FormBuilder.default_text_area_width = 50
+Formtastic::FormBuilder.default_text_area_width = 20
 
 # Should all fields be considered "required" by default?
 # Defaults to true.
-# Formtastic::FormBuilder.all_fields_required_by_default = true
+Formtastic::FormBuilder.all_fields_required_by_default = false
 
 # Should select fields have a blank option/prompt by default?
 # Defaults to true.
-# Formtastic::FormBuilder.include_blank_for_select_by_default = true
+Formtastic::FormBuilder.include_blank_for_select_by_default = true
 
 # Set the string that will be appended to the labels/fieldsets which are required
 # It accepts string or procs and the default is a localized version of
@@ -38,17 +38,17 @@
 
 # Set the way inline errors will be displayed.
 # Defaults to :sentence, valid options are :sentence, :list, :first and :none
-# Formtastic::FormBuilder.inline_errors = :sentence
+Formtastic::FormBuilder.inline_errors = :sentence
 # Formtastic uses the following classes as default for hints, inline_errors and error list
 
 # If you override the class here, please ensure to override it in your stylesheets as well
-# Formtastic::FormBuilder.default_hint_class = "inline-hints"
-# Formtastic::FormBuilder.default_inline_error_class = "inline-errors"
-# Formtastic::FormBuilder.default_error_list_class = "errors"
+Formtastic::FormBuilder.default_hint_class = "inline-hints"
+Formtastic::FormBuilder.default_inline_error_class = "inline-errors"
+Formtastic::FormBuilder.default_error_list_class = "errors"
 
 # Set the method to call on label text to transform or format it for human-friendly
 # reading when formtastic is used without object. Defaults to :humanize.
-# Formtastic::FormBuilder.label_str_method = :humanize
+Formtastic::FormBuilder.label_str_method = :humanize
 
 # Set the array of methods to try calling on parent objects in :select and :radio inputs
 # for the text inside each @<option>@ tag or alongside each radio @<input>@. The first method
@@ -74,7 +74,7 @@
 
 # You can opt-in to Formtastic's use of the HTML5 `required` attribute on `<input>`, `<select>` 
 # and `<textarea>` tags by setting this to false (defaults to true).
-# Formtastic::FormBuilder.use_required_attribute = true
+Formtastic::FormBuilder.use_required_attribute = true
 
 # You can opt-in to new HTML5 browser validations (for things like email and url inputs) by setting
 # this to false. Doing so will add a `novalidate` attribute to the `<form>` tag.

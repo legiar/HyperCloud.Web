@@ -8,3 +8,11 @@ en:
   edit: "Edit"
   destroy: "Destroy"
   are_you_sure: "Are you sure?"
+
+  activerecord:
+    errors:
+      messages:
+        ipaddress:
+          invalid: Invalid IP address
+          not_v4: IP address not IPv4
+          not_v6: IP address not IPv6

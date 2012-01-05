@@ -1,12 +1,37 @@
-%h1= t '.title'
-%p
-  = link_to t('back'), networks_path
-  = link_to t('edit'), edit_network_path(@network)
+%section#dashboard
+  %h1 Network '#{@network.name}'
+  %ul#breadcrumbs
+    %li= link_to "Home", root_url, :title => "Back to Homepage" 
+    %li= link_to "Networks", networks_path
+    %li= link_to @network.name, @network
 
-%dl
-  %dt= Network.human_attribute_name :address
-  %dd= @network.address
-  %dt= Network.human_attribute_name :netmask
-  %dd= @network.netmask
-  %dt= Network.human_attribute_name :gateway
-  %dd= @network.gateway
+%article.content-box.col-2
+  %header
+    %h2 Details
+    %nav
+
+  %section
+    %dl
+      %dt= Network.human_attribute_name :address
+      %dd= @network.address
+      %dt= Network.human_attribute_name :netmask
+      %dd= @network.netmask
+      %dt= Network.human_attribute_name :gateway
+      %dd= @network.gateway
+      
+%article.content-box.col-2.clear-rm
+  %header
+    %h2 Addresses
+    %nav
+      
+  %section
+    %table.datatable
+      %thead
+        %tr
+          %th IP
+      %tbody
+        - @network.addresses.each do |address|
+          %tr{:class => cycle(:odd, :even)}
+            %td= address.ip
+
+.clearfix

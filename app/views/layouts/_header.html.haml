@@ -7,8 +7,7 @@
       %li= link_to "Slices", slices_path
       %li= link_to "Sites", sites_path
       %li= link_to "Databases", databases_path
-      %li
-        %a.nav-main-subnav{:href => "#submenu-3", :title => ""} Tickets
+      %li= link_to "Networks", networks_path
       %li
         = link_to "Users", users_path
         - cnt = User.where(:approved => false).count

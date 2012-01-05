@@ -11,6 +11,11 @@ HyperCloud::Application.routes.draw do
   
   resources :hosts
   resources :slices
+  resources :networks do
+    resources :addresses, :controller => "NetworkAddresses"
+  end
+  #resources :network_addresses
+  
   resources :sites
   resources :databases
   
@@ -35,8 +40,6 @@ HyperCloud::Application.routes.draw do
   #resources :tasks
   #resources :jobs
   #resources :products
-  #resources :network_addresses
-  #resources :networks
 
   get "dashboard", :controller => :dashboard, :action => :index
 
