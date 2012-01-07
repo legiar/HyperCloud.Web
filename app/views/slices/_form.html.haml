@@ -5,11 +5,11 @@
       %ul
       - @slice.errors.full_messages.each do |msg|
         %li= msg
-  
-  = f.input :name
-  = f.input :host
-  = f.input :active_host
-  = f.input :network_address, :label_method => :ip
-  = f.input :cpu
-  = f.input :memory
-  = f.commit_button
+  %dl
+    = f.input :name
+    = f.input :host
+    = f.input :active_host
+    = f.input :cpu
+    = f.input :memory
+    
+  = f.submit

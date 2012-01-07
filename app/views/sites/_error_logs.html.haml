@@ -7,7 +7,7 @@
       %li.ticket-header-user Slice
       %li.ticket-header-priority Level
       %li.ticket-header-age Age
-  - SiteErrorLog.order(:date).each do |error|
+  - SiteErrorLog.where(:site => @site.name).order('date desc').limit(50).each do |error|
     %li.ticket-data
       .ticket-overview
         %ul
