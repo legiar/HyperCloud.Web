@@ -1,7 +1,10 @@
 - for host in @hosts
   %tr{ :class => cycle(:odd, :even) }
-    %td= host.name
-    %td= host.ip
+    %td= link_to host.name, host
+    %td= host.zone.name
+    %td= host.public_ip
+    %td= host.private_ip
+    %td= host.state
     %td.actions
       = link_to t('show'), host
       = link_to t('edit'), edit_host_path(host)

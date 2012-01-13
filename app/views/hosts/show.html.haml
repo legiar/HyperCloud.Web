@@ -6,5 +6,9 @@
 %dl
   %dt= Host.human_attribute_name :name
   %dd= @host.name
-  %dt= Host.human_attribute_name :ip
-  %dd= @host.ip
+  %dt= Host.human_attribute_name :zone
+  %dd= @host.zone.name
+  %dt= Host.human_attribute_name :public_ip
+  %dd= @host.public_ip
+  %dt= Host.human_attribute_name :private_ip
+  %dd= @host.private_ip
