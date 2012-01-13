@@ -1,10 +1,15 @@
 - @networks.each do |network| 
   %tr{ :class => cycle(:odd, :even) }
     %td= link_to network.name, network
-    %td= network.cidr
-    %td= network.vlan
+    %td= network.zone.name
+    %td= network.address
+    %td= [network.dns1, network.dns2].compact.join(', ')
+    %td= network.system
+    %td= network.shared
+    %td= network.default
+    %td= network.private
     %td= network.addresses.count
-    %td= 0
+    %td= network.addresses.where(:state => "free").count
     %td
       %ul.actions
         %li= link_to t('show'), network, :class => "view tooltip"

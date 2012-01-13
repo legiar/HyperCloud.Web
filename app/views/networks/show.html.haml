@@ -14,8 +14,6 @@
     %dl
       %dt= Network.human_attribute_name :address
       %dd= @network.address
-      %dt= Network.human_attribute_name :netmask
-      %dd= @network.netmask
       %dt= Network.human_attribute_name :gateway
       %dd= @network.gateway
       
@@ -29,9 +27,15 @@
       %thead
         %tr
           %th IP
+          %th State
+          %th Allocated At
+          %th Slice
       %tbody
         - @network.addresses.each do |address|
           %tr{:class => cycle(:odd, :even)}
             %td= address.ip
+            %td= address.state
+            %td= address.allocated_at
+            %td= address.slice.try(:name)
 
 .clearfix
