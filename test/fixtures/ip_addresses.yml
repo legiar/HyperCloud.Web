@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  state: MyString
+  ip: MyString
+  allocated_at: 2012-01-12 15:20:09
+  deleted_at: 2012-01-12 15:20:09
+  network: 
+
+two:
+  state: MyString
+  ip: MyString
+  allocated_at: 2012-01-12 15:20:09
+  deleted_at: 2012-01-12 15:20:09
+  network: 

@@ -7,13 +7,11 @@
         %li= msg
   
   %dl
+    = f.input :zone
     = f.input :name
-    = f.input :cidr
     = f.input :address
-    = f.input :netmask
     = f.input :gateway
-    = f.input :vlan
-    = f.input :begin_ip
-    = f.input :end_ip
+    =# f.input :begin_ip
+    =# f.input :end_ip
     
   = f.submit

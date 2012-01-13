@@ -1,4 +1,5 @@
 class Host < ActiveRecord::Base
-  set_inheritance_column :ruby_type
+  belongs_to :zone
+  
   validates :name, :presence => true, :uniqueness => true
 end
