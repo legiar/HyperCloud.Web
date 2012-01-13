@@ -1,13 +1,12 @@
 - @slices.each do |slice| 
   %tr{:class => cycle(:odd, :even)}
-    %td= slice.id
     %td= link_to slice.name, slice
-    %td= slice.host.name if slice.host
-    %td= slice.active_host.name if slice.active_host
-    %td= slice.network_address.ip if slice.network_address
+    %td= slice.host.name
+    %td
     %td= slice.cpu
     %td= slice.memory
-    %td= slice.sites.collect{|site| site.name}.join(' ')
+    %td 0
+    %td= slice.state
     %td
       %ul.actions
         %li= link_to t('show'), slice, :class => "view tooltip"
