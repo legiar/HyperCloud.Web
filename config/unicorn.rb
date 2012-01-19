@@ -1,23 +1,12 @@
-rails_root  = "/home/hyperadmin/current"
-rails_env   = "production"
-pid_file    = "/home/hyperadmin/shared/pids/unicorn.pid"
-socket_file = "/home/hyperadmin/shared/var/unicorn.sock"
-log_file    = "#{rails_root}/log/unicorn.log"
-error_file    = "#{rails_root}/log/error.log"
-username    = "hyperadmin"
-group       = "webmaster"
-old_pid     = pid_file + ".oldbin"
+# unicorn_rails -c config/unicorn.rb -E production -D
+app_path = File.expand_path(File.dirname(__FILE__) + "/../..")
 
-working_directory rails_root
-pid pid_file
-stderr_path error_file
-stdout_path log_file
-worker_processes 10
-
+rails_env = ENV['RAILS_ENV'] || 'production'
+worker_processes (rails_env == 'production' ? 16 : 4)
 preload_app true
 timeout 30
 
-listen socket_file, :backlog => 2048
+listen "#{path}/current/tmp/unicorn.sock", :backlog => 2048
 
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=)
 
@@ -33,14 +22,13 @@ before_fork do |server, worker|
   # we send it a QUIT.
   #
   # Using this method we get 0 downtime deploys.
-
-  if File.exists?(old_pid) && server.pid != old_pid
-    begin
-      Process.kill("QUIT", File.read(old_pid).to_i)
-    rescue Errno::ENOENT, Errno::ESRCH
-      # someone else did our job for us
-    end
-  end
+  #if File.exists?(old_pid) && server.pid != old_pid
+  #  begin
+  #    Process.kill("QUIT", File.read(old_pid).to_i)
+  #  rescue Errno::ENOENT, Errno::ESRCH
+  #    # someone else did our job for us
+  #  end
+  #end
 end
 
 after_fork do |server, worker|
