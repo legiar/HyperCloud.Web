@@ -10,11 +10,13 @@ gem 'devise'
 gem "formtastic", "~> 2.0.0"
 gem "inherited_resources", "~> 1.2.1"
 gem "unicorn"
-gem "capistrano"
 gem "cancan"
 
 gem "resque"
 gem "resque-scheduler"
+gem "resque-status"
+gem "resque_mailer"
+gem "resque-multi-step"
 
 gem "compass", :git => 'git://github.com/chriseppstein/compass.git'
 gem "compass-h5bp"
@@ -27,3 +29,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem "capistrano"
+end
+
