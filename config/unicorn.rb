@@ -6,7 +6,7 @@ worker_processes (rails_env == 'production' ? 16 : 4)
 preload_app true
 timeout 30
 
-listen "#{path}/current/tmp/unicorn.sock", :backlog => 2048
+listen "#{app_path}/current/tmp/unicorn.sock", :backlog => 2048
 
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=)
 
