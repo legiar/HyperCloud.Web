@@ -6,6 +6,7 @@ worker_processes (rails_env == 'production' ? 16 : 4)
 preload_app true
 timeout 30
 
+pid "#{app_path}/current/tmp/pids/unicorn.pid"
 listen "#{app_path}/current/tmp/unicorn.sock", :backlog => 2048
 
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=)
@@ -22,13 +23,14 @@ before_fork do |server, worker|
   # we send it a QUIT.
   #
   # Using this method we get 0 downtime deploys.
-  #if File.exists?(old_pid) && server.pid != old_pid
-  #  begin
-  #    Process.kill("QUIT", File.read(old_pid).to_i)
-  #  rescue Errno::ENOENT, Errno::ESRCH
-  #    # someone else did our job for us
-  #  end
-  #end
+  old_pid = "#{app_path}/current/tmp/pids/unicorn.pid.oldbin"
+  if File.exists?(old_pid) && server.pid != old_pid
+    begin
+      Process.kill("QUIT", File.read(old_pid).to_i)
+    rescue Errno::ENOENT, Errno::ESRCH
+      # someone else did our job for us
+    end
+  end
 end
 
 after_fork do |server, worker|
