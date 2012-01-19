@@ -1,4 +1,4 @@
-%h3 Change password
+%h3 Enter new password
 = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :put}) do |f|
   = f.hidden_field :reset_password_token
   %dl
