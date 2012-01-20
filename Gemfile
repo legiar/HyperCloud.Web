@@ -1,34 +1,31 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-gem 'rails', '3.1.0'
-gem 'mysql2'
-gem 'sqlite3'
-gem 'json'
-gem 'therubyracer'
-gem 'haml'
-gem 'devise'
-gem "formtastic", "~> 2.0.0"
-gem "inherited_resources", "~> 1.2.1"
+gem "rails", "3.1.0"
 gem "unicorn"
+gem "mysql2"
+gem "sqlite3"
+
+gem "inherited_resources", "~> 1.2.1"
+gem "will_paginate"
+
+gem "devise"
 gem "cancan"
 
-gem "resque"
-gem "resque-scheduler"
-gem "resque-status"
-gem "resque_mailer"
-gem "resque-multi-step"
-
-gem "compass", :git => 'git://github.com/chriseppstein/compass.git'
+gem "haml"
+gem "json"
+gem "therubyracer"
+gem "jquery-rails"
+gem "compass", :git => "git://github.com/chriseppstein/compass.git"
 gem "compass-h5bp"
 gem "html5-boilerplate"
 
-group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
-end
+gem "formtastic", "~> 2.0.0"
 
-gem 'jquery-rails'
+group :assets do
+  gem "sass-rails", "  ~> 3.1.0"
+  gem "coffee-rails", "~> 3.1.0"
+  gem "uglifier"
+end
 
 group :development do
   gem "capistrano"
