@@ -50,6 +50,7 @@ namespace :deploy do
   
   after "deploy:setup" do
     run "mkdir -p #{deploy_to}/shared/config"
+    run "mkdir -p #{deploy_to}/shared/sockets"
   end
 end
 
