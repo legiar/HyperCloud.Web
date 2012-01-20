@@ -82,17 +82,17 @@ $(function(){
 	
 	// Content box tabs and sidetabs
 	$('.tab, .sidetab').hide(); // Hide the content divs
-	$('.default-tab, .default-sidetab').show(); // Show the div with class 'default-tab'
-	$('.tab-switch a.default-tab, .sidetab-switch a.default-sidetab').addClass('current'); // Set the class of the default tab link to 'current'
+	$('.tab.default, .default-sidetab').show(); // Show the div with class 'default-tab'
+	$('nav .tabs a.default, .sidetab-switch a.default-sidetab').addClass('current'); // Set the class of the default tab link to 'current'
 
 	if(window.location.hash && window.location.hash.match(/^#tab\d+$/)) { // Check for tab Hash ID, if exist opens corresponding tab
 		var tabID = window.location.hash; // Set variable tabID to the value of URL Hash
 		
-		$('.tab-switch a[href='+tabID+']').addClass('current').parent().siblings().find('a').removeClass('current'); // Find corresponding link and set is as current
+		$('nav .tabs a[href='+tabID+']').addClass('current').parent().siblings().find('a').removeClass('current'); // Find corresponding link and set is as current
 		$('div'+tabID).parent().find('.tab').hide(); // Hide all content divs
 		$('div'+tabID).show(); // Show the content div with the id equal to the id of URL Hash
-		$('div'+tabID).find('.visualize').trigger('visualizeRefresh');; // Refresh jQuery Visualize
-		$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
+		//$('div'+tabID).find('.visualize').trigger('visualizeRefresh');; // Refresh jQuery Visualize
+		//$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
 		
 	} else if (window.location.hash && window.location.hash.match(/^#sidetab\d+$/)) { // Check for sidetab Hash ID, if exist opens corresponding sidetab
 		var sidetabID = window.location.hash;// Set variable sidetabID to the value of URL Hash
@@ -104,7 +104,7 @@ $(function(){
 		//$('.fullcalendar').fullCalendar('render'); // Refresh jQuery FullCalendar
 	}
 	
-	$('.tab-switch a').click(
+	$('nav .tabs a').click(
 		function() { 
 			var tab = $(this).attr('href'); // Set variable 'tab' to the value of href of clicked tab
 			$(this).parent().siblings().find('a').removeClass('current'); // Remove 'current' class from all tabs

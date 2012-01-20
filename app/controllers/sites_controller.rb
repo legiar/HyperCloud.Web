@@ -1,5 +1,6 @@
 class SitesController < InheritedResources::Base
   respond_to :html, :json
+  add_breadcrumb "Sites", :sites_path
 
   def show
     show! do

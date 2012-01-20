@@ -417,36 +417,6 @@ div.tab > img, div.tab > .image-frame img { margin-top:0; }
 }
 #footer .social-list li:last-child { margin-right:0; }
 
-/*  Tabs  */
-.tab-switch {
-  display:block;
-  position:relative;
-  top:10px;
-}
-.tab-switch li {
-  float:left;
-  list-style:none;
-  background:none;
-  margin-right:15px;
-  padding:0;
-}
-.tab-switch li:last-child { margin-right:0; }
-.tab-switch li:last-child a { padding-right:0; }
-.tab-switch li a {
-  display:block;
-  padding:0 3px 21px;
-  height:16px;
-}
-.tab-switch li a.current {
-  background-position:bottom center;
-  background-repeat:no-repeat;
-  background-image:url("icon_tabs.png");
-}
-.tab {
-  clear:both;
-  display:block;
-  overflow:hidden;
-}
 
 /*  Sidetabs */
 .content-box section .sidetabs {

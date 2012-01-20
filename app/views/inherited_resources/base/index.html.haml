@@ -1,6 +1,10 @@
+%section#dashboard
+  %h1= resource_class.name.pluralize
+  = render "layouts/breadcrumbs"
+
 %article.content-box
   %header
-    %h2= resource_class.name.pluralize
+    %h2 #{resource_class.name.pluralize} list
     %nav
       %ul.button-switch
         %li= link_to "New #{resource_class.name.downcase}", new_resource_path, :class => "button"
