@@ -7,7 +7,7 @@
       %li.ticket-header-user Slice
       %li.ticket-header-priority Level
       %li.ticket-header-age Age
-  - SiteErrorLog.where(:site => @site.name).order('date desc').limit(50).each do |error|
+  - SiteErrorLog.where(:site => @site.name).order('date desc').limit(20).each do |error|
     %li.ticket-data
       .ticket-overview
         %ul
@@ -16,7 +16,7 @@
           - msg = "Unknown error"
           - msg = m[1].gsub(/\r/, '') if m 
           %li.ticket-data-activity= link_to msg, "#", :class => "ticket-open-details"  
-          %li.ticket-data-user #{error.slice}, #{error.site}
+          %li.ticket-data-user= error.host
           %li.ticket-data-priority= error.level
           %li.ticket-data-age= 0
       .ticket-details{:style => "display: none;"}
