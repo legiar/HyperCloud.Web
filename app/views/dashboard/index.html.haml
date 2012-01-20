@@ -1,11 +1,6 @@
-%section#dashboard
-  %h1 Dashboard
-  = render "layouts/breadcrumbs"
+- add_shortcut "Tickets", tickets_path, :count => 4 
     
-  %ul.shortcuts
-    %li.shortcut-tickets= link_to "Tickets", tickets_path
-    
-%article.content-box.minimizer
+%article.content
   %header
     %h2 Statistics
     %nav

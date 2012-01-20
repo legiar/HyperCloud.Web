@@ -8,17 +8,26 @@
   
   %body
     #container
-      /%header#header
       %header#navigation
         = render "layouts/header"
       
-      /#main{ :role => 'main' }
       %section.page-wrapper{:role => "main"}
         = render "layouts/flashes"
+        
+        - unless @disable_title
+          %section
+            %h1= @title || controller.controller_name.titleize
+            
+            %ul#breadcrumbs
+              %li= link_to "Home", root_path
+              = render_breadcrumbs :tag => :li, :separator => ''
+                        
+            %ul.shortcuts
+              = render_shortcuts :tag => :li, :separator => ''
+          
         = yield
         
       %footer#footer
         = render "layouts/footer"
         
-    -# Javascript at the bottom for fast page loading
     = render "layouts/javascripts"
