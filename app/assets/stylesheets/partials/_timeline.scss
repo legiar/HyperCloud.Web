@@ -1,0 +1,65 @@
+.timeline {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  background: #fff;
+
+  ul {
+    position: relative;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    font-size: 10px;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    white-space: nowrap;
+
+    li {
+      position: relative;
+      float: left;
+      width: 0.9em;
+      margin: 0 2px 0 0;
+      padding: 0;
+      height: 100%;
+      background: #f2f2f2;
+      a {
+        cursor: default;
+        display: block;
+        height: 100%;
+        .count {
+          padding: 0;
+          margin: 0;
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 0;
+          width: 100%;
+          background: #bdbdbd;
+          text-indent: -9999px;
+          overflow: hidden;
+        }
+        &:hover {
+          .count {
+            background: #4d88cf;
+          }
+        }
+      }
+      &:hover {
+        background: #dedede;
+      }
+    }
+  }
+}
+
+.timeline-label {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  line-height: 20px;
+}

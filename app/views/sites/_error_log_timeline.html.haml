@@ -1,0 +1,18 @@
+.timeline
+  %ul
+    - @timeline.each_with_index do |day, i|
+      - count = @timeline_log[@timeline[i]].blank? ? 0 : @timeline_log[@timeline[i]]  
+      %li
+        %a(href="#" title="#{count} #{count == 1 ? 'ticket' : 'tickets'} opened on #{day}" onclick="return false;")
+          - if count == 0
+            - height = '1px'
+          - else
+            - if count == @max_count
+              - height = '100%'
+            - else
+              - if (count.to_f / @max_count) * 100 < 1
+                - height = '1px'
+              - else
+                - height = (count.to_f / @max_count) * 100
+                - height = height.to_s + "%"
+          %span.count{:style => "height: #{height};"}= count
