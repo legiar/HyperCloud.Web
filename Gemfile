@@ -7,6 +7,7 @@ gem "sqlite3"
 
 gem "inherited_resources", "~> 1.2.1"
 gem "will_paginate"
+gem "meta_search"
 
 gem "devise"
 gem "cancan"
