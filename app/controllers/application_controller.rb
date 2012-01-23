@@ -30,11 +30,19 @@ class ApplicationController < ActionController::Base
     def sort_column
       # TODO: How get resource_class from InheritedResource  
       #resource_class.column_names.include?(params[:sort]) ? params[:sort] : resource_class.primary_key
-      params[:sort] ? params[:sort] : "id"
-    end  
-  
+      params[:sort] ? params[:sort] : default_sort_column
+    end
+    
+    def default_sort_column
+      "id"
+    end
+    
     def sort_direction
-      %w[asc desc].include?(params[:direction]) ?  params[:direction] : "asc"  
+      %w[asc desc].include?(params[:direction]) ?  params[:direction] : default_sort_direction  
     end      
-  
+
+    def default_sort_direction
+      "asc"
+    end
+    
 end
