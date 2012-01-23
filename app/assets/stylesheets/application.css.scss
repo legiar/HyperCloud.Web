@@ -30,7 +30,8 @@
 @import "partials/devise";
 @import "partials/timeline";
 @import "partials/tabs";
-//@import "formtastic";
+
+@import "hypercloud";
 
 // Media should come last
 @import "partials/media";

@@ -1,6 +1,4 @@
 %h4 Please send us your email and we'll reset your password.
-= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f|
-  %dl
-    %dt= f.label :email
-    %dd= f.text_field :email
+= semantic_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => {:method => :post}) do |f|
+  = f.input :email
   = f.submit "Send me email"

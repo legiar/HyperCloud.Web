@@ -1,10 +1,6 @@
 %h4 Register
-= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
-  %dl
-    %dt= f.label :email
-    %dd= f.text_field :email
-    %dt= f.label :password
-    %dd= f.password_field :password
-    %dt= f.label :password_confirmation
-    %dd= f.password_field :password_confirmation
+= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = f.input :email
+  = f.input :password
+  = f.input :password_confirmation
   = f.submit "Register"

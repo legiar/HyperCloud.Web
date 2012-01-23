@@ -11,31 +11,28 @@ body.devise {
   form {
     text-align: center;
     
-    dl {
-      text-align: left;
-    }
-    
-    dt {
-      width: 110px;
+    > li {
+      margin-bottom: 0 !important;
       
-      &.checkbox {
-        width: 200px;
-        left: 150px;
-        top: -2px;
+      label {
+        width: 110px;
+        text-align: left;
       }
-      &.remember {
-        top: -12px;
-      }
+      
+      &.boolean {
+        padding-left: 130px;
+        
+        label {
+          width: 200px;
+        }
+        
+        input {
+          margin-right: 5px;
+        }
+      } 
     }
     
-    dd {
-      left: 125px;
-      &.remember {
-        top: -35px;
-      }
-    }
-    
-    input[type=text], input[type=password] {
+    input[type=email], input[type=password] {
       width: 200px;
     }
     

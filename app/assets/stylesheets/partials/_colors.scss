@@ -195,7 +195,6 @@ ul li { background-image:url("lists/icon_list_style_basic.png"); }
 .notification.attention { background-image:url("notifications/icon_notification_attention.png"); }
 .notification.information { background-image:url("notifications/icon_notification_information.png"); }
 .notification.note { background-image:url("notifications/icon_notification_note.png"); }
-.content section .sidetabs { background-image:url("bg_sidetabs.png"); }
 .loading { background-image:url("loading/icon_loading_notification_white.gif"); }
 .loading.red { background-image:url("loading/icon_loading_notification_red.gif"); }
 .loading.green { background-image:url("loading/icon_loading_notification_green.gif"); }
@@ -207,10 +206,8 @@ form span.valid-side-note { background-image:url("notifications/icon_notificatio
 form span.invalid-side-note { background-image:url("notifications/icon_notification_error.png"); }
 .loading-notification { background-image:url("loading/icon_loading_notification_white.gif"); }
 .toggle-table-switch { background-image:url("icon_options.png"); }
-.content section .sidetab-switch { background-image:url("bg_sidetabs_ul.png"); }
 .tip-box header { background-image:url("icon_tip_box.png"); }
 .tip-box header h2{ background-image:url("bg_tipbox.png"); }
-.content section .sidetab-switch a.current { background-image:url("icon_sidetabs.png"); }
 .small-notification { background-image:url("bg_notification.png"); }
 #breadcrumbs li { background-image:url("icon_breadcrumb_divider.png"); }
 a.outside { background-image:url("icon_outside.png"); }
@@ -221,7 +218,6 @@ body #container > footer { background-image:url("bg_footer.png"); }
 /*  Global Text Shadows  */
 #nav-main ul li, .progress-bar div span { text-shadow:0 1px 1px #1a1a1a; }
 .tab-switch li a { text-shadow:0 1px 1px #b3b3b3; }
-.sidetab-switch a { text-shadow:0 1px 1px #ccc; }
 .shortcuts li a { text-shadow:0 1px 1px #fff; }
 .small-notification { text-shadow:0 1px 1px #666; }
 .button.gray, a.button.gray, button.gray, input[type="button"].gray, input[type="submit"].gray,

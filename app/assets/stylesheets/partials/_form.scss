@@ -1,76 +1,175 @@
-/* Forms */
-
-form {
+form.formtastic {
   margin: 20px 0;
   padding-bottom: 5px;
+  
+  ol, ul, li {
+    margin: 0;
+    list-style: none;
+  }
+  
+  fieldset {
+    margin: 0;
+    border: 0;
+    overflow: auto;
+    
+    &.inputs {
+      border-radius: 3px;
+      padding: 25px 25px 0;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+    }
+    
+    &.buttons {
+      padding: 0;
+      border: 0;
+      
+      li {
+        float: left;
+        padding-right: 0.5em;
+      }
+    }
+    
+    legend {
+      margin: 0;
+      white-space: normal; 
+      font-size: 116%;
+      padding: 0 1em;
+    }
+  }
+  
+  fieldset > ol > li, > li {
+    padding: 0.5em 0;
+    margin-top: -0.5em;
+    margin-bottom: 1em;
+    overflow: auto;
+    
+    &.required {
+      
+    }
+    
+    &.optional {
+      
+    }
+    
+    &.error {
+      input {
+        border-color: #AE432E;
+        background-color: #F7ECEA;
+      }
+    }
+    
+    label {
+      font-weight: bold;
+      cursor: pointer;
+      width: 150px;
+      display: block;
+      float: left;
+      min-height: 20px;
+      text-align: right;
+      padding-top: .4em;
+      padding-right: 10px;
+      
+      abbr {
+        font-variant: normal;
+        border: 0;
+        color: #e30613;
+        border-bottom: 0px none !important;
+        &:before {
+          content: " ";
+        }
+      }
+    }
+    
+    &.string, &.email {
+      input {
+        width: 25%;
+        min-width: 25%;
+      }
+    }
+    
+    p {
+      margin: 0;
+      
+      &.inline-hints {
+        color: #666;
+        font-size: 77%;
+        margin-left: 160px;
+      }
+      
+      &.inline-errors {
+        display: inline-block;
+        color: #cc0000;
+      }
+    }
+    
+    ul.errors {
+      color: #cc0000;
+      margin: 0.5em 0 0 25%;
+      list-style: square;
+      li {
+        padding: 0;
+        border: none;
+        display: list-item;
+      }
+    }
+  }
+ 
+  input, textarea, select /*, .customfile, div.wysiwyg iframe*/ {
+    /*font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-size: 100%;*/
+    margin: 0;
+    background-position: top;
+    background-repeat: repeat-x;
+    border: 1px solid #CCC;
+    border-radius: 1px;
+  }
+  
+  input[type=text], input[type=password], input[type=email], textarea, select {
+    padding: 8px;
+  }
+  
+  textarea {
+    overflow: auto;
+  }
+ 
+  input[type="checkbox"], input[type="radio"] {
+    background: none;
+    border: none;
+  }
+ 
+  select {
+    width: auto;
+    cursor: pointer;
+  }
+  
+  .checkbox1, .radio {
+    width: 200px;
+    position: relative;
+    left: 185px;
+    text-align: left;
+  }
+  .checkbox1 label, .radio1 label { font-weight:normal; }
+  
+  input[type="submit"] {
+    box-shadow: 0 1px 2px #bfbfbf;
+  }
+ 
 }
+.ie8 form.formtastic fieldset, .ie7 form.formtastic fieldset { padding-top: 0; }
 
-section form:last-child, section div form:last-child {
+
+/*section form:last-child, section div form:last-child {
   margin-bottom: 0;
-}
+}*/
 
-form.table-form {
+/*form.table-form {
   margin-top: 0;
-}
+}*/
+/*
 
-button, input, select, textarea {
-  margin: 0;
-}
 
-textarea {
-  overflow: auto;
-}
-
-fieldset {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding: 25px 25px 0;
-  margin-bottom: 15px;
-  border-style: solid;
-  border-width: 1px;
-}
-.ie8 fieldset, .ie7 fieldset { padding-top: 0; }
-fieldset.no-borders { border:0; }
-legend {
-  font-size:116%;
-  padding:0 1em;
-}
-input, textarea, select, .customfile, div.wysiwyg iframe {
-  background-position: top;
-  background-repeat: repeat-x;
-  border: 1px solid;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  border-radius: 1px;
-}
-input[type=text], input[type=password], textarea, select { padding:8px; }
-input[type="checkbox"], input[type="radio"] {
-  background:none;
-  border:none;
-}
-label {
-  font-weight:bold;
-  cursor:pointer;
-}
-select {
-  width:auto;
-  cursor:pointer;
-}
-.checkbox, .radio {
-  width:200px;
-  position:relative;
-  left:185px;
-  text-align:left;
-}
-.checkbox label, .radio label { font-weight:normal; }
-
-/*  Form :: Layout  */
-form dt, form.horizontal-form dt {
-  width: 150px;
-  min-height: 20px;
-  text-align: right;
-}
 form dd, form.horizontal-form dd {
   position: relative;
   top: -21px;
@@ -115,15 +214,6 @@ input.large, textarea.large { width:75%; }
 input.full, textarea.full { width:99%; }
 textarea.footer { width:94%; resize:vertical; }
 
-/*  Form :: Elements  */
-abbr[title] {
-  color: #e30613;
-  border-bottom: 0px none !important;
-  &:before {
-    content: " ";
-  }
-}
-
 form {
   label {
     span {
@@ -164,7 +254,7 @@ input.datepicker {
   left:-24px;
 }
 
-/*  Form :: IE fix  */
+
 .ie6 legend, .ie7 legend { margin-left:-7px; }
 .ie8 legend, .ie7 legend { margin-bottom:30px; }
 .ie8 legend { top:-25px; }
@@ -176,8 +266,8 @@ input.datepicker {
   border:none;
   box-shadow:none;
 }
-/*.ie7 .checkbox, .ie8 .checkbox, .ie9 .checkbox { top:-7px; }
-.ie7 .radio, .ie8 .radio, .ie9 .radio { top:-5px; }*/
+.ie7 .checkbox, .ie8 .checkbox, .ie9 .checkbox { top:-7px; }
+.ie7 .radio, .ie8 .radio, .ie9 .radio { top:-5px; }
 .ie7 td select {
   position:relative;
   top:-3px;
@@ -185,7 +275,7 @@ input.datepicker {
 }
 .ie7 .datepicker-icon { top:0; }
 
-/*  Form :: jQuery Datepicker  */
+
 .jq-datepicker {
   border:1px solid;
   -webkit-border-radius:5px;
@@ -211,3 +301,4 @@ input.datepicker {
   -moz-border-radius:1px;
   border-radius:1px;
 }
+*/
