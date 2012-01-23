@@ -5,7 +5,7 @@
     %li= link_to "Sites", sites_path
     %li= link_to @site.name, @site
 
-%article.content-box.col-2
+%article.content.col2
   %header
     %h2 Details
     %nav
@@ -25,7 +25,7 @@
       %li Network (IPs)
       %li Balancer (Slices, status?)
           
-%article.content-box.col-2.clear-rm
+%article.content.col.clear-rm
   %header
     %h2 Usage statistics
     %nav
@@ -41,7 +41,7 @@
 
 .clearfix
 
-%article.content-box
+%article.content
   %header
     %h2 Support
     %nav
@@ -56,6 +56,6 @@
           %li= link_to "Tickets", "#sidetab2" 
         %p Support info
       #sidetab1.sidetab.default-sidetab
-        = render "error_logs"
-      #sidetab3.sidetab{:style => "display: none;"}
+        = render "site_errors/list"
+      #sidetab2.sidetab{:style => "display: none;"}
         

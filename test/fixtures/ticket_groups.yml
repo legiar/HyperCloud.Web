@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  disabled_at: 2012-01-19 16:19:53
+
+two:
+  name: MyString
+  disabled_at: 2012-01-19 16:19:53

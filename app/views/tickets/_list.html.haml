@@ -1,0 +1,70 @@
+=# render :partial => 'tickets_per_page', :locals => { :per_page => @tickets_per_page }
+
+%section
+  %header
+    = will_paginate @tickets, :previous_label => '&#8249;', :next_label => '&#8250;'
+
+  %ul.tickets
+    %li.ticket-header
+      %ul
+        %li.ticket-header-ticket Ticket
+        %li.ticket-header-activity Activity
+        %li.ticket-header-user User
+        %li.ticket-header-priority Priority
+        %li.ticket-header-age Last Activity
+    - @tickets.each do |ticket|
+      %li.ticket-data
+      
+        .ticket-overview
+          %ul
+            %li.ticket-data-ticket
+              \##{ticket.id}
+            %li.ticket-data-activity
+              = link_to truncate(ticket.title, :length => 40), "#", :class => "ticket-open-details" 
+              %p= ticket.status.name
+            %li.ticket-data-user
+              %strong= ticket.owner.email unless ticket.owner.nil?
+              = ticket.author.email unless ticket.author.nil?
+            %li.ticket-data-priority
+              - if ticket.priority.standard?
+                /:class => "#{ticket.priority.name.downcase}"
+                %span.tag.red= ticket.priority.name
+              - else
+                %span.tag= ticket.priority.name
+            %li.ticket-data-age= ticket.updated_at
+            
+        .ticket-details{:style => "display: none;"}
+          %h4= ticket.title
+          %dl
+            %dt Opened:
+            %dd
+              %strong= ticket.created_at
+            %dt Last updated:
+            %dd
+              %strong= ticket.updated_at
+            %dt Milestone:
+            %dd
+              %strong N/A
+            %dt.clear Reported by:
+            %dd
+              %strong= link_to ticket.author.email, user_path(ticket.author) unless ticket.author.nil?
+            %dt Assigned to:
+            %dd
+              %strong= link_to ticket.owner.email, user_path(ticket.owner) unless ticket.owner.nil?
+            %dt Tags:
+            %dd
+              %strong N/A
+          %h5 Description
+          %p= ticket.details
+          %ul.ticket-details-actions
+            %li
+              %a.button.gray{:href => "#"} Update ticket
+            %li
+              %a.button.red{:href => "#"} Close ticket
+  
+  %footer          
+    = will_paginate @tickets, :previous_label => '&#8249;', :next_label => '&#8250;'
+    - if @total_tickets
+      %div(style="margin: 6px 0; font-style: italic; color: #333; text-align:center;")
+        =@total_tickets
+        #{@total_tickets == 1 ? "ticket" : "tickets"} found.

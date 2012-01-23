@@ -7,6 +7,10 @@ HyperCloud::Application.routes.draw do
     end
   end
   
+  resources :tickets, :shallow => true do
+    resources :comments
+  end
+  
   resources :customers
   
   resources :hosts
@@ -17,6 +21,8 @@ HyperCloud::Application.routes.draw do
   #resources :network_addresses
   
   resources :sites
+  resources :site_errors, :only => [:index, :show]
+  
   resources :databases
   
   #namespace :dns do

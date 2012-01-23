@@ -1,5 +1,5 @@
 .timeline
-  %h5 Sites Error logs
+  %h5= link_to "Site Errors", site_errors_path
   %ul
     - max_count = @timeline_site_errors.collect{|item| item[1]}.max
     - @timeline.each_with_index do |day, i|

@@ -1,0 +1,117 @@
+#ticket_title_input, #ticket_details_input { 
+  label {
+    float: none;
+    width: auto !important;
+    display: block;
+    text-align: left;
+  }
+  
+  input, textarea {
+    width: 98%;  
+  }
+  
+  textarea {
+    min-height: 100px;
+  }  
+}
+
+#ticket_group_input, #ticket_priority_input {
+  float: left;
+  label {
+    width: auto !important;
+    display: block;
+    text-align: left;
+  } 
+}
+
+#ticket_priority_input {
+  margin-left: 10px;
+}
+#ticket_details_input {
+  clear: both;
+}
+
+
+.errors {
+  overflow: hidden;
+  margin: 0;
+  ul, ul ul {
+    overflow: hidden;
+    margin: 0;
+  }  
+
+  li {
+    display: block;
+    list-style: none;
+    background: none;
+    padding: 0;
+  }
+  li li {
+    float: left;
+  }
+
+  .header {
+    width: 100%;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+  }
+  
+  .header li, .data li {
+    text-align: center;
+    padding: 0;
+    width: 15%;
+  }
+  
+  .activity { width: 40%; }
+  
+  .data {
+    padding: 5px 0;
+    border-bottom: 1px dotted;
+    min-height: 45px;
+    overflow: hidden;
+    
+    .activity { text-align:left; }
+    .activity p { margin:0; }
+    .user strong { display:block; }
+    .date, .priority, .age { padding-top:13px; }
+    .dl {
+      overflow:hidden;
+      padding:9px;
+      border:1px solid;
+      margin-bottom:10px;
+    }
+    .dd, .details dt {
+      float:left;
+      width:13%;
+      margin-bottom:5px;
+    }
+    .details {
+      margin:5px 15px;
+      border-top:1px dotted;
+      dd { margin-right:2%; }
+      dd:nth-child(3n+3) { margin-right:0; }
+      dt { width:19%; }
+      dt.clear { clear:left; }
+      h4 {
+        text-shadow:none;
+        margin:15px 0;
+      }
+      h5 {
+        text-shadow:none;
+        text-transform:uppercase;
+      }
+      .actions {
+        float:right;
+        margin:0;
+        padding:10px 0;
+      }
+      .actions li {
+        width:auto;
+        margin-left:5px;
+      }
+    }
+  }
+  .tickets .tag { line-height:120%; }
+}
+.ie7 .ticket-data { margin-top:-4px; }

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  details: MyText
+  group: 
+  status: 
+  priority: 
+  author: 
+  owner: 
+  closed_at: 2012-01-19 16:15:34
+  comments_count: 1
+
+two:
+  title: MyString
+  details: MyText
+  group: 
+  status: 
+  priority: 
+  author: 
+  owner: 
+  closed_at: 2012-01-19 16:15:34
+  comments_count: 1

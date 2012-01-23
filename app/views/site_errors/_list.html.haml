@@ -1,0 +1,40 @@
+%h3 Error Logs
+
+=# render "error_log_timeline"
+
+= will_paginate @site_errors
+%ul.errors
+  %li.header
+    %ul
+      %li.date Date
+      %li.activity Message
+      %li.user Slice
+      %li.user Site
+      %li.priority Level
+      %li.age Age
+  - @site_errors.each do |site_error|
+    - title = site_error.message.match(/Exception Message:\s*(.*)/)
+    - title = title ? title[1].gsub(/\r/, '') : "Unknown error"
+    
+    %li.data
+      .overview
+        %ul
+          %li.date= site_error.date
+          %li.activity
+            = link_to title, "#", :class => "ticket-open-details"  
+          %li.user= site_error.host
+          %li.user= site_error.site
+          %li.priority= site_error.level
+          %li.age= 0
+      .details{:style => "display: none;"}
+        %h4= title
+        %dl
+          %dt Posted:
+          %dd
+            %strong= site_error.date
+        %h5 Message
+        %p= h(site_error.message).gsub(/\n/, '<br/>').gsub(/\r/, '').html_safe
+        %ul.actions
+          %li
+            = link_to "Send to email", "#", :class => "button red"
+= will_paginate @site_errors        
