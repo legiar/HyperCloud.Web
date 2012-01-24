@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
-config/database.yml
+config/*.yml
 public/assets/
 public/javascript/hyperadmin.js
 public/stylesheets/hyperadmin.css

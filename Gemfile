@@ -22,8 +22,14 @@ gem "html5-boilerplate"
 
 gem "formtastic", "~> 2.0.0"
 
+gem "resque", "~> 1.19.0"
+gem "resque_mailer"
+gem "resque-scheduler"
+gem "resque-meta"
+gem "resque-progress"
+
 group :assets do
-  gem "sass-rails", "  ~> 3.1.0"
+  gem "sass-rails", "~> 3.1.0"
   gem "coffee-rails", "~> 3.1.0"
   gem "uglifier"
 end
