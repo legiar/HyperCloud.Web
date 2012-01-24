@@ -48,6 +48,9 @@ HyperCloud::Application.routes.draw do
   #resources :products
 
   get "dashboard", :controller => :dashboard, :action => :index
-
   root :to => "dashboard#index"
+
+  constraints CanAccessResque do  
+    mount Resque::Server, :at => "/resque"
+  end  
 end
