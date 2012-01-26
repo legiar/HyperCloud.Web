@@ -1,0 +1,21 @@
+- @title = "Pool #{@pool.name}"
+
+- add_breadcrumb @pool.name, pool_path(@pool)
+
+%article.content.col2
+  %header
+    %h2 Pool Details
+    %nav
+      %a.toggle-options-switch.button.gray{:href => "#"}
+        = image_tag("icon_options.png")
+      %ul.options-switch{:style => "margin-left: -5.5px; display: none; "}
+        %li
+          %a{:href => "#"} View
+        %li
+          %a{:href => "#"} Edit
+        %li
+          %a{:href => "#"} Delete
+  
+  %section
+    %ul
+      %li= @pool.name
