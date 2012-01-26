@@ -1,6 +1,6 @@
 module ApplicationHelper
-  def table_columns(names)
-    out = ['<th class="check">&nbsp;</th>']
+  def table_head(names)
+    out = []
     out << names.collect do |name|
       "<th" + (name == "options" ? ' class="options"' : '') + ">" + name.humanize  + "</th>"
     end

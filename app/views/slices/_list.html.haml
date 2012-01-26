@@ -1,14 +1,7 @@
 %table
   %thead
     %tr
-      %th Name
-      %th Host
-      %th Last Host
-      %th CPU
-      %th Memory
-      %th Sites
-      %th State
-      %th.actions Options
+      = table_head %w(name host last_host cpu memory pool state)
   %tbody
     - @slices.each do |slice| 
       %tr{:class => cycle(:odd, :even)}
@@ -17,7 +10,7 @@
         %td
         %td= slice.cpu
         %td= slice.memory
-        %td 0
+        %td= slice.pool.try(:name)
         %td= slice.state
         %td
           %ul.actions
