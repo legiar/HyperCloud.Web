@@ -1,20 +1,16 @@
 %table
   %thead
     %tr
-      %th= Host.human_attribute_name :name
-      %th= Host.human_attribute_name :zone
-      %th= Host.human_attribute_name :public_ip
-      %th= Host.human_attribute_name :private_ip
-      %th= Host.human_attribute_name :state
-      %th.actions= t 'actions'
+      = table_head %w(name zone public_ip private_ip state slices_count)
   %tbody
     - for host in @hosts
-      %tr{ :class => cycle(:odd, :even) }
+      %tr{:class => cycle(:odd, :even)}
         %td= link_to host.name, host
         %td= host.zone.name
         %td= host.public_ip
         %td= host.private_ip
         %td= host.state
+        %td= host.slices.count
         %td.actions
           = link_to t('show'), host
           = link_to t('edit'), edit_host_path(host)

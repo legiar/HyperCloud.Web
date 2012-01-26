@@ -1,4 +1,5 @@
 class HostsController < InheritedResources::Base
+  add_breadcrumb "Hosts", :hosts_path
   
   protected
   
