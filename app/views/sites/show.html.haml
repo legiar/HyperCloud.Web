@@ -9,6 +9,20 @@
     %ul
       %li State
       %li Pool: #{@site.pool.try(:name)}
+      %li
+        Site instances
+        %table
+          %thead
+            %tr
+              %th Slice
+              %th State
+              %th Enabled
+          %tbody
+            - @site.instances.each do |instance|
+              %tr
+                %td= instance.slice.name
+                %td= instance.state
+                %td= instance.enabled?
           
 %article.content.col2.clear-rm
   %header

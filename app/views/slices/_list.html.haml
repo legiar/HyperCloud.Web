@@ -1,7 +1,7 @@
 %table
   %thead
     %tr
-      = table_head %w(name host last_host cpu memory pool state)
+      = table_head %w(name host last_host cpu memory pool state sites_count)
   %tbody
     - @slices.each do |slice| 
       %tr{:class => cycle(:odd, :even)}
@@ -12,6 +12,7 @@
         %td= slice.memory
         %td= slice.pool.try(:name)
         %td= slice.state
+        %td= slice.sites.count
         %td
           %ul.actions
             %li= link_to t('show'), slice, :class => "view tooltip"

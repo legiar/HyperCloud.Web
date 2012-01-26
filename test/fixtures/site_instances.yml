@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  site: 
+  slice: 
+  enabled: false
+  state: MyString
+
+two:
+  site: 
+  slice: 
+  enabled: false
+  state: MyString
