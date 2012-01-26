@@ -4,7 +4,26 @@ class Site < ActiveRecord::Base
   belongs_to :slice
   belongs_to :pool
   has_many :site_errors, :foreign_key => :site, :primary_key => :name
-  has_many :instances, :class_name => "SiteInstance"
+  has_many :instances, :class_name => "SiteInstance", :dependent => :destroy
 
   validates :name, :presence => true, :uniqueness => true
+  
+  before_save :store_old_values
+  after_save :populate_instances
+  
+  private
+    
+    def store_old_values
+      @previously_changed = changes
+    end
+    
+    def populate_instances
+      if previous_changes.has_key?("pool_id")
+        instances.clear
+        pool.slices.each do |slice|
+          instances.create(:slice => slice)
+        end
+      end
+    end
+    
 end
