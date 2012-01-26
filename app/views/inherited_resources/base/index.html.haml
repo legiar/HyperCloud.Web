@@ -1,8 +1,8 @@
-- @title = resource_class.name.pluralize 
+- @title = resource_class.name.pluralize.titleize
 
 %article.content
   %header
-    %h2 #{resource_class.name.singularize} list
+    %h2 #{resource_class.name} list
     %nav
       %ul.button-switch
         %li= link_to "New #{resource_class.name.downcase}", new_resource_path, :class => "button"
