@@ -24,28 +24,8 @@ HyperCloud::Application.routes.draw do
   resources :site_errors, :only => [:index, :show]
   
   resources :databases
-  
-  #namespace :dns do
-  #  resources :domains do
-  #    resources :records
-  #  end
-  #  resources :supermasters
-  #end
 
-  #resources :conditions
-
-  #resources :queue_tasks
-  #resources :queue_jobs do
-  #  collection do
-  #    post "reorder"
-  #  end
-  #  member do
-  #    get 'cancel'
-  #  end
-  #end
-  #resources :tasks
-  #resources :jobs
-  #resources :products
+  resources :pools
 
   get "dashboard", :controller => :dashboard, :action => :index
   root :to => "dashboard#index"
