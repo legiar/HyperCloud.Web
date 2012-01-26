@@ -1,4 +1,5 @@
 class SlicesController < InheritedResources::Base
+  add_breadcrumb "Slices", :slices_path
   
   protected
   

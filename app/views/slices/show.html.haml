@@ -1,10 +1,38 @@
-%h1= t '.title'
-%p
-  = link_to t('back'), slices_path
-  = link_to t('edit'), edit_slice_path(@slice)
+- @title = "Slice '#{@slice.name}'"
+- add_breadcrumb @slice.name, slice_path(@slice)
 
-%dl
-  %dt= Slice.human_attribute_name :name
-  %dd= @slice.name
-  %dt= Slice.human_attribute_name :host
-  %dd= @slice.host
+%article.content.col2
+  %header
+    %h2 Info
+    %nav
+      = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
+      %ul.options-switch{:style => "display: none;"}
+        %li= link_to "Edit", edit_slice_path(@slice)
+  
+  %section
+    %dl
+      %dt= Slice.human_attribute_name :name
+      %dd= @slice.name
+      %dt= Slice.human_attribute_name :host
+      %dd= @slice.host.name
+      %dt= Slice.human_attribute_name :cpu
+      %dd= @slice.cpu
+      %dt= Slice.human_attribute_name :memory
+      %dd= @slice.memory
+      %dt= Slice.human_attribute_name :pool
+      %dd= @slice.pool.try(:name)
+
+%article.content.col2.clear-rm
+  %header
+    %h2 Sites
+  %section
+    %table
+      %thead
+        %tr
+          = table_head %w(site)
+      %tbody
+        - @slice.site_instances.where(:enabled => true).each do |instance|
+          %tr
+            %td= link_to instance.site.name, instance.site
+        
+.clearfix
