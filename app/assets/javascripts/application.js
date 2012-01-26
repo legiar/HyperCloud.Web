@@ -141,6 +141,21 @@ $(function(){
 		}
 	);
 	
+	// Content Header Options
+	var optWidth = $('.options-switch').width();
+	var btnWidth = $('.toggle-options-switch').width();
+	$('.options-switch').hide().css({ 'margin-left':-(optWidth-btnWidth)/2 });
+	$('.toggle-options-switch').click(
+		function () {
+			$(this).parent().parent().parent().siblings().find('.toggle-options-switch').removeClass('active').next().slideUp(); // Hide all menus expect the one clicked
+			$(this).toggleClass('active').next().slideToggle(); // Toggle clicked menu
+			$(document).click(function() { // Hide menu when clicked outside of it
+				$('.options-switch').slideUp();
+				$('.toggle-options-switch').removeClass('active')
+			});
+			return false;
+		}
+	);
 	
 	/*$('#sites').dataTable({
 		'bProcessing': true,

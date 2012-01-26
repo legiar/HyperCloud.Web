@@ -4,6 +4,10 @@
 %article.content.col2
   %header
     %h2 Info
+    %nav
+      = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
+      %ul.options-switch{:style => "display: none;"}
+        %li= link_to "Edit", edit_site_path(@slice)
   
   %section
     %ul
