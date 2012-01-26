@@ -1,31 +1,16 @@
-%section#dashboard
-  %h1 Site '#{@site.name}'
-  %ul#breadcrumbs
-    %li= link_to "Home", root_url, :title => "Back to Homepage" 
-    %li= link_to "Sites", sites_path
-    %li= link_to @site.name, @site
+- @title = "Site '#{@site.name}'"
+- add_breadcrumb @site.name, site_path(@site)
 
 %article.content.col2
   %header
-    %h2 Details
-    %nav
-      %a.toggle-options-switch.button.gray{:href => "#"}
-        = image_tag("icon_options.png")
-      %ul.options-switch{:style => "margin-left: -5.5px; display: none; "}
-        %li
-          %a{:href => "#"} View
-        %li
-          %a{:href => "#"} Edit
-        %li
-          %a{:href => "#"} Delete
+    %h2 Info
   
   %section
     %ul
-      %li Customer
-      %li Network (IPs)
-      %li Balancer (Slices, status?)
+      %li State
+      %li Pool: #{@site.pool.try(:name)}
           
-%article.content.col.clear-rm
+%article.content.col2.clear-rm
   %header
     %h2 Usage statistics
     %nav
