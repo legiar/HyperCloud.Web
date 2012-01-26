@@ -1,6 +1,6 @@
 - add_shortcut "Tickets", tickets_path, :count => 4 
     
-%article.content
+%article.content.col2
   %header
     %h2 Statistics
     %nav
@@ -23,5 +23,24 @@
       %h3 Databases statistics
       = render "databases/stats"
   %footer
+    
+%article.content.col2.clear-rm
+  %header
+    %h2 Summary
+    %nav
+      %a.toggle-options-switch.button.gray{:href => "#"}
+        = image_tag("icon_options.png", :alt => "Options") 
+      %ul.options-switch{:style => "display: none;"}
+        %li
+          %a{:href => "#"} View
+        %li
+          %a{:href => "#"} Edit
+        %li
+          %a{:href => "#"} Delete
+  %section
+    %ul.stats-summary
+      = display_summary(Host)
+      = display_summary(Slice)
+      = display_summary(Site)
 .clearfix
 
