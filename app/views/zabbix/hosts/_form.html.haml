@@ -1,0 +1,17 @@
+= semantic_form_for @host do |f|
+  = f.inputs "Host" do
+    = f.input :host
+    = f.input :groups
+    TODO: New host group
+    = f.input :dns
+    = f.input :ip
+    = f.input :useip, :as => :boolean
+    = f.input :port
+    = f.input :status, :as => :boolean
+  = f.inputs "Linked templates" do
+    = f.input :templates
+    TODO: Template actions
+  = f.inputs "Macros" do
+    TODO: macros
+  = f.buttons do
+    = f.commit_button

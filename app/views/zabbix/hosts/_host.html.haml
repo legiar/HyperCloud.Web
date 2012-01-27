@@ -1,0 +1,17 @@
+%tr[host]
+  %td= link_to host.name, host
+  %td
+    - unless host.useip == 1
+      %strong= host.dns
+    - else
+      = host.dns
+  %td
+    - if host.useip == 1
+      %string= host.ip
+    - else
+      = host.ip
+  %td= host.port
+  %td{:style => "max-width: 200px; world-wrap: true;"}= host.templates.collect{|template| template.host}.join(", ")
+  %td= host.status == 0 ? "Monitored" : "Not monitored"
+  %td= image_tag("zabbix/zabbix_" + (host.available == 0 ? "unknown" : (host.available == 1 ? "available" : "unavailable")) + ".png", :class => "tooltip", :title => host.error) 
+  %td.actions

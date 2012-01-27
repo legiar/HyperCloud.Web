@@ -1,0 +1,2 @@
+module Zabbix::HostsHelper
+end

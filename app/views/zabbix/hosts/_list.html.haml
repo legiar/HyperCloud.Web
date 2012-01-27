@@ -1,0 +1,12 @@
+= semantic_form_for Zabbix::Host.new do |f|
+  = f.inputs :groups, :as => :select
+  
+%table
+  %thead
+    %tr
+      = table_head %w(name dns ip port templates status availability)
+  %tbody
+    = render @hosts
+- if @hosts.respond_to?(:total_pages)
+  = will_paginate @sites            
+    
