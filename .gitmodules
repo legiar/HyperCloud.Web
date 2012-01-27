@@ -1,0 +1,3 @@
+[submodule "vendor/plugins/zabbixapi"]
+	path = vendor/plugins/zabbixapi
+	url = git@github.com:legiar/zabbixapi.git
