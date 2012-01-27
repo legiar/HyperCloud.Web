@@ -1,7 +1,8 @@
 %tr[site_instance]
   %td= link_to site_instance.slice.name, site_instance.slice 
   %td= site_instance.state
-  %td= site_instance.enabled?
+  %td
+    %span.tag{:class => site_instance.enabled? ? "green" : "grey"}= site_instance.enabled?
   %td
     = link_to "Options", "#", :class => "toggle-table-switch tooltip"
     %ul.table-switch{:style => "display: none;"}
