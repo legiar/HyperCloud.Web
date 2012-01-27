@@ -1,9 +1,9 @@
 class CreateSiteInstances < ActiveRecord::Migration
   def change
     create_table :site_instances do |t|
-      t.references  :site
-      t.references  :slice
-      t.boolean     :enabled
+      t.references  :site, :null => false
+      t.references  :slice, :null => false
+      t.boolean     :enabled, :null => false, :default => false
       t.string      :state
       t.timestamps
     end
