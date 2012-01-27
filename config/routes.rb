@@ -20,7 +20,14 @@ HyperCloud::Application.routes.draw do
   end
   #resources :network_addresses
   
-  resources :sites
+  resources :sites do
+    resources :instances, :controller => "SiteInstances", :only => [:show] do
+      member do
+        get "enable"
+        get "disable"
+      end
+    end
+  end
   resources :site_errors, :only => [:index, :show]
   
   resources :databases

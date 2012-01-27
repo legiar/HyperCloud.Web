@@ -8,4 +8,17 @@ class SiteInstance < ActiveRecord::Base
       model.enabled = false
     end
   end
+  
+  def enable
+    self.enabled = true
+    self.state = "Starting..."
+    self.save  
+  end
+  
+  def disable
+    self.enabled = false
+    self.state = "Stopping..."  
+    self.save  
+  end
+  
 end

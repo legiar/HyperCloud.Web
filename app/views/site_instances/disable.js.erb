@@ -1,0 +1,5 @@
+$('#site_instance_<%= @instance.id %>')
+	.css('background', 'yellow')
+	.replaceWith("<%= escape_javascript(render(@instance)) %>");
+$('.table-switch').slideUp();
+$('.toggle-table-switch').removeClass('active')

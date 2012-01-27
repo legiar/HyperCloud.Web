@@ -6,7 +6,7 @@
     %h2 Info
     %nav
       = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
-      %ul.options-switch{:style => "display: none;"}
+      %ul.options-switch{:style => "display: none; margin-left: 8px"}
         %li= link_to "Edit", edit_site_path(@site)
   
   %section
@@ -18,15 +18,9 @@
         %table
           %thead
             %tr
-              %th Slice
-              %th State
-              %th Enabled
+              = table_head %w(slice state enabled)
           %tbody
-            - @site.instances.each do |instance|
-              %tr
-                %td= instance.slice.name
-                %td= instance.state
-                %td= instance.enabled?
+            = render @site.instances
           
 %article.content.col2.clear-rm
   %header
