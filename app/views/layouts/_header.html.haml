@@ -9,6 +9,7 @@
       %li= link_to "Databases", databases_path
       %li= link_to "Networks", networks_path
       %li= link_to "Pools", pools_path
+      %li= link_to "Products", products_path
       %li
         = link_to "Users", users_path
         - cnt = User.where(:approved => false).count

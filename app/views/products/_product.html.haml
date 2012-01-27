@@ -1,0 +1,8 @@
+%tr[product]
+  %td= link_to product.name, product
+  %td= product.version
+  %td= product.demo
+  %td.options
+    = link_to 'Show', product
+    = link_to 'Edit', edit_product_path(product)
+    = link_to 'Destroy', product, :confirm => 'Are you sure', :method => :delete

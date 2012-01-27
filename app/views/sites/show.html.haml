@@ -10,11 +10,15 @@
         %li= link_to "Edit", edit_site_path(@site)
   
   %section
-    %ul
-      %li State
-      %li Pool: #{@site.pool.try(:name)}
-      %li
-        Site instances
+    %dl
+      %dt State
+      %dd #Todo
+      %dt Pool
+      %dd= @site.pool.try(:name)
+      %dt Product
+      %dd= @site.product.try(:name)
+      %dt Site instances
+      %dd        
         %table
           %thead
             %tr

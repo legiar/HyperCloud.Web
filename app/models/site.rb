@@ -3,10 +3,12 @@ class Site < ActiveRecord::Base
   belongs_to :database
   belongs_to :slice
   belongs_to :pool
+  belongs_to :product
   has_many :site_errors, :foreign_key => :site, :primary_key => :name
   has_many :instances, :class_name => "SiteInstance", :dependent => :destroy
 
   validates :name, :presence => true, :uniqueness => true
+  validates :product, :presence => true
   
   before_save :store_old_values
   after_save :populate_instances

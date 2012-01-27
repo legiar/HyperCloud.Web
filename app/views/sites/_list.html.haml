@@ -2,11 +2,15 @@
   %thead
     %tr
       %th= sortable :name
+      %th= sortable :pool
+      %th= sortable :product
       %th.options Options
   %tbody
     - @sites.each do |site|
       %tr{:class => cycle(:odd, :even)}
         %td= link_to site.name, site
+        %td= site.pool.try(:name)
+        %td= site.product.try(:name)
         %td
           %ul.actions
             %li= link_to t('Show'), site, :class => "view tooltip"
