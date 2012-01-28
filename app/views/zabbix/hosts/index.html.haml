@@ -1,0 +1,13 @@
+= workspace "Zabbix Hosts" do
+  %table#zabbix_hosts.display.datatable{"data-remote" => zabbix_hosts_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "host", :sort => true, :filter => true} Name
+        %th{"data-member" => "groups"} Groups
+        %th{"data-member" => "dns"} DNS
+        %th{"data-member" => "ip"} IP
+        %th{"data-member" => "port"} Port
+        %th{"data-member" => "templates"} Templates
+        %th{"data-member" => "status"} Status
+        %th{"data-member" => "available", :sort => true} Availability
+    %tbody

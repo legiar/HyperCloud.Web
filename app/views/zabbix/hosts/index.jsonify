@@ -1,0 +1,14 @@
+@hosts.each do |host|
+  record = {
+	"0" => link_to(host.host, host),
+	"1" => host.groups.collect{|group| group.name}.join(", "),
+	"2" => host.useip == 0 ? "<strong>" + host.dns + "</strong>" : host.dns,
+	"3" => host.useip == 1 ? "<strong>" + host.ip + "</strong>" : host.ip,
+	"4" => host.port,
+	"5" => host.templates.collect{|template| template.host}.join(", "),
+	"6" => host.status == 0 ? "Monitored" : "Not monitored",
+	"7" => image_tag("zabbix/zabbix_" + (host.available == 0 ? "unknown" : (host.available == 1 ? "available" : "unavailable")) + ".png", :title => host.error),
+	"DT_RowId" => "host_#{host.id}" 
+  }
+  json << record 
+end
