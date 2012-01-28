@@ -38,6 +38,10 @@ $(function(){
 	// Auto highlight mandatory inputs
 	$('<span> *</span>').appendTo('.mandatory');
 	
+	// jQuery Tipsy
+	$('.tooltip, .loading').tipsy({gravity:'s', fade:true}); // Tooltip Gravity Orientation: n | w | e | s
+	$('.tooltip-wide').tipsy({gravity:'e', fade:true}); // Tooltip Gravity Orientation: n | w | e | s
+	
 	// Check all checkboxes
 	$('.check-all').click(
 		function(){
