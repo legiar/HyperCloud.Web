@@ -1,6 +1,3 @@
-%section.portlet.grid_12.leading
-  %header
-    %h2 New #{resource_class.name.downcase}
-
-  %section
+= workspace resource_class.name.pluralize.titleize do
+  = section "New #{resource_class.name.titleize}" do  
     = render "form"
