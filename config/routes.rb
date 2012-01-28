@@ -35,6 +35,10 @@ HyperCloud::Application.routes.draw do
   resources :databases
 
   resources :pools
+  
+  namespace :zabbix do
+    resources :hosts
+  end
 
   get "dashboard", :controller => :dashboard, :action => :index
   root :to => "dashboard#index"
