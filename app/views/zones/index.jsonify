@@ -1,0 +1,12 @@
+@zones.each do |zone|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = zone
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "zone_#{zone.id}" 
+  json << record 
+end

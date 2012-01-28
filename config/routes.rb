@@ -35,6 +35,7 @@ HyperCloud::Application.routes.draw do
   resources :databases
 
   resources :pools
+  resources :zones
   
   namespace :zabbix do
     resources :hosts

@@ -1,24 +1,29 @@
-.navigation-wrapper
-  = link_to "HyperCloud", root_url, :id => "logo", :title => "Back to Homepage"
-  %nav#nav-main
-    %ul#nav-main-navigation
-      %li= link_to "Dashboard", dashboard_path
-      %li= link_to "Hosts", hosts_path
-      %li= link_to "Slices", slices_path
-      %li= link_to "Sites", sites_path
-      %li= link_to "Databases", databases_path
-      %li= link_to "Networks", networks_path
-      %li= link_to "Pools", pools_path
-      %li= link_to "Products", products_path
-      %li
-        = link_to "Users", users_path
-        - cnt = User.where(:approved => false).count
-        - if cnt > 0 
-          %span.small-notification= cnt 
-        
-    %ul#nav-main-user
-      %li Welcome, #{link_to current_user.email, "#"}
-      /%li= link_to image_tag("icon_user_message.png", :alt => "Messages"), "#", :title => "Messages", :class => "actions"  
-      /%li= link_to image_tag("icon_user_settings.png", :alt => "Settings"), "#", :title => "Settings", :class => "actions"  
-      %li= link_to image_tag("icon_user_logout.png", :alt => "Logout"), destroy_user_session_path, :method => :delete, :title => "Logout", :class => "actions"
+%h1= link_to "HyperCloud", root_url, :title => "Back to Homepage"
+%nav
+  %ul#main-navigation.clearfix
+    %li= link_to "Dashboard", dashboard_path
+    %li= link_to "Hosts", hosts_path
+    /%li.dropdown
+    /  = link_to "Slices", slices_path
+    /  %ul
+    %li= link_to "Pools", pools_path
+    /%li= link_to "Sites", sites_path
+    /%li= link_to "Databases", databases_path
+    %li= link_to "Networks", networks_path
+    %li= link_to "Products", products_path
+    %li= link_to "Zones", zones_path
+    %li.dropdown
+      = link_to "Zabbix", "/zabbix"
+      %ul
+        %li= link_to "Hosts", zabbix_hosts_path 
+    %li.fr.dropdown
+      = link_to "#", :class => "with-profile-image" do 
+        %span>
+          = image_tag "profile-image.png"
+        = current_user.email
+      %ul
+        %li= link_to "Settings", "#"
+        %li= link_to "Users", users_path
+        %li= link_to "Groups", "#"
+        %li= link_to "Logout", destroy_user_session_path, :method => :delete
   

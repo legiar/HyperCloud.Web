@@ -1,0 +1,12 @@
+@tickets.each do |ticket|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = ticket
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "ticket_#{ticket.id}" 
+  json << record 
+end

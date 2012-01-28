@@ -1,0 +1,12 @@
+= workspace "Slices" do
+  %table#slices.display.datatable{"data-remote" => slices_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => slice_path(":id")} Name
+        %th{"data-member" => "host.name"} Host
+        %th{"data-member" => "cpu"} CPU
+        %th{"data-member" => "memory"} Memory
+        %th{"data-member" => "pool.name", :sort => true} Pool
+        %th{"data-member" => "state", :sort => true} State
+        %th{"data-member" => "sites.count"} Sites count
+    %tbody

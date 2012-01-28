@@ -1,0 +1,9 @@
+= workspace "Pools" do
+  %table#pools.display.datatable{"data-remote" => pools_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => pool_path(":id")} Name
+        %th{"data-member" => "slices.count"} Slices count
+        %th{"data-member" => "sites.count"} Sites count
+    %tbody
+

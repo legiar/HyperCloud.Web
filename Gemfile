@@ -21,6 +21,7 @@ gem "compass-h5bp"
 gem "html5-boilerplate"
 
 gem "formtastic", "~> 2.0.0"
+gem "simple_datatables"
 
 gem "resque", "~> 1.19.0"
 gem "resque_mailer"

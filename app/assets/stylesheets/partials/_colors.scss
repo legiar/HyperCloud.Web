@@ -1,430 +1,467 @@
-a, a:active, a:visited, .content section h1, .content section h2, .content section h3, .content section h4,
-.content section h5, #nav-sub .box-list li a:hover { color:#ae432e; }
-
-/*  Box Shadow  */
-body.gray .button, body.gray a.button, body.gray button, body.gray input[type="button"], body.gray input[type="submit"] { box-shadow:0 1px 2px #bfbfbf; }
-
-/*  Global Color Settings  */
-
-/*  Global Colors  */
-.progress-bar div span, .tag, .small-notification, .loading-notification, #nav-main #nav-main-user li a:hover, #nav-sub .submenu a:hover, #footer a:hover { color:#fff; }
-body, select, input, textarea, .toggled.content header h2, .content .dashboard li h4,
-.tickets .ticket-data .ticket-details dt, #nav-sub .box-list li a, .button.gray, a.button.gray,
-button.gray, input[type="button"].gray, input[type="submit"].gray, .fc-view table thead th, .wizard-steps li span { color:#666; }
-.disabled, .button.disabled, button:disabled, button.disabled, input[type="button"]:disabled, input[type="submit"]:disabled, input[type="button"].disabled, input[type="submit"].disabled,
-.disabled:hover, .button.disabled:hover, button:disabled:hover, button.disabled:hover, input[type="button"]:disabled:hover, input[type="submit"]:disabled:hover,
-input[type="button"].disabled:hover, input[type="submit"].disabled:hover .tickets .ticket-data .ticket-details h5, .tickets .ticket-data-activity p { color:#999; }
-label{ color:#333; }
-#nav-main-user { color:#7d7e80; }
-#navigation, #nav-main #nav-main-navigation li a, #nav-main-user li a, #footer, #nav-sub .submenu a, #nav-sub label, #footer a , #footer label { color:#a6a6a6; }
-.content header h2, .shortcuts li a, .shortcuts li a:hover { color:#545454; }
-.show-notification-details { color:#898989; }
-
-.notification {
-  &.note {
-    h4, .show-notification-details { color:#4d4d4d; }
-  }
-  
-}
-.notification.note h4, .notification.note .show-notification-details { color:#4d4d4d; }
-.notification.information h4, .notification.information .show-notification-details { color:#0576a6; }
-.notification.attention h4, .notification.attention .show-notification-details { color:#be8007; }
-.notification.success h4, .notification.success .show-notification-details { color:#69990f; }
-.notification.error h4, .notification.error .show-notification-details, #nav-sub .box-list li a:hover { color:#ae432e; }
-
-.button.green, a.button.green, button.green, input[type="button"].green, input[type="submit"].green { color:#dcebd3; }
-.button.red, a.button.red, button.red, input[type="button"].red, input[type="submit"].red, .button, a.button, button,
-input[type="button"], input[type="submit"], th, .paging_full_numbers span.paginate_active, .fc-state-default, .wizard-steps li.wizard-step-done span { color:#f2deda; }
-.button.blue, a.button.blue, button.blue, input[type="button"].blue, input[type="submit"].blue { color:#daebf2; }
-.button.black, a.button.black, button.black, input[type="button"].black, input[type="submit"].black { color:#e5e5e5; }
-.disabled, .button.disabled, button:disabled, button.disabled, input[type="button"]:disabled,
-input[type="submit"]:disabled, input[type="button"].disabled, input[type="submit"].disabled { color:#b2b2b2; }
-
-.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover, .button.red:hover, button.red:hover, input[type="button"].red:hover, input[type="submit"].red:hover,
-.button.blue:hover, button.blue:hover, input[type="button"].blue:hover, input[type="submit"].blue:hover, .button.green:hover, button.green:hover, input[type="button"].green:hover,
-input[type="submit"].green:hover, .button.black:hover, button.black:hover, input[type="button"].black:hover, input[type="submit"].black:hover { color:#fff; }
-.button.gray:hover, button.gray:hover, input[type="button"].gray:hover, input[type="submit"].gray:hover { color:#333; }
-
-a:hover, .wizard-steps li a.current { color: #036; }
-
-#nav-sub .submenu h2, #nav-sub .submenu h3, #nav-sub .submenu-form legend, #footer section h2, #nav-main #nav-main-navigation li a:hover, #nav-main #nav-main-navigation li a.active { color:#f2f2f2; }
-
-#footer section h2 {}
-
-/*  Global Backgrounds  */
-input, textarea, select, .customfile,
-div.wysiwyg iframe, .toggle-table-switch, .table-switch, .options-switch, body.error-page .error-wrapper { background-color:#fff; }
-.shortcuts li, #nav-main #nav-main-user .actions { background-color:#e5e5e5; }
-input:focus, textarea:focus, input.focused { background-color:#fff7ee; }
-input.valid, textarea.valid { background-color:#eef5e9; }
-input.invalid, textarea.invalid { background-color:#f7ecea; }
-.notification.note, tbody tr:nth-child(odd), .tickets .ticket-data:nth-child(odd),
-.progress-bar, .content section .stats-summary li, .contacts li, code, .accordion .accordion-switch, .wizard-steps,
-.shortcuts li:hover, .toggled.content { background-color:#f2f2f2; }
-input:disabled, input.disabled, tbody tr:nth-child(even), .tickets .ticket-data:nth-child(even) { background-color:#ebebeb; }
-.tickets .ticket-data .ticket-details dl { background-color:#e0e0e0; }
-.loading-notification, #toTop { background-color:#000; }
-.notification.error { background-color:#f2d4ce; }
-.notification.success { background-color:#d9e6c3; }
-.notification.attention { background-color:#faf6d4; }
-.notification.information { background-color:#cee6f2; }
-.progress-bar.red div, .tag.red, .jq-datepicker .datepick-month td .datepick-highlight { background-color:#ae432e; }
-.progress-bar.blue div, .tag.blue { background-color:#0576a6; }
-.progress-bar.green div, .tag.green { background-color:#549a2a; } 
-.progress-bar.black div { background-color:#2e2e2e; } 
-.tag.orange { background-color:#ef561a; }
-.tag.gray { background-color:#b3b3b3; }
-.tag.black { background-color:#595959; }
-body #container > footer { background-color:#2e353b; }
-
-/*  Global Gradients  */
-.progress-bar.red div, .button.red, a.button.red, button.red, input[type="button"].red, input[type="submit"].red,
-.button, a.button, button, input[type="button"], input[type="submit"], thead tr, .datatable tfoot tr, .paging_full_numbers span.paginate_active, .fc-state-default, .wizard-steps li.wizard-step-done span {
-  background:-moz-linear-gradient(top, #d95338 0%, #ae432e 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#d95338), color-stop(100%,#ae432e)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #d95338 0%,#ae432e 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #d95338 0%,#ae432e 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #d95338 0%,#ae432e 100%); /* IE10+ */
-  background:linear-gradient(top, #d95338 0%,#ae432e 100%); /* W3C */
-}
-.progress-bar.blue div, .button.blue, a.button.blue, button.blue, input[type="button"].blue, input[type="submit"].blue {
-  background:-moz-linear-gradient(top, #07a3e5 0%, #0576a6 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#07a3e5), color-stop(100%,#0576a6)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #07a3e5 0%,#0576a6 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #07a3e5 0%,#0576a6 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #07a3e5 0%,#0576a6 100%); /* IE10+ */
-  background:linear-gradient(top, #07a3e5 0%,#0576a6 100%); /* W3C */
-}
-.progress-bar.green div, .button.green, a.button.green, button.green, input[type="button"].green, input[type="submit"].green {
-  background:-moz-linear-gradient(top, #77d93b 0%, #549a2a 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#77d93b), color-stop(100%,#549a2a)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #77d93b 0%,#549a2a 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #77d93b 0%,#549a2a 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #77d93b 0%,#549a2a 100%); /* IE10+ */
-  background:linear-gradient(top, #77d93b 0%,#549a2a 100%); /* W3C */
-}
-.progress-bar.black div, .button.black, a.button.black, button.black, input[type="button"].black, input[type="submit"].black {
-  background:-moz-linear-gradient(top, #595959 0%, #2e2e2e 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#595959), color-stop(100%,#2e2e2e)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #595959 0%,#2e2e2e 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #595959 0%,#2e2e2e 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #595959 0%,#2e2e2e 100%); /* IE10+ */
-  background:linear-gradient(top, #595959 0%,#2e2e2e 100%); /* W3C */
-}
-.button.gray, a.button.gray, button.gray, input[type="button"].gray, input[type="submit"].gray, .paging_full_numbers span.paginate_button, .fc-view table thead tr, .wizard-steps li span, .shortcuts li, #nav-main #nav-main-user .actions {
-  background:-moz-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#d9d9d9)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #f2f2f2 0%,#d9d9d9 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #f2f2f2 0%,#d9d9d9 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #f2f2f2 0%,#d9d9d9 100%); /* IE10+ */
-  background:linear-gradient(top, #f2f2f2 0%,#d9d9d9 100%); /* W3C */
-}
-.disabled, .button.disabled, button:disabled, button.disabled, input[type="button"]:disabled,
-input[type="submit"]:disabled, input[type="button"].disabled, input[type="submit"].disabled, .disabled:hover,
-.button.disabled:hover, button:disabled:hover, button.disabled:hover, input[type="button"]:disabled:hover,
-input[type="submit"]:disabled:hover, input[type="button"].disabled:hover, input[type="submit"].disabled:hover {
-  background:-moz-linear-gradient(top, #f4f4f4 0%, #e9e9e9 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f4f4f4), color-stop(100%,#e9e9e9)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #f4f4f4 0%,#e9e9e9 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #f4f4f4 0%,#e9e9e9 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #f4f4f4 0%,#e9e9e9 100%); /* IE10+ */
-  background:linear-gradient(top, #f4f4f4 0%,#e9e9e9 100%); /* W3C */
-}
-.button.green:hover, a.button.green:hover, button.green:hover, input[type="button"].green:hover, input[type="submit"].green:hover {
-  background:-moz-linear-gradient(top, #549a2a 0%, #77d93b 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#549a2a), color-stop(100%,#77d93b)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #549a2a 0%,#77d93b 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #549a2a 0%,#77d93b 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #549a2a 0%,#77d93b 100%); /* IE10+ */
-  background:linear-gradient(top, #549a2a 0%,#77d93b 100%); /* W3C */
-}
-.button.red:hover, a.button.red:hover, button.red:hover, input[type="button"].red:hover, input[type="submit"].red:hover,
-.button:hover, a.button:hover, button:hover, input[type="button"]:hover, input[type="submit"]:hover, .fc-button-today.fc-state-hover, .fc-state-hover {
-  background:-moz-linear-gradient(top, #ae432e 0%, #d95338 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#ae432e), color-stop(100%,#d95338)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #ae432e 0%,#d95338 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #ae432e 0%,#d95338 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #ae432e 0%,#d95338 100%); /* IE10+ */
-  background:linear-gradient(top, #ae432e 0%,#d95338 100%); /* W3C */
-}
-.button.blue:hover, a.button.blue:hover, button.blue:hover, input[type="button"].blue:hover, input[type="submit"].blue:hover {
-  background:-moz-linear-gradient(top, #0576a6 0%, #07a3e5 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0576a6), color-stop(100%,#07a3e5)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #0576a6 0%,#07a3e5 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #0576a6 0%,#07a3e5 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #0576a6 0%,#07a3e5 100%); /* IE10+ */
-  background:linear-gradient(top, #0576a6 0%,#07a3e5 100%); /* W3C */
-}
-.button.black:hover, a.button.black:hover, button.black:hover, input[type="button"].black:hover, input[type="submit"].black:hover {
-  background:-moz-linear-gradient(top, #2e2e2e 0%, #595959 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e2e2e), color-stop(100%,#595959)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #2e2e2e 0%,#595959 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #2e2e2e 0%,#595959 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #2e2e2e 0%,#595959 100%); /* IE10+ */
-  background:linear-gradient(top, #2e2e2e 0%,#595959 100%); /* W3C */
-}
-.button.gray:hover, a.button.gray:hover, button.gray:hover, input[type="button"].gray:hover, input[type="submit"].gray:hover, .paging_full_numbers span.paginate_button:hover {
-  background:-moz-linear-gradient(top, #d9d9d9 0%, #f2f2f2 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#d9d9d9), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #d9d9d9 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #d9d9d9 0%,#f2f2f2 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #d9d9d9 0%,#f2f2f2 100%); /* IE10+ */
-  background:linear-gradient(top, #d9d9d9 0%,#f2f2f2 100%); /* W3C */
-}
-.shortcuts li:hover, #nav-main #nav-main-user .actions:hover {
-  background:-moz-linear-gradient(top, #fff 0%, #e5e5e5 100%); /* FF3.6+ */
-  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background:-webkit-linear-gradient(top, #fff 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background:-o-linear-gradient(top, #fff 0%,#e5e5e5 100%); /* Opera11.10+ */
-  background:-ms-linear-gradient(top, #fff 0%,#e5e5e5 100%); /* IE10+ */
-  background:linear-gradient(top, #fff 0%,#e5e5e5 100%); /* W3C */
+/**
+ * Header
+ */
+#wrapper > header {
+    background-color: #ABCEEE;
+    background-image: image_url("svg1910.svg?from=%23ABCEEE&amp;to=%238AA8CA");
+    background-image: -o-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -ms-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -moz-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ABCEEE), to(#8AA8CA));
+    background-image: -webkit-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: linear-gradient(top, #ABCEEE, #8AA8CA);
+    -pie-background: linear-gradient(top, #ABCEEE, #8AA8CA);
 }
 
-/*  Global Background Images  */
-#navigation { background-image:url("bg_main_nav.png"); }
-#nav-main #nav-main-navigation li .nav-main-subnav { background-image:url("icon_main_nav_arrows.png"); }
-input, textarea, select, .customfile, div.wysiwyg iframe { background-image:url("bg_input.png"); }
-input:disabled, input.disabled { background-image:url("bg_input_disabled.png"); }
-ul li { background-image:url("lists/icon_list_style_basic.png"); }
-.list-style-arrow li { background-image:url("lists/icon_list_style_arrow.png"); }
-.list-style-cross li { background-image:url("lists/icon_list_style_cross.png"); }
-.list-style-checkmark li { background-image:url("lists/icon_list_style_checkmark.png"); }
-.list-style-attach li { background-image:url("lists/icon_list_style_attach.png"); }
-.notification.error { background-image:url("notifications/icon_notification_error.png"); }
-.notification.success { background-image:url("notifications/icon_notification_success.png"); }
-.notification.attention { background-image:url("notifications/icon_notification_attention.png"); }
-.notification.information { background-image:url("notifications/icon_notification_information.png"); }
-.notification.note { background-image:url("notifications/icon_notification_note.png"); }
-.loading { background-image:url("loading/icon_loading_notification_white.gif"); }
-.loading.red { background-image:url("loading/icon_loading_notification_red.gif"); }
-.loading.green { background-image:url("loading/icon_loading_notification_green.gif"); }
-.loading.blue { background-image:url("loading/icon_loading_notification_blue.gif"); }
-.loading.black { background-image:url("loading/icon_loading_notification_black.gif"); }
-.progress-bar { background-image:url("bg_progress_bar.png"); }
-.close-notification { background-image:url("notifications/icon_notification_close.png"); }
-form span.valid-side-note { background-image:url("notifications/icon_notification_success.png"); }
-form span.invalid-side-note { background-image:url("notifications/icon_notification_error.png"); }
-.loading-notification { background-image:url("loading/icon_loading_notification_white.gif"); }
-.toggle-table-switch { background-image:url("icon_options.png"); }
-.tip-box header { background-image:url("icon_tip_box.png"); }
-.tip-box header h2{ background-image:url("bg_tipbox.png"); }
-.small-notification { background-image:url("bg_notification.png"); }
-#breadcrumbs li { background-image:url("icon_breadcrumb_divider.png"); }
-a.outside { background-image:url("icon_outside.png"); }
-#toTop, #toTopHover { background-image:url("icon_top_scroll.png"); }
-.wizard-steps li { background-image:url("bg_wizard.png"); }
-body #container > footer { background-image:url("bg_footer.png"); }
-
-/*  Global Text Shadows  */
-#nav-main ul li, .progress-bar div span { text-shadow:0 1px 1px #1a1a1a; }
-.tab-switch li a { text-shadow:0 1px 1px #b3b3b3; }
-.shortcuts li a { text-shadow:0 1px 1px #fff; }
-.small-notification { text-shadow:0 1px 1px #666; }
-.button.gray, a.button.gray, button.gray, input[type="button"].gray, input[type="submit"].gray,
-.disabled, .button.disabled, button:disabled, button.disabled, input[type="button"]:disabled,
-input[type="submit"]:disabled, input[type="button"].disabled, input[type="submit"].disabled, .paging_full_numbers span.paginate_button, .fc-view table thead th, .wizard-steps li span, #breadcrumbs li { text-shadow:0 1px 1px #fff; }
-.button.green, a.button.green, button.green, input[type="button"].green, input[type="submit"].green, .button.red, a.button.red, button.red, input[type="button"].red, input[type="submit"].red, .button,
-a.button, button, input[type="button"], input[type="submit"], th, .paging_full_numbers span.paginate_active, .fc-state-default, .wizard-steps li.wizard-step-done span, .button.blue, a.button.blue, button.blue,
-input[type="button"].blue, input[type="submit"].blue, .button.black, a.button.black, button.black, input[type="button"].black, input[type="submit"].black { text-shadow:0 1px 1px #4d4d4d; }
-
-/*  Global Box Shadows  */
-#nav-main #nav-main-user .actions {
-  -webkit-box-shadow:0 0 3px #2e2e2e;
-  -moz-box-shadow:0 0 3px #2e2e2e;
-  box-shadow:0 0 3px #2e2e2e;
-}
-.loading-notification, #toTop {
-  -webkit-box-shadow:0 0 3px #000;
-  -moz-box-shadow:0 0 3px #000;
-  box-shadow:0 0 3px #000;
-}
-.shortcuts li, .table-actions > a.active, .table-actions ul, .options-switch, .jq-datepicker, .content section img, body.error-page .error-wrapper {
-  -webkit-box-shadow:0 0 3px #b3b3b3;
-  -moz-box-shadow:0 0 3px #b3b3b3;
-  box-shadow:0 0 3px #b3b3b3;
+#main-navigation > li.active {
+	background-color: #abceee;
+	background-image: -o-linear-gradient(#ABC, rgba(234, 238, 243, 0.2) 10%, #ABCEEE), -o-linear-gradient(left, #ABC, #ABCEEE 3%, #ABCEEE 97%, #ABC);
+	background-image: -ms-linear-gradient(#ABC, rgba(234, 238, 243, 0.2) 10%, #ABCEEE), -ms-linear-gradient(left, #ABC, #ABCEEE 3%, #ABCEEE 97%, #ABC);
+	background-image: -moz-linear-gradient(#ABC, rgba(234, 238, 243, 0.2) 10%, #ABCEEE), -moz-linear-gradient(left, #ABC, #ABCEEE 3%, #ABCEEE 97%, #ABC);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ABC), color-stop(10%, rgba(234, 238, 243, 0.2)), color-stop(100%, #ABCEEE)), -webkit-gradient(linear, left center, right center, color-stop(0%, #ABC), color-stop(3%, #ABCEEE), color-stop(97%, #ABCEEE), color-stop(100%, #ABC));
+	background-image: -webkit-linear-gradient(#ABC, rgba(234, 238, 243, 0.2) 10%, #ABCEEE), -webkit-linear-gradient(left, #ABC, #ABCEEE 3%, #ABCEEE 97%, #ABC);
+	background-image: linear-gradient(#ABC, rgba(234, 238, 243, 0.2) 10%, #ABCEEE), linear-gradient(left, #ABC, #ABCEEE 3%, #ABCEEE 97%, #ABC);
 }
 
-.button.green, a.button.green, button.green, input[type="button"].green, input[type="submit"].green, .button.red,
-a.button.red, button.red, input[type="button"].red, input[type="submit"].red, .button, a.button, button, input[type="button"],
-input[type="submit"], .button.blue, a.button.blue, button.blue, input[type="button"].blue, input[type="submit"].blue, .button.black,
-a.button.black, button.black, input[type="button"].black, input[type="submit"].black, .paging_full_numbers span.paginate_active, .fc-state-default, .wizard-steps li.wizard-step-done span {
-  -webkit-box-shadow:0 1px 2px #a6a6a6;
-  -moz-box-shadow:0 1px 2px #a6a6a6;
-  box-shadow:0 1px 2px #a6a6a6;
-}
-.button.gray, a.button.gray, button.gray, input[type="button"].gray, input[type="submit"].gray, .paging_full_numbers span.paginate_button, .wizard-steps li span {
-  -webkit-box-shadow:0 1px 2px #bfbfbf;
-  -moz-box-shadow:0 1px 2px #bfbfbf;
-  box-shadow:0 1px 2px #bfbfbf;
+/**
+ * Contents
+ */
+#wrapper > section > section > header h1,
+#wrapper > section > section > .viewport > header h1{
+	color: #567;
+	line-height: 30px;
+	margin: 0;
+	text-shadow: #FFF 0 1px 2px;
 }
 
-/*  Global Borders  */
-#nav-main #nav-main-navigation li, #nav-sub .submenu { border-color:#3e3f40; }
-input, textarea, select, .customfile, div.wysiwyg iframe,
-.content section img, .content section .sidetab-switch li, fieldset,
-.jq-datepicker, td, tbody, .table-switch li, .options-switch li, .tickets .ticket-header,
-.tickets .ticket-data, .tickets .ticket-data .ticket-details, .jq-datepicker .datepick-month-header select { border-color:#ccc; }
-#nav-main #nav-main-user .actions { border-color:#888; }
-.options-switch, .dashboard li, .logs li, body.error-page .error-wrapper, .shortcuts li, .no-boxshadow .shortcuts li { border-color:#afafaf; }
-.toggle-table-switch, .table-switch, .notification.note { border-color:#bfbfbf; }
-.progress-bar, .content section .stats-summary li, .accordion .accordion-switch, .wizard-steps, .bb,
-.tickets .ticket-data .ticket-details dl, .logs .logs-actions li, .contacts li { border-color:#d9d9d9; }
-.notification.error { border-color:#ae432e; }
-.notification.success { border-color:#77ab13; }
-.notification.attention { border-color:#e6c26e; }
-.notification.information { border-color:#058dc7; }
-.toggled.content header { border-color:#999; }
-input:focus, textarea:focus, input.focused { border-color:#a68042; }
-input.valid, textarea.valid { border-color:#549a2a; }
-input.invalid, textarea.invalid { border-color:#ae432e; }
-.tip-box header, .tip-box section { border-color:#057fb3; }
-.tip-box header, .tip-box section { background-color:#b4d8e8; }
-.tip-box, .tip-box header h2, .tip-box section h3, .tip-box section h4 { color:#034866; }
-.button.red, a.button.red, button.red, input[type="button"].red, input[type="submit"].red, .button, .progress-bar.red div, a.button, button, input[type="button"], input[type="submit"], thead, tfoot, .paging_full_numbers span.paginate_active, .fc-state-default, .wizard-steps li.wizard-step-done span { border-color:#a6402b #993b28 #803121; }
-.button.gray, a.button.gray, button.gray, input[type="button"].gray, input[type="submit"].gray, .paging_full_numbers span.paginate_button, .fc-view table thead, .wizard-steps li span { border-color:#bfbfbf #b3b3b3 #999; }
-.button.green, a.button.green, button.green, input[type="button"].green, input[type="submit"].green, .progress-bar.green div { border-color:#62b330 #549929 #3f731f; }
-.button.blue, a.button.blue, button.blue, input[type="button"].blue, input[type="submit"].blue, .progress-bar.blue div { border-color:#057fb3 #056c99 #035173; }
-.button.black, a.button.black, button.black, input[type="button"].black, input[type="submit"].black, .progress-bar.black div { border-color:#333 #262626 #000; }
-.disabled, .button.disabled, button:disabled, button.disabled, input[type="button"]:disabled, input[type="submit"]:disabled, input[type="button"].disabled, input[type="submit"].disabled { border-color:#ebebeb #e1e1e1 #dadada; }
-/*  Social  */
-.social.rss { background-image:url("social/rss.png"); }
-.social.blogger { background-image:url("social/blogger.png"); }
-.social.delicious { background-image:url("social/delicious.png"); }
-.social.deviantart { background-image:url("social/deviantart.png"); }
-.social.digg { background-image:url("social/digg.png"); }
-.social.facebook { background-image:url("social/facebook.png"); }
-.social.flickr { background-image:url("social/flickr.png"); }
-.social.forrst { background-image:url("social/forrst.png"); }
-.social.linkedin { background-image:url("social/linkedin.png"); }
-.social.myspace { background-image:url("social/myspace.png"); }
-.social.technorati { background-image:url("social/technorati.png"); }
-.social.tumblr { background-image:url("social/tumblr.png"); }
-.social.twitter { background-image:url("social/twitter.png"); }
-.social.vimeo { background-image:url("social/vimeo.png"); }
-.social.wordpress { background-image:url("social/wordpress.png"); }
-.social.yahoo { background-image:url("social/yahoo.png"); }
-.social.youtube { background-image:url("social/youtube.png"); }
-
-/*  Emoticons  */
-.emoticon.smile { background-image:url("emoticon/emoticon_smile.png"); }
-.emoticon.grin { background-image:url("emoticon/emoticon_grin.png"); }
-.emoticon.evilgrin { background-image:url("emoticon/emoticon_evilgrin.png"); }
-.emoticon.happy { background-image:url("emoticon/emoticon_happy.png"); }
-.emoticon.surprised { background-image:url("emoticon/emoticon_surprised.png"); }
-.emoticon.tongue { background-image:url("emoticon/emoticon_tongue.png"); }
-.emoticon.unhappy { background-image:url("emoticon/emoticon_unhappy.png"); }
-.emoticon.waii { background-image:url("emoticon/emoticon_waii.png"); }
-.emoticon.wink { background-image:url("emoticon/emoticon_wink.png"); }
-.emoticon.bug { background-image:url("emoticon/emoticon_bug.png"); }
-.emoticon.heart { background-image:url("emoticon/emoticon_heart.png"); }
-.emoticon.basketball { background-image:url("emoticon/emoticon_basketball.png"); }
-.emoticon.football { background-image:url("emoticon/emoticon_football.png"); }
-.emoticon.golf { background-image:url("emoticon/emoticon_golf.png"); }
-.emoticon.soccer { background-image:url("emoticon/emoticon_soccer.png"); }
-.emoticon.tennis { background-image:url("emoticon/emoticon_tennis.png"); }
-.emoticon.up { background-image:url("emoticon/emoticon_up.png"); }
-.emoticon.down { background-image:url("emoticon/emoticon_down.png"); }
-
-/*  File Extensions  */
-.extension.empty { background-image:url("extensions/page_white.png"); }
-.extension.acrobat { background-image:url("extensions/page_white_acrobat.png"); }
-.extension.code { background-image:url("extensions/page_white_code.png"); }
-.extension.c { background-image:url("extensions/page_white_c.png"); }
-.extension.cplusplus { background-image:url("extensions/page_white_cplusplus.png"); }
-.extension.csharp { background-image:url("extensions/page_white_csharp.png"); }
-.extension.database { background-image:url("extensions/page_white_database.png"); }
-.extension.excel { background-image:url("extensions/page_white_excel.png"); }
-.extension.flash { background-image:url("extensions/page_white_flash.png"); }
-.extension.msoffice { background-image:url("extensions/page_white_office.png"); }
-.extension.php { background-image:url("extensions/page_white_php.png"); }
-.extension.powerpoint { background-image:url("extensions/page_white_powerpoint.png"); }
-.extension.picture { background-image:url("extensions/page_white_picture.png"); }
-.extension.ruby { background-image:url("extensions/page_white_ruby.png"); }
-.extension.text { background-image:url("extensions/page_white_text.png"); }
-.extension.tux { background-image:url("extensions/page_white_tux.png"); }
-.extension.word { background-image:url("extensions/page_white_word.png"); }
-.extension.visualstudio { background-image:url("extensions/page_white_visualstudio.png"); }
-.extension.zip { background-image:url("extensions/page_white_zip.png"); }
-
-/*  Old Browsers  */
-.no-cssgradients .progress-bar.red div { background-image:url("fallback/ob_progress_bar_red.png"); }
-.no-cssgradients .progress-bar.blue div { background-image:url("fallback/ob_progress_bar_blue.png"); }
-.no-cssgradients .progress-bar.green div { background-image:url("fallback/ob_progress_bar_green.png"); }
-.no-cssgradients .progress-bar.black div { background-image:url("fallback/ob_progress_bar_black.png"); }
-.no-cssgradients .button, .no-cssgradients a.button, .no-cssgradients button, .no-cssgradients input[type="button"],
-.no-cssgradients input[type="submit"], .no-cssgradients .button.red, .no-cssgradients a.button.red, .no-cssgradients button.red,
-.no-cssgradients input[type="button"].red, .no-cssgradients input[type="submit"].red, .no-cssgradients .datatable thead tr, .no-cssgradients .fc-button,
-.no-cssgradients .datatable tfoot tr, .no-cssgradients .wizard-steps li.wizard-step-done span, .no-cssgradients .paging_full_numbers span.paginate_active, .ie7 .datatable, .ie7 table, .ie8 table, .ie9 table {
-  background-image:url("fallback/ob_button_red.png");
-  background-color:#d95338;
-}
-.ie7 tfoot td, .ie8 tfoot td, .ie9 tfoot td, .ie7 .fullcalendar table, .ie8 .fullcalendar table, .ie9 .fullcalendar table { background-color:#fff; }
-.ie7 .fullcalendar table, .ie8 .fullcalendar table, .ie9 .fullcalendar table { background-image:none; }
-.no-cssgradients .button:hover, .no-cssgradients a.button:hover, .no-cssgradients button:hover, .no-cssgradients input[type="button"]:hover,
-.no-cssgradients input[type="submit"]:hover, .no-cssgradients .button.red:hover, .no-cssgradients a.button.red:hover, .no-cssgradients button.red:hover,
-.no-cssgradients input[type="button"].red:hover, .no-cssgradients input[type="submit"].red:hover, .no-cssgradients .fc-button.fc-state-hover {
-  background-image:url("fallback/ob_button_red_hover.png");
-  background-color:#ae432e;
-}
-.no-cssgradients  .button.gray, .no-cssgradients a.button.gray, .no-cssgradients button.gray, .no-cssgradients input[type="button"].gray,
-.no-cssgradients input[type="submit"].gray, .no-cssgradients .wizard-steps li span, .no-cssgradients .paging_full_numbers span.paginate_button, .no-cssgradients .fc-view table thead tr {
-  background-image:url("fallback/ob_button_gray.png");
-  background-color:#f2f2f2;
-}
-.no-cssgradients .button.gray:hover, .no-cssgradients a.button.gray:hover, .no-cssgradients button.gray:hover,
-.no-cssgradients input[type="button"].gray:hover, .no-cssgradients input[type="submit"].gray:hover, .no-cssgradients .paging_full_numbers span.paginate_button:hover {
-  background-image:url("fallback/ob_button_gray_hover.png");
-  background-color:#d9d9d9;
-}
-.no-cssgradients .button.green, .no-cssgradients a.button.green, .no-cssgradients button.green, .no-cssgradients input[type="button"].green,
-.no-cssgradients input[type="submit"].green {
-  background-image:url("fallback/ob_button_green.png");
-  background-color:#77d93b;
-}
-.no-cssgradients .button.green:hover, .no-cssgradients a.button.green:hover, .no-cssgradients button.green:hover,
-.no-cssgradients input[type="button"].green:hover, .no-cssgradients input[type="submit"].green:hover {
-  background-image:url("fallback/ob_button_green_hover.png");
-  background-color:#549a2a;
-}
-.no-cssgradients .button.blue, .no-cssgradients a.button.blue, .no-cssgradients button.blue, .no-cssgradients input[type="button"].blue,
-.no-cssgradients input[type="submit"].blue {
-  background-image:url("fallback/ob_button_blue.png");
-  background-color:#07a3e5;
-}
-.no-cssgradients .button.blue:hover, .no-cssgradients a.button.blue:hover, .no-cssgradients button.blue:hover,
-.no-cssgradients input[type="button"].blue:hover, .no-cssgradients input[type="submit"].blue:hover {
-  background-image:url("fallback/ob_button_blue_hover.png");
-  background-color:#07a3e5;
-}
-.no-cssgradients .button.black, .no-cssgradients a.button.black, .no-cssgradients button.black, .no-cssgradients input[type="button"].black,
-.no-cssgradients input[type="submit"].black {
-  background-image:url("fallback/ob_button_black.png");
-  background-color:#595959;
-}
-.no-cssgradients .button.black:hover, .no-cssgradients a.button.black:hover, .no-cssgradients button.black:hover,
-.no-cssgradients input[type="button"].black:hover, .no-cssgradients input[type="submit"].black:hover {
-  background-image:url("fallback/ob_button_black_hover.png");
-  background-color:#2e2e2e;
-}
-.no-cssgradients .disabled, .no-cssgradients .button.disabled, .no-cssgradients button:disabled, .no-cssgradients button.disabled,
-.no-cssgradients input[type="button"]:disabled, .no-cssgradients input[type="submit"]:disabled, .no-cssgradients input[type="button"].disabled,
-.no-cssgradients input[type="submit"].disabled {
-  background-image:url("fallback/ob_button_disabled.png");
-  background-color:#f4f4f4;
+/**
+ * Elements
+ */
+.fc-event-skin {
+    background-color: #ABCEEE;
+    background-image: url(../../svg1910.svg?from=%23ABCEEE&amp;to=%238AA8CA);
+    background-image: -o-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -ms-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -moz-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ABCEEE), to(#8AA8CA));
+    background-image: -webkit-linear-gradient(top, #ABCEEE, #8AA8CA);
+    background-image: linear-gradient(top, #ABCEEE, #8AA8CA);
+    zoom: 1;
 }
 
-/*  Sample Data  */
-#logo { background-image:url("_sample-data/sample_logo.png"); }
 
-/*  Sample Shortcuts  */
-.shortcuts .shortcut-contacts a { background-image:url("shortcuts/icon_shortcut_contacts.png"); }
-.shortcuts .shortcut-sales a { background-image:url("shortcuts/icon_shortcut_sales.png"); }
-.shortcuts .shortcut-tickets a { background-image:url("shortcuts/icon_shortcut_tickets.png"); }
-.shortcuts .shortcut-articles a { background-image:url("shortcuts/icon_shortcut_articles.png"); }
-.shortcuts .shortcut-looong a { background-image:url("shortcuts/icon_shortcut_looong.png"); }
-.shortcuts .shortcut-settings a { background-image:url("shortcuts/icon_shortcut_settings.png"); }
+/* ======================== WIDGETS ======================== */
 
-/*  Sample Table Actions  */
-table .actions .view { background-image:url("actions/page_white_find.png"); }
-table .actions .edit { background-image:url("actions/page_white_edit.png"); }
-table .actions .delete { background-image:url("actions/page_white_delete.png"); }
+#calhead,
+.fc-widget-header,
+table.display thead tr,
+table.display tfoot tr,
+.tabs > ul > li > a,
+.accordion > header,
+.portlet > header {
+    background-color: #F4F4F4;
+    background-image: url(../../svg9e40.svg?from=%23FCFCFC&amp;to=%23F4F4F4);
+    background-image: -o-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: -ms-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: -moz-linear-gradient(top, #FCFCFC, #F4F4F4);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FCFCFC), to(#F4F4F4));
+    background-image: -webkit-linear-gradient(top, #FCFCFC, #F4F4F4);
+    background-image: linear-gradient(top, #FCFCFC, #F4F4F4);
+    text-shadow: 0 1px 0 #FFF;
+    zoom: 1;
+}
+
+.lte8 #calhead,
+.lte8 .fc-widget-header,
+.lte8 table.display thead tr,
+.lte8 table.display tfoot tr,
+.lte8 .tabs > ul > li > a,
+.lte8 .accordion > header,
+.lte8 .portlet > header {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FCFCFC,endColorstr=#F4F4F4);
+}
+
+.portlet > header h2 {
+    color: #999;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.portlet > section {
+    background: #FFF;
+    border-color: #CCC;
+}
+
+/**
+ * Tabs
+ */
+.tabs > ul > li > a:hover {
+    background-color: #F2F2F2;
+    background-image: -o-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -ms-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -moz-linear-gradient(top, #FFF, #F2F2F2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2));
+    background-image: -webkit-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: linear-gradient(top, #FFF, #F2F2F2);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#F2F2F2);
+    zoom: 1;
+}
+
+.tabs > ul > li > a.current {
+    background-color: #FFF;
+	background-image: -o-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+	background-image: -ms-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+	background-image: -moz-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #EEE), color-stop(10%, rgba(234, 238, 243, 0.2)), color-stop(100%, #FFF)), -webkit-gradient(linear, left center, right center, color-stop(0%, #DBDBDB), color-stop(3%, #FFF), color-stop(97%, #FFF), color-stop(100%, #DBDBDB));
+	background-image: -webkit-linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+	background-image: linear-gradient(#EEE, rgba(234, 238, 243, 0.2) 10%, #FFF), -moz-linear-gradient(left, #DBDBDB, #FFF 3%, #FFF 97%, #DBDBDB);
+    filter: none;
+    border-color: #CCC;
+    border-bottom-color: #FFF;
+    color: #39F;
+    zoom: 1;
+}
+
+.tabs > section {
+    background-color: #FFF;
+    border-color: #CCC;
+}
+
+.tabs.side > ul > li > a.current {
+    background: #FFF;
+    border-color: #CCC;
+    border-right-color: #FFF;
+}
+
+/**
+ * Accordion
+ */
+.accordion {
+    border-color: #CCC;
+}
+
+.accordion > header {
+    border-color: #CCC;
+    zoom: 1;
+}
+
+.accordion > header:hover {
+    background-color: #F2F2F2;
+    background-image: -o-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -ms-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -moz-linear-gradient(top, #FFF, #F2F2F2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2));
+    background-image: -webkit-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: linear-gradient(top, #FFF, #F2F2F2);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#F2F2F2);
+    zoom: 1;
+}
+
+.accordion > header h2 {
+    color: #999;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.accordion > section {
+    background-color: #FFF;
+    border-color: #CCC;
+}
+
+/* ======================== WIDGETS END ======================== */
+
+/**
+ * Buttons
+ */
+.mceEditor.defaultSkin .mceToolbar,
+.mceEditor.defaultSkin .mceStatusbar,
+.fc-button.fc-state-default .fc-button-inner,
+.paging_full_numbers span.paginate_button,
+.paging_full_numbers span.paginate_active,
+input[type=button],
+input[type=submit],
+input[type=reset],
+button,
+.button,
+.pagination li a,
+.toolbar li a,
+.selector,
+.uploader span.action,
+.checker,
+.radio,
+.paging_full_numbers span.paginate_button,
+.paging_full_numbers span.paginate_active {
+    background-color: #EEE;
+    background-image: url(../../svgd371.svg?from=%23FEFEFE&amp;to=%23EEE);
+    background-image: -o-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: -ms-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: -moz-linear-gradient(top, #FEFEFE, #EEE);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#EEE));
+    background-image: -webkit-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: linear-gradient(top, #FEFEFE, #EEE);
+    border-color: #AAA;
+    -moz-box-shadow: inset 0 1px 0 #FFF, 0 1px 3px rgba(0,0,0,0.15);
+    -webkit-box-shadow: inset 0 1px 0 #FFF, 0 1px 3px rgba(0,0,0,0.15);
+    box-shadow: inset 0 1px 0 #FFF, 0 1px 3px rgba(0,0,0,0.15);
+    color: #111;
+    text-shadow: 0 1px 0 #FFF;
+}
+
+.lte8 .mceEditor.defaultSkin .mceToolbar,
+.lte8 .mceEditor.defaultSkin .mceStatusbar,
+.lte8 .fc-button.fc-state-default .fc-button-inner,
+.lte8 .paging_full_numbers span.paginate_button,
+.lte8 .paging_full_numbers span.paginate_active,
+.lte8 input[type=button],
+.lte8 input[type=submit],
+.lte8 input[type=reset],
+.lte8 button,
+.lte8 .button,
+.lte8 .pagination li a,
+.lte8 .toolbar li a,
+.lte8 .selector,
+.lte8 .uploader span.action,
+.lte8 .checker,
+.lte8 .radio,
+.lte8 .paging_full_numbers span.paginate_button,
+.lte8 .paging_full_numbers span.paginate_active {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE,endColorstr=#EEEEEE);
+    zoom: 1;
+}
+
+.mceEditor.defaultSkin .mceToolbar {
+    margin-bottom: 4px;
+}
+
+.fc-button.fc-state-default:hover .fc-button-inner,
+.paging_full_numbers span.paginate_button:hover,
+.paging_full_numbers span.paginate_active:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover,
+.button:hover,
+.pagination li a:hover,
+.toolbar li a:hover,
+.selector:hover,
+.selector.hover,
+.uploader.hover span.action,
+.checker:hover,
+.checker.hover,
+.radio:hover,
+.radio.hover,
+.paging_full_numbers span.paginate_button:hover,
+.paging_full_numbers span.paginate_active:hover {
+    background-color: #F2F2F2;
+    background-image: url(../../svg0605.svg?from=%23FFF&amp;to=%23F2F2F2);
+    background-image: -o-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -ms-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: -moz-linear-gradient(top, #FFF, #F2F2F2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#F2F2F2));
+    background-image: -webkit-linear-gradient(top, #FFF, #F2F2F2);
+    background-image: linear-gradient(top, #FFF, #F2F2F2);
+    border-color: #888;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.lte8 .fc-button.fc-state-default:hover .fc-button-inner,
+.lte8 .paging_full_numbers span.paginate_button:hover,
+.lte8 .paging_full_numbers span.paginate_active:hover,
+.lte8 input[type=button]:hover,
+.lte8 input[type=submit]:hover,
+.lte8 input[type=reset]:hover,
+.lte8 button:hover,
+.lte8 .button:hover,
+.lte8 .pagination li a:hover,
+.lte8 .toolbar li a:hover,
+.lte8 .selector:hover,
+.lte8 .selector.hover,
+.lte8 .uploader.hover span.action,
+.lte8 .checker:hover,
+.lte8 .checker.hover,
+.lte8 .radio:hover,
+.lte8 .radio.hover,
+.lte8 .paging_full_numbers span.paginate_button:hover,
+.lte8 .paging_full_numbers span.paginate_active:hover {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFF,endColorstr=#F2F2F2);
+    zoom: 1;
+}
+
+.fc-button.fc-state-default:focus .fc-button-inner,
+.paging_full_numbers span.paginate_button:focus,
+.paging_full_numbers span.paginate_active:focus,
+input[type=button]:focus,
+input[type=submit]:focus,
+input[type=reset]:focus,
+button:focus,
+.button:focus,
+.pagination li a:focus,
+.toolbar li a:focus,
+.selector:focus,
+.selector.focus,
+.uploader.focus span.action,
+.checker:focus,
+.checker.focus,
+.radio:focus,
+.radio.focus,
+.paging_full_numbers span.paginate_button:focus,
+.paging_full_numbers span.paginate_active:focus {
+    background-color: #EEE;
+    background-image: url(../../svgd371.svg?from=%23FEFEFE&amp;to=%23EEE);
+    background-image: -o-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: -ms-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: -moz-linear-gradient(top, #FEFEFE, #EEE);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FEFEFE), to(#EEE));
+    background-image: -webkit-linear-gradient(top, #FEFEFE, #EEE);
+    background-image: linear-gradient(top, #FEFEFE, #EEE);
+    border-color: #AAA;
+}
+
+.lte8 .fc-button.fc-state-default:focus .fc-button-inner,
+.lte8 .paging_full_numbers span.paginate_button:focus,
+.lte8 .paging_full_numbers span.paginate_active:focus,
+.lte8 input[type=button]:focus,
+.lte8 input[type=submit]:focus,
+.lte8 input[type=reset]:focus,
+.lte8 button:focus,
+.lte8 .button:focus,
+.lte8 .pagination li a:focus,
+.lte8 .toolbar li a:focus,
+.lte8 .selector:focus,
+.lte8 .selector.focus,
+.lte8 .uploader.focus span.action,
+.lte8 .checker:focus,
+.lte8 .checker.focus,
+.lte8 .radio:focus,
+.lte8 .radio.focus,
+.lte8 .paging_full_numbers span.paginate_button:focus,
+.lte8 .paging_full_numbers span.paginate_active:focus {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FEFEFE,endColorstr=#EEEEEE);
+    zoom: 1;
+}
+
+.fc-button.fc-state-active .fc-button-inner,
+.fc-button.fc-state-default.fc-state-active:hover .fc-button-inner,
+.fc-button.fc-state-default:active .fc-button-inner,
+.paging_full_numbers span.paginate_button:active,
+.paging_full_numbers span.paginate_active:active,
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active,
+button:active,
+.button:active,
+.pagination li a:active,
+.toolbar li a:active,
+.toolbar li.current a,
+.toolbar li.current a:hover,
+.selector:active,
+.selector.active,
+.uploader.active span.action,
+.checker:active,
+.checker.active,
+.radio:active,
+.radio.active,
+.paging_full_numbers span.paginate_button:active,
+.paging_full_numbers span.paginate_active:active {
+    background-color: #EAEAEA;
+    background-image: url(../../svg9d02.svg?from=%23FAFAFA&amp;to=%23EAEAEA);
+    background-image: -o-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: -ms-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: -moz-linear-gradient(top, #FAFAFA, #EAEAEA);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FAFAFA), to(#EAEAEA));
+    background-image: -webkit-linear-gradient(top, #FAFAFA, #EAEAEA);
+    background-image: linear-gradient(top, #FAFAFA, #EAEAEA);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 1px 0px rgba(255,255,255,0.2);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 1px 0px rgba(255,255,255,0.2);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3), 0 1px 0px rgba(255,255,255,0.2);
+}
+
+.lte8 .fc-button.fc-state-active .fc-button-inner,
+.lte8 .fc-button.fc-state-default.fc-state-active:hover .fc-button-inner,
+.lte8 .fc-button.fc-state-default:active .fc-button-inner,
+.lte8 .paging_full_numbers span.paginate_button:active,
+.lte8 .paging_full_numbers span.paginate_active:active,
+.lte8 input[type=button]:active,
+.lte8 input[type=submit]:active,
+.lte8 input[type=reset]:active,
+.lte8 button:active,
+.lte8 .button:active,
+.lte8 .pagination li a:active,
+.lte8 .toolbar li a:active,
+.lte8 .toolbar li.current a,
+.lte8 .toolbar li.current a:hover,
+.lte8 .selector:active,
+.lte8 .selector.active,
+.lte8 .uploader.active span.action,
+.lte8 .checker:active,
+.lte8 .checker.active,
+.lte8 .radio:active,
+.lte8 .radio.active,
+.lte8 .paging_full_numbers span.paginate_button:active,
+.lte8 .paging_full_numbers span.paginate_active:active {
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FAFAFA,endColorstr=#EAEAEA);
+    zoom: 1;
+}
+
+.fc-button.fc-state-disabled .fc-button-inner,
+.fc-button.fc-state-disabled:hover .fc-button-inner,
+.fc-button.fc-state-disabled:active .fc-button-inner,
+input[type=button]:disabled,
+input[type=button]:hover:disabled,
+input[type=button]:focus:disabled,
+input[type=button]:active:disabled,
+input[type=submit]:disabled,
+input[type=submit]:hover:disabled,
+input[type=submit]:focus:disabled,
+input[type=submit]:active:disabled,
+input[type=reset]:disabled,
+input[type=reset]:hover:disabled,
+input[type=reset]:focus:disabled,
+input[type=reset]:active:disabled,
+button:disabled,
+button:hover:disabled,
+button:focus:disabled,
+button:active:disabled,
+.button.disabled,
+.pagination li a.disabled,
+.toolbar li a.disabled,
+.selector.disabled,
+.selector.disabled:hover,
+.selector.disabled:focus,
+.selector.disabled:active,
+.uploader.disabled span.action,
+.checker.disabled,
+.checker.disabled:hover,
+.checker.disabled:focus,
+.checker.disabled:active,
+.radio.disabled,
+.radio.disabled:hover,
+.radio.disabled:focus,
+.radio.disabled:active {
+    border-color: #DDD;
+    background: #EAEAEA;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    filter: none;
+    color: #777;
+}
+
+.pagination li.current a,
+.paging_full_numbers span.paginate_active {
+    background: #FFF;
+    filter: none;
+}
+
+.radio span.checked {
+    background-color: #ABCEEE;
+    box-shadow: inset 0 1px 3px #111;
+}
+
+.checker span {
+    background: image_url("check.png") no-repeat -14px 0;
+}
+
+.checker span.checked {
+    background-position: 0 0;
+}

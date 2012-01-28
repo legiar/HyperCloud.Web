@@ -1,25 +1,6 @@
-.view.list-view
-  .toolbar
-    .button.action.add.reduced-hide
-      %span= link_to 'Add zone', new_zone_path 
-
-  .data-table
-    .fixed-header
-      %table
-        %thead
-          %tr
-            %th Name
-            %th Network Type
-            %th State
-            %th.actions Actions
-
-        %tbody
-          - @zones.each do |zone|
-            %tr{:class => cycle(:odd, :even)}
-              %td= link_to zone.name, zone 
-              %td &nbsp;
-              %td &nbsp;
-              %td.actions
-                = link_to 'Show', zone
-                = link_to 'Edit', edit_zone_path(zone)
-                = link_to 'Destroy', zone, :confirm => 'Are you sure?', :method => :delete
+= workspace "Zones" do
+  %table#zones.display.datatable{"data-remote" => zones_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => zone_path(":id")} Name
+    %tbody

@@ -1,15 +1,10 @@
 class SlicesController < InheritedResources::Base
+  respond_to :html, :datatables
   add_breadcrumb "Slices", :slices_path
   
   protected
   
     def collection
-      @slices ||= end_of_association_chain.order(sort_column + ' ' + sort_direction).paginate(
-        :per_page => 10,
-        :page => params[:page])
-    end
-
-    def default_sort_column
-      "name"
+      @slices ||= end_of_association_chain.search(params[:search]).paginate(:page => params[:page], :per_page => params[:per_page])
     end
 end

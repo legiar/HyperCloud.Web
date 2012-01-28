@@ -1,0 +1,12 @@
+@pools.each do |pool|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = pool
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "pool_#{pool.id}" 
+  json << record 
+end

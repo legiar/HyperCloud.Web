@@ -1,0 +1,12 @@
+@networks.each do |network|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = network
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "network_#{network.id}" 
+  json << record 
+end

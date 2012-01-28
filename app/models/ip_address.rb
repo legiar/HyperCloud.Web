@@ -2,6 +2,8 @@ class IpAddress < ActiveRecord::Base
   belongs_to :network
   belongs_to :slice
   
+  scope :free, where(:state => "free")
+  
   validates :network, :presence => true
   validates :ip, :ip_address => true
   

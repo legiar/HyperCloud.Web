@@ -3,7 +3,6 @@
     - class_name = key.to_s
     - class_name = 'error' if class_name == 'alert'
     - class_name = 'success' if class_name == 'notice'
-    .notification{:class => class_name}
-      = link_to "x", "#", :class => "close-notification tooltip", :title => "Hide Notification"
-      %h4= key.to_s.capitalize
+    .message{:class => class_name}
+      %h3= key.to_s.capitalize + "!"
       %p= value

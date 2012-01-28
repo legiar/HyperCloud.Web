@@ -1,0 +1,17 @@
+= workspace "Networks" do
+  %table#networks.display.datatable{"data-remote" => networks_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => network_path(":id")} Name
+        %th{"data-member" => "zone.name"} Zone
+        %th{"data-member" => "address"} Address
+        %th{"data-member" => "dns1"} DNS 1
+        %th{"data-member" => "dns2"} DNS 2
+        %th{"data-member" => "system"} System
+        %th{"data-member" => "shared"} Shared
+        %th{"data-member" => "default"} Default
+        %th{"data-member" => "private"} Private
+        %th{"data-member" => "addresses.count"} Total Addresses
+        %th{"data-member" => "addresses.free.count"} Free Addresses
+    %tbody
+

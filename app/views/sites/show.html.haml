@@ -1,15 +1,11 @@
-- @title = "Site '#{@site.name}'"
 - add_breadcrumb @site.name, site_path(@site)
 
-%article.content.col2
-  %header
-    %h2 Info
-    %nav
-      = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
-      %ul.options-switch{:style => "display: none; margin-left: 8px"}
-        %li= link_to "Edit", edit_site_path(@site)
-  
-  %section
+= workspace "Site '#{@site.name}'" do 
+  /%nav
+  /  = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
+  /  %ul.options-switch{:style => "display: none; margin-left: 8px"}
+  /    %li= link_to "Edit", edit_site_path(@site)
+  = section "Info", :class => "grid_5" do
     %dl
       %dt State
       %dd #Todo
@@ -19,37 +15,31 @@
       %dd= @site.product.try(:name)
       %dt Site instances
       %dd        
-        %table
+        %table.display
           %thead
             %tr
               = table_head %w(slice state enabled)
           %tbody
             = render @site.instances
-          
-%article.content.col2.clear-rm
-  %header
-    %h2 Usage statistics
-    %nav
-      %ul.button-switch
-        %li= link_to "Refresh", "#", :class => "button"
   
-  %section
+
+  = section "Usage statistics", :class => "grid_7" do
+    /%nav
+    /  %ul.button-switch
+    /    %li= link_to "Refresh", "#", :class => "button"
     %ul
       %li User statistics    
       %li Web alizer
       %li Traffic
       %li Summary CPU usage
 
-.clearfix
+  .clearfix
 
-%article.content
-  %header
-    %h2 Support
-    %nav
-      /%form.content-box-header-search{:action => "/"}
-      /  %input.content-box-header-search-input{:name => "", :type => "text"}
-      /    %button.content-box-header-search-btn Search
-  %section
+  = section "Support" do
+    /%nav
+    /  %form.content-box-header-search{:action => "/"}
+    /    %input.content-box-header-search-input{:name => "", :type => "text"}
+    /      %button.content-box-header-search-btn Search
     .sidetabs
       %nav.sidetab-switch
         %ul

@@ -1,0 +1,9 @@
+= workspace "Products" do
+  %table#products.display.datatable{"data-remote" => products_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => product_path(":id")} Name
+        %th{"data-member" => "version", :sort => true} Version
+        %th{"data-member" => "demo"} Demo
+    %tbody
+

@@ -1,28 +1,28 @@
 - add_shortcut "Tickets", tickets_path, :count => 4 
-    
-%article.content.col2
+
+%section.portlet.grid_6.leading
   %header
-    %h2 Statistics
-    %nav
-      %ul.tabs
-        %li= link_to "Sites", "#tab1", :class => "default"
-        %li= link_to "Hosts", "#tab2"
-        %li= link_to "Slices", "#tab3"
-        %li= link_to "Databases", "#tab4"
+    %h2 Site Statistics
   %section
-    #tab1.tab.default
-      %h3 Sites statistics
-      = render "sites/stats"
-    #tab2.tab
-      %h3 Hosts statistics
-      = render "hosts/stats"
-    #tab3.tab
-      %h3 Slice statistics
-      = render "slices/stats"
-    #tab4.tab
-      %h3 Databases statistics
-      = render "databases/stats"
-  %footer
+    = render "sites/stats"
+
+%section.portlet.grid_6.leading
+  %header
+    %h2 Host Statistics
+  %section
+    = render "hosts/stats"
+.clear
+%section.portlet.grid_6.leading
+  %header
+    %h2 Slice Statistics
+  %section
+    = render "slices/stats"
+
+%section.portlet.grid_6.leading
+  %header
+    %h2 Database Statistics
+  %section
+    = render "databases/stats"
     
 %article.content.col2.clear-rm
   %header

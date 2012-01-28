@@ -1,0 +1,8 @@
+= workspace "Sites" do
+  %table#sites.display.datatable{"data-remote" => sites_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => site_path(":id")} Name
+        %th{"data-member" => "pool.name"} Pool
+        %th{"data-member" => "product.name"} Product
+    %tbody   

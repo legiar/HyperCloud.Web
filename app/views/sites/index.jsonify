@@ -1,0 +1,12 @@
+@sites.each do |site|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = site
+  	name.split(".").each do |part|
+  		val = val.try(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "site_#{site.id}" 
+  json << record 
+end

@@ -1,0 +1,12 @@
+@slices.each do |slice|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = slice
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "slice_#{slice.id}" 
+  json << record 
+end

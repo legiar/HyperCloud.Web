@@ -1,7 +1,7 @@
 class SitesController < InheritedResources::Base
-  respond_to :html, :json
+  respond_to :html, :datatables
   add_breadcrumb "Sites", :sites_path
-
+  
   def show
     show! do
       @timeline = ((Time.zone.now - 30.days).to_date..(Time.zone.now - 1.day).to_date).inject([]){ |accum, date| accum << date }  
@@ -16,13 +16,7 @@ class SitesController < InheritedResources::Base
   protected
   
     def collection
-      @sites ||= end_of_association_chain.order(sort_column + ' ' + sort_direction).paginate(
-        :per_page => 10,
-        :page => params[:page])
-    end
-
-    def default_sort_column
-      "name"
+      @sites ||= end_of_association_chain.search(params[:search]).paginate(:page => params[:page], :per_page => params[:per_page])
     end
 
 end

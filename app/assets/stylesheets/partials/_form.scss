@@ -1,304 +1,203 @@
-form.formtastic {
-  margin: 20px 0;
-  padding-bottom: 5px;
-  
-  ol, ul, li {
-    margin: 0;
-    list-style: none;
-  }
-  
-  fieldset {
-    margin: 0;
-    border: 0;
-    overflow: auto;
-    
-    &.inputs {
-      border-radius: 3px;
-      padding: 25px 25px 0;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-    }
-    
-    &.buttons {
-      padding: 0;
-      border: 0;
-      
-      li {
-        float: left;
-        padding-right: 0.5em;
-      }
-    }
-    
-    legend {
-      margin: 0;
-      white-space: normal; 
-      font-size: 116%;
-      padding: 0 1em;
-    }
-  }
-  
-  fieldset > ol > li, > li {
-    padding: 0.5em 0;
-    margin-top: -0.5em;
-    margin-bottom: 1em;
-    overflow: auto;
-    
-    &.required {
-      
-    }
-    
-    &.optional {
-      
-    }
-    
-    &.error {
-      input {
-        border-color: #AE432E;
-        background-color: #F7ECEA;
-      }
-    }
-    
-    label {
-      font-weight: bold;
-      cursor: pointer;
-      width: 150px;
-      display: block;
-      float: left;
-      min-height: 20px;
-      text-align: right;
-      padding-top: .4em;
-      padding-right: 10px;
-      
-      abbr {
-        font-variant: normal;
-        border: 0;
-        color: #e30613;
-        border-bottom: 0px none !important;
-        &:before {
-          content: " ";
-        }
-      }
-    }
-    
-    &.string, &.email {
-      input {
-        width: 25%;
-        min-width: 25%;
-      }
-    }
-    
-    p {
-      margin: 0;
-      
-      &.inline-hints {
-        color: #666;
-        font-size: 77%;
-        margin-left: 160px;
-      }
-      
-      &.inline-errors {
-        display: inline-block;
-        color: #cc0000;
-      }
-    }
-    
-    ul.errors {
-      color: #cc0000;
-      margin: 0.5em 0 0 25%;
-      list-style: square;
-      li {
-        padding: 0;
-        border: none;
-        display: list-item;
-      }
-    }
-  }
- 
-  input, textarea, select /*, .customfile, div.wysiwyg iframe*/ {
-    /*font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    font-size: 100%;*/
-    margin: 0;
-    background-position: top;
-    background-repeat: repeat-x;
-    border: 1px solid #CCC;
-    border-radius: 1px;
-  }
-  
-  input[type=text], input[type=password], input[type=email], textarea, select {
-    padding: 8px;
-  }
-  
-  textarea {
-    overflow: auto;
-  }
- 
-  input[type="checkbox"], input[type="radio"] {
-    background: none;
-    border: none;
-  }
- 
-  select {
-    width: auto;
-    cursor: pointer;
-  }
-  
-  .checkbox1, .radio {
-    width: 200px;
-    position: relative;
-    left: 185px;
-    text-align: left;
-  }
-  .checkbox1 label, .radio1 label { font-weight:normal; }
-  
-  input[type="submit"] {
-    box-shadow: 0 1px 2px #bfbfbf;
-  }
- 
+/**
+ * Fieldsets
+ */
+fieldset {
+  border: 1px solid #bbb;
+  padding: 15px;
 }
-.ie8 form.formtastic fieldset, .ie7 form.formtastic fieldset { padding-top: 0; }
-
-
-/*section form:last-child, section div form:last-child {
-  margin-bottom: 0;
-}*/
-
-/*form.table-form {
-  margin-top: 0;
-}*/
-/*
-
-
-form dd, form.horizontal-form dd {
+fieldset legend {
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  padding: 0 10px;
+}
+fieldset.fieldset-buttons {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+fieldset.fieldset-buttons legend {
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+}
+fieldset.fieldset-buttons legend .ui-buttonset {
+  display: inline;
+  margin: 0;
+}
+/**
+ * Inputs and Validation
+ */
+.form .form-label {
+  display: block;
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  text-align: right;
+  width: 200px;
+}
+.form .form-label small {
+  color: #666666;
+  display: block;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 11px;
+  text-align: right;
+  width: 200px;
+}
+.form .form-label em {
+  color: red;
+  font-style: normal;
+}
+.form .form-label.no-description {
+  line-height: 30px;
+}
+.form .form-label.no-description small {
+  display: none;
+}
+.form .form-action {
+  margin-left: 210px;
+}
+.form .form-input {
+  line-height: 26px;
+  margin: 2px 0 25px 210px;
+}
+.form .form-textarea {
+  line-height: 1;
+}
+.form .form-input textarea,
+.form .form-input input[type=text],
+.form .form-input input[type=password],
+.form .form-input input[type=email],
+.form .form-input input[type=url],
+.form .form-input input[type=date],
+.form .form-input input[type=number],
+.form .form-input input[type=time],
+.form .form-input input[type=date],
+.form .form-input input.date,
+.form .form-input .selector,
+.form .form-input .uploader,
+.form .form-input .radiogroup {
+  width: 100%;
+  max-width: 300px;
+}
+.form .form-input textarea {
   position: relative;
-  top: -21px;
-  left: 165px;
 }
-form dd p, form.horizontal-form dd p {
-  font-size: 77%;
+.invalid {
+  border: 1px solid red !important;
+}
+.form-error {
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 6px #dddddd;
+  -moz-box-shadow: 0px 0px 6px #dddddd;
+  box-shadow: 0px 0px 6px #dddddd;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 11px;
+  height: 15px;
+  padding: 4px 10px;
+  z-index: 999;
+}
+.form-error p {
+  color: #fff;
+  display: block;
+  margin: 0px;
+  line-height: 13px;
+}
+.form-error em {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 5px solid;
+  border-width: 0 5px 5px;
+  border-color: #000 transparent;
+  /* positioning */
+
+  position: absolute;
+  top: -5px;
+  left: 10px;
+}
+/**
+ * Tooltips
+ */
+.tooltip {
+  /* default background for browsers without gradient support */
+  background: #000;
+  background: rgba(0,0,0,0.7);
+
+  color: #fff;
+  display: none;
+  font-weight: normal;
+  padding: 10px;
   position: relative;
-  top: -4px;
-}
-form.vertical-form dd:last-child { margin-bottom:25px; }
-form.vertical-form dt {
-  width:auto;
-  text-align:left;
-  margin:15px 0 5px;
-}
-form.vertical-form dt.clear-tm { margin-top:0; }
-form.vertical-form dd { position:static; }
-form.vertical-form dd.checkbox, form.vertical-form dd.radio {
-  margin-bottom:0;
-  position:relative;
-  left:0;
-}
-form.vertical-form dd.checkbox { top:-23px; }
-form.vertical-form dt.checkbox, form.vertical-form dt.radio {
-  left:20px;
-  margin:0;
-}
-form dt.checkbox, form dt.radio { text-align:left; }
-form dd.text {
-  max-width:600px;
-  top:-21px;
-}
-form dd.text p {
-  font-size:100%;
-  top:-1px;
+  text-align: center;
+  width: 100px;
+  z-index: 999;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 40px;
+  border-radius: 4px;
+  min-height: 20px;
+  /* creates triangle */
 
 }
-input.small, textarea.small { width:25%; }
-input.medium, textarea.medium { width:50%; }
-input.large, textarea.large { width:75%; }
-input.full, textarea.full { width:99%; }
-textarea.footer { width:94%; resize:vertical; }
+.tooltip em {
+  display: block;
+  /* reduce the damage in FF3.0 */
 
-form {
-  label {
-    span {
-      color: #e30613;
-    }
-  }
-}
-    
-form span.valid-side-note, form span.invalid-side-note {
-  margin-left:5px;
-  padding:0 0 0 20px;
-  background-repeat:no-repeat;
-  background-position:left 1px;
-}
-input.ghost {
-  background:#fff;
-  border-color:#fff;
-  padding:6px 0 8px 0;
-}
-input.ghost:focus { padding:8px;}
-input:disabled, input.disabled {
-  background-repeat:repeat;
-  box-shadow:none;
-  cursor:not-allowed;
-}
-input.datepicker {
-  padding-right:30px;
-  cursor:pointer;
-}
-.datepicker-icon {
-  display:inline-block;
-  text-indent:-9999em;
-  width:16px;
-  height:16px;
-  background:url('../img/jquery/datepicker.png') no-repeat center;
-  position:relative;
-  top:4px;
-  left:-24px;
-}
+  position: absolute;
+  bottom: -8px;
+  /* value = - border-top-width - border-bottom-width */
 
+  left: 52px;
+  /* controls horizontal position */
 
-.ie6 legend, .ie7 legend { margin-left:-7px; }
-.ie8 legend, .ie7 legend { margin-bottom:30px; }
-.ie8 legend { top:-25px; }
-.ie7 legend { top:-35px; }
-.ie7 input[type="checkbox"] { vertical-align:baseline; }
-.ie6 input { vertical-align:text-bottom; }
-.ie7 input[type=checkbox], .ie8 input[type=checkbox], .ie9 input[type=checkbox],
-.ie7 input[type=radio], .ie8 input[type=radio], .ie9 input[type=radio] {
-  border:none;
-  box-shadow:none;
-}
-.ie7 .checkbox, .ie8 .checkbox, .ie9 .checkbox { top:-7px; }
-.ie7 .radio, .ie8 .radio, .ie9 .radio { top:-5px; }
-.ie7 td select {
-  position:relative;
-  top:-3px;
-  left:-15px;
-}
-.ie7 .datepicker-icon { top:0; }
+  width: 0;
+  height: 0;
+  border-width: 8px 8px 0;
+  /* vary these values to change the angle of the vertex */
 
+  border-style: solid;
+  border-color: #000 transparent;
+  border-color: rgba(0,0,0,0.7) transparent;
+  zoom: 1;
+}
+.tooltip.bottom em {
+  top: -8px;
+  /* value = - border-top-width - border-bottom-width */
 
-.jq-datepicker {
-  border:1px solid;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  border-radius:5px;
+  border-width: 0 8px 8px;
+  /* vary these values to change the angle of the vertex */
 }
-.jq-datepicker .datepick-nav {
-  height:20px;
-  padding-top:10px;
+.tooltip.right {
+  margin-left: 20px;
 }
-.jq-datepicker .datepick-ctrl { padding:5px 0 3px; }
-.jq-datepicker .datepick-nav, .jq-datepicker .datepick-ctrl, .jq-datepicker .datepick-month, .jq-datepicker .datepick-month-header,
-.jq-datepicker .datepick-month-header select, .jq-datepicker .datepick-month-header input, .jq-datepicker .datepick-cmd:hover,
-.jq-datepicker .datepick-ctrl .datepick-cmd:hover, .jq-datepicker .datepick-month th, .jq-datepicker .datepick-month tr, 
-.jq-datepicker .datepick-month th a { background:none; }
-.jq-datepicker .datepick-month table td { width:30px; }
-.jq-datepicker .datepick-month a, .jq-datepicker .datepick-month span { padding:11px 0; }
-.jq-datepicker .datepick-month thead, .jq-datepicker .datepick-month th, .jq-datepicker .datepick-month th a { border:none; }
-.jq-datepicker .datepick-month-header, .jq-datepicker .datepick-month-header select, .jq-datepicker .datepick-month-header input { height:auto; }
-.jq-datepicker .datepick-month-header select {
-  border:1px solid;
-  -webkit-border-radius:1px;
-  -moz-border-radius:1px;
-  border-radius:1px;
+.tooltip.right em {
+  border-color: transparent #000;
+  border-color: transparent rgba(0,0,0,0.7);
+  top: 12px;
+  /* controls vertical position */
+
+  left: -7px;
+  /* value = - border-left-width - border-right-width */
+
+  bottom: auto;
+  border-width: 8px 8px 8px 0;
 }
-*/
+/**
+ * Table Styles
+ */
+table.simple tr.highlight, .portlet > section.no-padding table.simple tr.highlight {
+  background: #eeeeff;
+}
+table.simple td, .portlet > section.no-padding table.simple td {
+  border-collapse: separate;
+  border-top: 1px solid #bbb;
+  padding: 10px 15px;
+}
+table.simple td strong span, .portlet > section.no-padding table.simple td strong span {
+  color: #999;
+}

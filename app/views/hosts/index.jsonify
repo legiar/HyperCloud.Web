@@ -1,0 +1,12 @@
+@hosts.each do |host|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = host
+  	name.split(".").each do |part|
+  		val = val.send(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "host_#{host.id}" 
+  json << record 
+end

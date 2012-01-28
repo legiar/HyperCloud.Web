@@ -4,7 +4,7 @@
   %td
     %span.tag{:class => site_instance.enabled? ? "green" : "grey"}= site_instance.enabled?
   %td
-    = link_to "Options", "#", :class => "toggle-table-switch tooltip"
+    = link_to "Options", "#", :class => "toggle-table-switch"
     %ul.table-switch{:style => "display: none;"}
       - unless site_instance.enabled?
         %li= link_to "Enable", enable_site_instance_path(@site, site_instance), :remote => true

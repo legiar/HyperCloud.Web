@@ -1,0 +1,12 @@
+= workspace "Hosts" do
+  %table#hosts.display.datatable{"data-remote" => hosts_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => host_path(":id")} Name
+        %th{"data-member" => "zone.name", :sort => true} Zone
+        %th{"data-member" => "public_ip"} Public IP
+        %th{"data-member" => "private_ip"} Private IP
+        %th{"data-member" => "state", :sort => true} State
+        %th{"data-member" => "slices.count"} Slices count
+    %tbody
+
