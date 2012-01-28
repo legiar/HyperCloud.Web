@@ -1,34 +1,28 @@
-- @title = "Tickets"
-
-%article.content
-  %header
-    %h2 Browse tickets
-    %nav
-      /%form.content-box-header-search{:action => "#"}
-      /  %input.content-box-header-search-input{:name => "", :type => "text"}
-      /    %button.content-box-header-search-btn Search
-      %ul.button-switch
-        %li
-          = form_for @search, :class => "content-box-header-search" do |f|
-            =# text_field_tag :search, params[:search]
-            = f.text_field :title_contains
-            = f.submit "Search"
-        %li= link_to "New ticket", new_ticket_path, :class => "button"
+= workspace "Tickets" do
+  %table#tickets.display.datatable{"data-remote" => tickets_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "id", :sort => true, :filter => true, :type => :link, :link => ticket_path(":id")} Ticket #
+        %th{"data-member" => "title", :sort => true, :filter => true} Title
+        %th{"data-member" => "group.name", :sort => true} Group
+        %th{"data-member" => "status.name", :sort => true} Status
+        %th{"data-member" => "owner.email", :sort => true} Owner
+        %th{"data-member" => "updated_at", :sort => true} Last activity
+    %tdoby
+      
+/%form.content-box-header-search{:action => "#"}
+/  %input.content-box-header-search-input{:name => "", :type => "text"}
+/    %button.content-box-header-search-btn Search
+/%ul.button-switch
+/  %li
+/    =# form_for @search, :class => "content-box-header-search" do |f|
+/      =# text_field_tag :search, params[:search]
+/      =# f.text_field :title_contains
+/      =# f.submit "Search"
+/  %li=# link_to "New ticket", new_ticket_path, :class => "button"
           
-  %section
-    .sidetabs
-      %aside
-        %ul
-          %li
-            = link_to "Everyone’s tickets", tickets_path, :class => "active" 
-            = link_to "Created by you", tickets_path(:created_by => true)
-            = link_to "Mentioning you", tickets_path(:mentioned => true)
-      
-      #sidetab1.sidetab.default-sidetab
-        %h3 Everyone’s tickets
-        = render :partial => "list"
-        
-      #sidetab2.sidetab
-      
-      #sidetab2.sidetab
+/=# link_to "Everyone’s tickets", tickets_path, :class => "active" 
+/=# link_to "Created by you", tickets_path(:created_by => true)
+/=# link_to "Mentioning you", tickets_path(:mentioned => true)
+     
             

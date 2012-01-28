@@ -1,5 +1,5 @@
 class TicketsController < InheritedResources::Base
-  respond_to :html, :json
+  respond_to :html, :datatables
   add_breadcrumb "Tickets", :tickets_path
   
   #before_filter :require_user
@@ -142,10 +142,7 @@ class TicketsController < InheritedResources::Base
   protected
     
     def collection
-      @search = Ticket.search(params[:search])
-      @tickets ||= end_of_association_chain.search(params[:search]).order(sort_column + ' ' + sort_direction).paginate(
-        :page => params[:page],
-        :per_page => 5)
+      @tickets ||= end_of_association_chain.search(params[:search]).paginate(:page => params[:page], :per_page => params[:per_page])
     end  
     
 end

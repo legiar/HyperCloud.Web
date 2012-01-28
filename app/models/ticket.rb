@@ -45,7 +45,7 @@ class Ticket < ActiveRecord::Base
         # TODO: Normalize default values
         self.group = TicketGroup.enabled.first
         self.priority = TicketPriority.default.first
-        self.author = current_user
+        #self.author = current_user
       end
     end
 
