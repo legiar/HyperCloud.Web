@@ -10,6 +10,8 @@ class Ticket < ActiveRecord::Base
   validates :group, :presence => true 
   validates :status, :presence => true 
   validates :priority, :presence => true
+  validates :author, :presence => true
+  validates :owner, :presence => true
   
   after_initialize :set_default_values
   before_update :set_closed_at
@@ -43,9 +45,9 @@ class Ticket < ActiveRecord::Base
     def set_default_values
       if new_record?
         # TODO: Normalize default values
+        self.status = TicketStatus.open.first
         self.group = TicketGroup.enabled.first
         self.priority = TicketPriority.default.first
-        #self.author = current_user
       end
     end
 

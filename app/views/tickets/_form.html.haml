@@ -1,12 +1,17 @@
-= semantic_form_for @ticket do |f|
-  =# f.semantic_errors
-  = f.input :title
-  = f.input :group
-  = f.input :priority
-  = f.input :details
-  =# f.input :status
-  =# f.input :author
-  =# f.input :owner
-  =# f.input :closed_at
-  =# f.input :comments_count
-  = f.commit_button
+- if @ticket.errors.any?
+  .message.error
+    %h3= "#{pluralize(@ticket.errors.count, 'error')} prohibited this user from being saved:"
+    %ul
+    - @ticket.errors.full_messages.each do |msg|
+      %li= msg
+
+= semantic_form_for @ticket, :class => "form" do |f|
+  = f.inputs "Ticket" do
+    = f.input :title
+    = f.input :group
+    = f.input :priority
+    = f.input :details
+    - unless @ticket.new_record?
+      = f.input :status
+  = f.buttons do
+    = f.submit
