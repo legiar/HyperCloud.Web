@@ -9,7 +9,7 @@ gem "inherited_resources", "~> 1.2.1"
 gem "will_paginate"
 gem "meta_search"
 
-gem "devise"
+gem "devise", "~> 2.0.0"
 gem "cancan"
 
 gem "haml"
