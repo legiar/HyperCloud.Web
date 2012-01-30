@@ -1,14 +1,18 @@
+- if @site.errors.any?
+  .message.error
+    %h3= "#{pluralize(@site.errors.count, 'error')} prohibited this user from being saved:"
+    %ul
+    - @site.errors.full_messages.each do |msg|
+      %li= msg
+      
 = semantic_form_for @site do |f|
-  - if @site.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@site.errors.count, 'error')} prohibited this user from being saved:"
-      %ul
-      - @site.errors.full_messages.each do |msg|
-        %li= msg
-  
-  = f.input :name
-  = f.input :slice
-  = f.input :pool
-  = f.input :product
+  = f.inputs "General" do
+    = f.input :name, :hint => "Subdomain name"
+    = f.input :product
+  = f.inputs "Deploy information" do
+    = f.input :slice
+    = f.input :pool
 
-  = f.submit
+  = f.buttons do
+    = f.submit
+  

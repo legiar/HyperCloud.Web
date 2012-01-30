@@ -1,42 +1,99 @@
-/**
- * Fieldsets
- */
-fieldset {
-  border: 1px solid #bbb;
-  padding: 15px;
+// Fieldsets
+
+.formtastic {
+
+  ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+  }
+  
+  li {
+    line-height: 26px;
+    margin: 2px 0 25px 10px;
+    
+    label {
+      display: block;
+      float: left;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0;
+      text-align: right;
+      width: 200px;
+      
+      abbr[title] {
+        color: red;
+        font-style: normal;
+        border-bottom: 0px none !important;
+        
+        &:before {
+          content: " ";
+        }
+      }
+    }
+    
+    textarea, input[type=text], input[type=password], input[type=email], input[type=url],
+    input[type=date], input[type=number], input[type=time], input[type=date],
+    input.date, .selector, .uploader, .radiogroup {
+      margin-left: 10px;
+      width: 100%;
+      max-width: 300px;
+    }
+    
+    p {
+      margin: 0;
+      
+      &.inline-hints {
+        color: #666;
+        font-size: 77%;
+        margin-left: 210px;
+      }
+      
+      &.inline-errors {
+        display: inline-block;
+        color: #cc0000;
+      }
+    }      
+    
+    &.error {
+      textarea, input, select, .selector {
+        border-color: #AE432E;
+        background-color: #F7ECEA;
+      }
+    }
+  }
+  
+  fieldset {
+    border: 1px solid #bbb;
+    padding: 15px;
+    margin-bottom: 10px;
+  
+    legend {
+      border-left: 1px solid #bbb;
+      border-right: 1px solid #bbb;
+      padding: 0 10px;
+    }
+    
+    &.buttons {
+      border: 0px none;
+      padding: 0;
+      margin: 0;
+      
+      legend {
+        padding: 0;
+        border-width: 0;
+        margin: 0;
+      }
+      
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
 }
-fieldset legend {
-  border-left: 1px solid #bbb;
-  border-right: 1px solid #bbb;
-  padding: 0 10px;
-}
-fieldset.fieldset-buttons {
-  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-}
-fieldset.fieldset-buttons legend {
-  padding: 0;
-  border-width: 0;
-  margin: 0;
-}
-fieldset.fieldset-buttons legend .ui-buttonset {
-  display: inline;
-  margin: 0;
-}
-/**
- * Inputs and Validation
- */
-.form .form-label {
-  display: block;
-  float: left;
-  font-size: 12px;
-  font-weight: bold;
-  margin: 0;
-  text-align: right;
-  width: 200px;
-}
-.form .form-label small {
+
+.formtastic label small {
   color: #666666;
   display: block;
   font-size: 11px;
@@ -45,48 +102,22 @@ fieldset.fieldset-buttons legend .ui-buttonset {
   text-align: right;
   width: 200px;
 }
-.form .form-label em {
-  color: red;
-  font-style: normal;
-}
-.form .form-label.no-description {
+.formtastic .form-label.no-description {
   line-height: 30px;
 }
-.form .form-label.no-description small {
+.formtastic .form-label.no-description small {
   display: none;
 }
-.form .form-action {
+.formtastic .form-action {
   margin-left: 210px;
 }
-.form .form-input {
-  line-height: 26px;
-  margin: 2px 0 25px 210px;
-}
-.form .form-textarea {
+.formtastic .form-textarea {
   line-height: 1;
 }
-.form .form-input textarea,
-.form .form-input input[type=text],
-.form .form-input input[type=password],
-.form .form-input input[type=email],
-.form .form-input input[type=url],
-.form .form-input input[type=date],
-.form .form-input input[type=number],
-.form .form-input input[type=time],
-.form .form-input input[type=date],
-.form .form-input input.date,
-.form .form-input .selector,
-.form .form-input .uploader,
-.form .form-input .radiogroup {
-  width: 100%;
-  max-width: 300px;
-}
-.form .form-input textarea {
+.formtastic .form-input textarea {
   position: relative;
 }
-.invalid {
-  border: 1px solid red !important;
-}
+
 .form-error {
   background-color: #000;
   -webkit-box-shadow: 0px 0px 6px #dddddd;
@@ -102,12 +133,14 @@ fieldset.fieldset-buttons legend .ui-buttonset {
   padding: 4px 10px;
   z-index: 999;
 }
+
 .form-error p {
   color: #fff;
   display: block;
   margin: 0px;
   line-height: 13px;
 }
+
 .form-error em {
   display: block;
   width: 0;
