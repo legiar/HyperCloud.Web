@@ -5,18 +5,18 @@
 $(function(){
 	// Top scroll
 	$().UItoTop();
+	
+	// UniForm
+	$("select, input:checkbox, input:radio, input:file").uniform();
 
 	// Main navigation
-	$('.nav-main-subnav').adminMenu();
+	//$('.nav-main-subnav').adminMenu();
 	
 	// jQuery Custom File Input
-	$('.fileupload').customFileInput();
+	//$('.fileupload').customFileInput();
 	
 	// jQuery DateInput
 	$('.datepicker').after('<span class="datepicker-icon">&nbsp;</span>').datepick({ pickerClass: 'jq-datepicker' });
-	
-	// IE7 doesn't support :disabled
-	$('.ie7').find(':disabled').addClass('disabled');
 
 	// Auto highlight mandatory inputs
 	$('<span> *</span>').appendTo('.mandatory');
