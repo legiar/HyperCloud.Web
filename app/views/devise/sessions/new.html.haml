@@ -7,9 +7,7 @@
     - if devise_mapping.rememberable?
       %span.fl{:style => "line-height: 23px;"}
         %label.choice{:for => "remember_me"}
-          #uniform-remember.checker
-            %span
-              = f.check_box :remember_me, :style => "opacity: 0; ", :type => "checkbox"
+          = f.check_box :remember_me, :style => "opacity: 0; ", :type => "checkbox"
           Remember me
     = f.submit "Sign in", :class => "fr"
    
