@@ -1,6 +1,6 @@
 = form_for(resource, :as => resource_name, :url => session_path(resource_name), :style => "margin-top: 30px") do |f|
   %p{:style => "margin-bottom: 30px"}
-    = f.text_field :email, :class => "full", :placeholder => "E-Mail", :required => "required", :type => "text"
+    = f.text_field :login, :class => "full", :placeholder => "Username or e-mail", :required => "required", :type => "text"
   %p{:style => "margin-bottom: 30px"}
     = f.password_field :password, :class => "full", :placeholder => "Password", :required => "required", :type => "password"
   %p.clearfix 

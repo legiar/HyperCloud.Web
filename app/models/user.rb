@@ -1,10 +1,14 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :roles
+  
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :confirmable, :lockable, :timeoutable
-
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  
+  validates :name, :presence => true, :uniqueness => true
+  
+  attr_accessor :login
+  attr_accessible :login, :email, :password, :password_confirmation, :remember_me
 
   def role?(role)
     return !!self.roles.find_by_name(role.to_s.camelize)
@@ -44,6 +48,12 @@ class User < ActiveRecord::Base
       recoverable.send_reset_password_instructions
     end
     recoverable
-  end    
+  end
+  
+  def self.find_for_database_authentication(warden_conditions)
+    conditions = warden_conditions.dup
+    login = conditions.delete(:login)
+    where(conditions).where(["lower(name) = :value OR lower(email) = :value", {:value => login.strip.downcase}]).first
+  end
 
 end
