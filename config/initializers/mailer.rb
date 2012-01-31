@@ -3,10 +3,9 @@ HyperCloud::Application.configure do
     :protocol => "http",
     :host => "cloud.bpmonline.com"
   }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.bpmonline.com",
-    :authentication => false,
-    :enable_starttls_auto => false
-  }
+  config.action_mailer.delivery_method = :sendmail
 end
+
+ActionMailer::Base.delivery_method = :sendmail
+
+

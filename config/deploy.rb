@@ -31,7 +31,7 @@ before "deploy:assets:precompile", "config:symlink_app_config"
 namespace :config do
   task :symlink_app_config do
     run "ln -sf #{deploy_to}/shared/config/database.yml #{current_release}/config/database.yml"
-    #run "ln -sf #{deploy_to}/shared/config/unicorn.rb #{current_release}/config/unicorn.rb"
+    run "ln -sf #{deploy_to}/shared/config/redis.yml #{current_release}/config/redis.yml"
   end
 end
 

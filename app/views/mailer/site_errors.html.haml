@@ -1,0 +1,27 @@
+:css
+  p strong {font-size: 10px; margin: 0 !important; padding: 0 !important; text-decoration: underline;};
+  p pre {margin-top: 0px; padding-top: 0px;};
+  
+%h1 Sites with errors in the last hour
+%em #{Time.zone.now} - #{1.hour.ago(Time.zone.now)}
+%ul
+  - @sites.each do |name, count|
+    %li
+      Site
+      %strong= name
+      has 
+      %strong= count
+      errors
+
+- @sites.each do |name, count|
+  %h2= name
+  - SiteError.recent_by_site(name).order("date desc").each do |site_error|
+    %p
+      %strong= site_error.date
+      %pre= h(site_error.message)
+        
+        
+  
+      
+	 
+	
