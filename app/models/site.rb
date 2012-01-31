@@ -6,6 +6,7 @@ class Site < ActiveRecord::Base
   belongs_to :product
   has_many :site_errors, :foreign_key => :site, :primary_key => :name
   has_many :instances, :class_name => "SiteInstance", :dependent => :destroy, :include => :slice, :order => "slices.name"
+  has_many :slices, :through => :instances
 
   validates :name, :presence => true, :uniqueness => true
   validates :product, :presence => true
