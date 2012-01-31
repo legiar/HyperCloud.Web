@@ -1,0 +1,13 @@
+@site_errors.each do |site_error|
+  title = site_error.message.match(/Exception Message:\s*(.*)/)
+  title = title ? title[1].gsub(/\r/, '') : "Unknown error"
+  record = {
+  	"0" => link_to(site_error.id, site_error),
+	"1" => site_error.date,
+	"2" => title,
+	"3" => site_error.host,
+	"4" => site_error.level,
+	"DT_RowId" => "site_error_#{site_error.id}" 
+  }
+  json << record 
+end

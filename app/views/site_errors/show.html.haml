@@ -1,0 +1,3 @@
+= workspace "Site Error" do
+  = section "Error info" do
+    = h(@site_error.message).gsub(/\n/, '<br/>').gsub(/\r/, '').html_safe

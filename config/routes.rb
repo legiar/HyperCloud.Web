@@ -29,6 +29,7 @@ HyperCloud::Application.routes.draw do
         get "disable"
       end
     end
+    resources :site_errors
   end
   resources :site_errors, :only => [:index, :show]
   

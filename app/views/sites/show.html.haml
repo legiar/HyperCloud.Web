@@ -35,18 +35,15 @@
 
   .clearfix
 
-  = section "Support" do
-    /%nav
-    /  %form.content-box-header-search{:action => "/"}
-    /    %input.content-box-header-search-input{:name => "", :type => "text"}
-    /      %button.content-box-header-search-btn Search
-    .sidetabs
-      %nav.sidetab-switch
-        %ul
-          %li= link_to "Error Logs", "#sidetab1", :class => "default-sidetab current"
-          %li= link_to "Tickets", "#sidetab2" 
-        %p Support info
-      #sidetab1.sidetab.default-sidetab
-        = render "site_errors/list"
-      #sidetab2.sidetab{:style => "display: none;"}
+  = section "Errors" do
+    =# render "site_errors/list"
+    %table#site_errors.display.datatable{"data-remote" => site_site_errors_path(@site, :datatables)}
+      %thead
+        %tr
+          %th{"data-member" => "id"} Error #
+          %th{"data-member" => "date", :sort => true} Date
+          %th{"data-member" => "title"} Title
+          %th{"data-member" => "host"} Slice
+          %th{"data-member" => "level"} Level
+      %tbody         
         
