@@ -5,6 +5,8 @@ class SiteErrorsController < InheritedResources::Base
   
   add_breadcrumb "Site errors", :site_errors_path
   
+  skip_before_filter :authenticate_user!, :only => :show
+  
   protected
   
     def collection
