@@ -1,4 +1,6 @@
 = workspace "Sites" do
+  #actions{:style => "margin-bottom: 10px;"}
+    = link_to "New site", new_site_path
   %table#sites.display.datatable{"data-remote" => sites_path(:datatables)}
     %thead
       %tr

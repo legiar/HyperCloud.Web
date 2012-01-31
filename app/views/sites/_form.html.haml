@@ -8,10 +8,9 @@
 = semantic_form_for @site do |f|
   = f.inputs "General" do
     = f.input :name, :hint => "Subdomain name"
-    = f.input :product
+    = f.input :product, :collection => Product.order(:name)
   = f.inputs "Deploy information" do
-    = f.input :slice
-    = f.input :pool
+    = f.input :pool, :collection => Pool.order(:name)
 
   = f.buttons do
     = f.submit

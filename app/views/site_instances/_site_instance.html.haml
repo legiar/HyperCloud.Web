@@ -4,10 +4,10 @@
   %td
     %span.tag{:class => site_instance.enabled? ? "green" : "grey"}= site_instance.enabled?
   %td
-    = link_to "Options", "#", :class => "toggle-table-switch"
-    %ul.table-switch{:style => "display: none;"}
-      - unless site_instance.enabled?
-        %li= link_to "Enable", enable_site_instance_path(@site, site_instance), :remote => true
-      - else
-        %li= link_to "Disable", disable_site_instance_path(@site, site_instance), :remote => true
+    /=# link_to "Options", "#", :class => "toggle-table-switch"
+    /%ul.table-switch{:style => "display: none;"}
+    - unless site_instance.enabled?
+      = link_to "Enable", enable_site_instance_path(@site, site_instance), :remote => true
+    - else
+      = link_to "Disable", disable_site_instance_path(@site, site_instance), :remote => true
 

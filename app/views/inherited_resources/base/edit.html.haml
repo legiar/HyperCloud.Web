@@ -1,6 +1,3 @@
-%article.content
-  %header
-    %h2 Edit #{resource_class.name.downcase} '#{resource.try(:name)}' 
-
-  %section
+= workspace resource_class.name.pluralize.titleize do
+  = section "Edit #{resource_class.name.titleize} '#{resource.try(:name)}'" do  
     = render "form"
