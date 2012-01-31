@@ -1,15 +1,9 @@
-- @title = "Slice '#{@slice.name}'"
-- add_breadcrumb @slice.name, slice_path(@slice)
+= workspace "Slice '#{@slice.name}'" do
+  - add_breadcrumb @slice.name, slice_path(@slice)
 
-%article.content.col2
-  %header
-    %h2 Info
-    %nav
-      = link_to image_tag("icon_options.png", :alt => "Options"), "#", :class => "toggle-options-switch button gray" 
-      %ul.options-switch{:style => "display: none;"}
-        %li= link_to "Edit", edit_slice_path(@slice)
+  = section "Info", :class => "grid_5" do
+    = link_to "Edit", edit_slice_path(@slice)
   
-  %section
     %dl
       %dt= Slice.human_attribute_name :name
       %dd= @slice.name
@@ -22,17 +16,15 @@
       %dt= Slice.human_attribute_name :pool
       %dd= @slice.pool.try(:name)
 
-%article.content.col2.clear-rm
-  %header
-    %h2 Sites
-  %section
-    %table
+  = section "Active Sites", :class => "grid_7" do
+    %table.display
       %thead
         %tr
           = table_head %w(site)
       %tbody
-        - @slice.site_instances.where(:enabled => true).each do |instance|
+        - @slice.sites.each do |site|
           %tr
-            %td= link_to instance.site.name, instance.site
+            %td= link_to site.name, site
+            %td
         
-.clearfix
+  .clearfix
