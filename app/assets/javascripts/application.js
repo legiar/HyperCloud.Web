@@ -200,6 +200,7 @@ $(function(){
 			options.aoColumnDefs.push(col_def);
 			col_index++;
 		});
+		
 		table.find("tbody").click(function(event) {
 			var table = $(this).closest("table");
 			var table_id = table.attr("id");
@@ -211,7 +212,6 @@ $(function(){
         		$(event.target.parentNode).addClass('row_selected');
         	}			
         });
-       	console.log(options);
 		datatables[table_id] = table.dataTable(options);
 		$("#" + table_id + "_wrapper select").uniform(); 
 	});

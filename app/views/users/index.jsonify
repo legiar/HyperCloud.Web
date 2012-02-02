@@ -1,0 +1,12 @@
+@users.each do |user|
+  record = {}
+  params["columns"].each do |idx, name|
+  	val = user
+  	name.split(".").each do |part|
+  		val = val.try(part)
+  	end 
+  	record[idx] = val
+  end
+  record["DT_RowId"] = "user_#{user.id}" 
+  json << record 
+end

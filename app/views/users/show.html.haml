@@ -1,0 +1,8 @@
+= workspace "User #{@user.name}" do
+  = section "Info", :class => "grid_5" do
+    %dl
+      %dt Name
+      %dd= @user.name
+      %dt E-mail
+      %dd= @user.email
+  

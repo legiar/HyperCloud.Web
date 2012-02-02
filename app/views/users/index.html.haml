@@ -1,0 +1,9 @@
+= workspace "Users" do
+  #actions{:style => "margin-bottom: 10px;"}
+    = link_to "New user", new_user_path
+  %table#users.display.datatable{"data-remote" => users_path(:datatables)}
+    %thead
+      %tr
+        %th{"data-member" => "name", :sort => true, :filter => true, :type => :link, :link => user_path(":id")} Name
+        %th{"data-member" => "email"} E-mail
+    %tbody   
